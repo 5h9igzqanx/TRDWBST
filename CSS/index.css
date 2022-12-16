@@ -106,6 +106,7 @@ li img{
 .lside{
     /*左栏*/
     width: 250px;
+    height:380px;
     float: left;
     background-color: #a3c6da;
     border-radius: 15px;
@@ -114,6 +115,7 @@ li img{
     padding-left: 12px;
     padding-right: 3px;
     padding-bottom: 4px;
+    overflow-y: auto;
 }
 .content-body{
     /*主内容框*/
