@@ -6,7 +6,141 @@
         <link rel="stylesheet" href="https://5h9igzqanx.github.io/fonts-wbst/font.css">
         <link rel="stylesheet" href="CSS/header/nav.css">
         <link rel="stylesheet" href="CSS/header/footer.css">
-        <link rel="stylesheet" href="CSS/index.css">
+        <style>
+            .notice{
+                /*公告*/
+                background-color: #a3c6da;
+                height: 250px;
+                width: 1499px;
+                text-align: center;
+                border-radius: 15px;
+                margin-left: 10px;
+                margin-right: 10px;
+                /*来自“https://www.bilibili.com/video/BV1354y1k7gQ/?spm_id_from=333.337.search-card.all.click&vd_source=dc8bb826ff686b2200b9b618418072a3”*/
+            	position: relative;
+            	/*width: 857px;
+            	height: 441px;*/
+            	overflow: hidden;
+            }
+            input {
+                display: none;
+            }
+            label {
+                position: absolute;
+                bottom: 30px;
+                width: 20px;
+                height: 20px;
+                border: 3px solid #fff;
+                border-radius: 50%;
+                background-color: #fff;
+            }
+            label[for="btn1"] {
+                left: 41%;
+            }
+            label[for="btn2"] {
+                left: 44%;
+            }
+            label[for="btn3"] {
+                left: 47%;
+            }
+            label[for="btn4"] {
+                left: 50%;
+            }
+            label[for="btn5"] {
+                left: 53%;
+            }
+            label[for="btn6"] {
+                left: 56%;
+            }
+            label[for="btn7"] {
+                left: 59%;
+            }
+            ul {
+                /* 让li水平排列 */
+                display: flex;
+                /* 自动计算宽度 */
+                width: calc(1499px * 7);
+                /* 过渡时间 */
+                transition: all 0.5s;
+            }
+            li {
+                list-style-type: none;
+            }
+            li img{
+                width: 100%;
+            }
+            #btn1:checked~ul {
+                margin-left: 0;
+            }
+            #btn2:checked~ul {
+                margin-left: -1499px;
+            }
+            #btn3:checked~ul {
+                margin-left: calc(-1499px * 2);
+            }
+            #btn4:checked~ul {
+                margin-left: calc(-1499px * 3);
+            }
+            #btn5:checked~ul {
+                margin-left: calc(-1499px * 4);
+            }
+            #btn6:checked~ul {
+                margin-left: calc(-1499px * 5);
+            }
+            #btn7:checked~ul {
+                margin-left: calc(-1499px * 6);
+            }
+            #btn1:checked~label[for="btn1"] {
+                background-color: #f00;
+            }
+            #btn2:checked~label[for="btn2"] {
+                background-color: #f00;
+            }
+            #btn3:checked~label[for="btn3"] {
+                background-color: #f00;
+            }
+            #btn4:checked~label[for="btn4"] {
+                background-color: #f00;
+            }
+            #btn5:checked~label[for="btn5"] {
+                background-color: #f00;
+            }
+            #btn6:checked~label[for="btn6"] {
+                background-color: #f00;
+            }
+            #btn7:checked~label[for="btn7"] {
+                background-color: #f00;
+            }
+            /*内容部分样式*/
+            .lside{
+                /*左栏*/
+                width: 250px;
+                height:380px;
+                float: left;
+                background-color: #a3c6da;
+                border-radius: 15px;
+                margin-left: 10px;
+                margin-right: 20px;
+                padding-left: 12px;
+                padding-right: 3px;
+                padding-bottom: 4px;
+                overflow-y: auto;
+            }
+            .content-body{
+                /*主内容框*/
+                /*float: right;*/
+                overflow: hidden;
+                width: calc(100vw - 325px);
+                margin-right: 10px;
+                padding-left: 3px;
+                padding-right: 2px;
+            }
+            /*@media screen and (max-width:700px){
+                .lside,.content-body{
+                    width: 100%;
+                }
+            }*/
+        </style>
         <!--框架灵感来自
             “https://www.bilibili.com/video/BV1sG411x77z/?spm_id_from=333.337.search-card.all.click&vd_source=dc8bb826ff686b2200b9b618418072a3”
         -->
