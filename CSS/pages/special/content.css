@@ -1,0 +1,31 @@
+
+.leftside {
+    /*左栏*/
+    width: 250px;
+    height: 380px;
+    float: left;
+    background-color: #a3c6da;
+    border-radius: 15px;
+    margin-left: 10px;
+    margin-right: 20px;
+    padding-left: 12px;
+    padding-right: 3px;
+    padding-bottom: 4px;
+    overflow-y: auto;
+}
+.content-body {
+    /*主内容框*/
+    /*float: right;*/
+    overflow: hidden;
+    width: calc(100vw - 325px);
+    margin-right: 10px;
+    padding-left: 3px;
+    padding-right: 2px;
+}
+.leftside h1{
+    text-align: center;
+}
+.content-body p{
+    word-break: break-all;
+    word-wrap: break-word;
+}
