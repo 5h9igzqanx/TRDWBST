@@ -19,21 +19,26 @@
 }
 .nav-logo{
     /*logo容器*/
-    width: 40%;
+    width: 15%;
 }
 .nav-logo a{
     /*防止链接穿帮*/
     text-decoration: none;
     color: black;
+    width: 44px;
+    height: 44px;
 }
 .nav-logo img{
     /*logo大小和圆角设置*/
     border-radius: 50%;
-    overflow: hidden;
-    width: 22%;
-    height: 22%;
+    width: 44px;
+    height: 44px;
 }
-.nav a {
+.nav{
+    width: 85%;
+    height: 44px;
+}
+.nav a{
     /*链接栏*/
     text-decoration: none;
     color: black;
@@ -41,8 +46,23 @@
     font-size: 16px;
     /*display: inline-block;*/
 }
-.nav a img{
+.nav-link{
+    width: 200px;
+    text-align: left;
+    position: fixed;
+    top: 20px;
+    left: 15%;
+}
+.honglvdeng{
+    position: fixed;
+    top: 20px;
+    right: 60px;
+    text-align: right;
+    width: 100px;
+    height: 44px;
+}
+.honglvdeng a img{
     /*“红绿灯”*/
-    width: 1%;
-    height: 1%
+    width: 12px;
+    height: 12px;
 }
