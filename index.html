@@ -183,7 +183,7 @@
         <br>
         <br>
         <div class="notice">
-            <!--放置公告(图片,屏幕宽度*250px)-->
+            <!--放置公告(图片,1499px*250px)-->
             <!--来自
                 “https://www.bilibili.com/video/BV1354y1k7gQ/?spm_id_from=333.337.search-card.all.click&vd_source=dc8bb826ff686b2200b9b618418072a3”
             -->
@@ -213,45 +213,37 @@
             <script>
                 function notice1(){
                     //top.location.href="https://5h9igzqanx.github.io/TRDWBST/pages/pages/special/notice/page/1.htm"
-                    alert("暂无公告")
-                    alert("这只是测试！")
-                    alert("看样子能用hhhh")
+                    notice_ces()
                 }
                 function notice2(){
                     //top.location.href="https://5h9igzqanx.github.io/TRDWBST/pages/pages/special/notice/page/2.htm"
-                    alert("暂无公告")
-                    alert("这只是测试！")
-                    alert("看样子能用hhhh")
+                    notice_ces()
                 }
                 function notice3(){
                     //top.location.href="https://5h9igzqanx.github.io/TRDWBST/pages/pages/special/notice/page/3.htm"
-                    alert("暂无公告")
-                    alert("这只是测试！")
-                    alert("看样子能用hhhh")
+                    notice_ces()
                 }
                 function notice4(){
                     //top.location.href="https://5h9igzqanx.github.io/TRDWBST/pages/pages/special/notice/page/4.htm"
-                    alert("暂无公告")
-                    alert("这只是测试！")
-                    alert("看样子能用hhhh")
+                    notice_ces()
                 }
                 function notice5(){
                     //top.location.href="https://5h9igzqanx.github.io/TRDWBST/pages/pages/special/notice/page/5.htm"
-                    alert("暂无公告")
-                    alert("这只是测试！")
-                    alert("看样子能用hhhh")
+                    notice_ces()
                 }
                 function notice6(){
                     //top.location.href="https://5h9igzqanx.github.io/TRDWBST/pages/pages/special/notice/page/6.htm"
-                    alert("暂无公告")
-                    alert("这只是测试！")
-                    alert("看样子能用hhhh")
+                    notice_ces()
                 }
                 function notice7(){
                     //top.location.href="https://5h9igzqanx.github.io/TRDWBST/pages/pages/special/notice/page/7.htm"
+                    notice_ces()
+                }
+                function notice_ces(){
                     alert("暂无公告")
                     alert("这只是测试！")
                     alert("看样子能用hhhh")
+                    //临时加的，有公告了可以删除
                 }
             </script>
         </div>
@@ -271,15 +263,19 @@
                 <div style="text-align: center;font-size: x-large;" id="lside-content-djs"></div>
                 <script>
                     setInterval(function(){
-                        var nowdate = new Date();
-                        var enddate = (new Date('2023-1-21 00:00:00')).getTime();//倒计时结束时间,但是毫秒
+                        var nowdate = new Date();//从1970年1月1日
+                        var enddate = (new Date('2023-1-21 00:00:00')).getTime();//从1970年1月1日到倒计时结束的毫秒数
                         var ms = enddate - nowdate;//剩余时间,但是毫秒
                         var seconds = ms/1000;//剩余时间,但是秒
                         var points = seconds/60;//剩余时间,但是分
                         var hours = points/60;//小时数
                         var days = hours/24;//天数
-                        var tm = document.getElementById("lside-content-djs")//id
-                        tm.innerHTML = Math.floor(days) + "天" + Math.floor(hours%24) + "时" + Math.floor(points%60) + "分" + Math.floor(seconds%60) + "秒";//求余输出,Math.floor()为保留整数
+                        var tm = document.getElementById("lside-content-djs")//div标签的id
+                        if(ms <= 0){
+                            tm.innerHTML = "时间到";//如果时间到就输出时间到
+                        }else{
+                            tm.innerHTML = Math.floor(days) + "天" + Math.floor(hours%24) + "时" + Math.floor(points%60) + "分" + Math.floor(seconds%60) + "秒";//求余输出剩余时间,Math.floor()为保留整数
+                        };//时间到不输出负数
                     },1000);//倒计时
                     function lside_content_djs_qianwang(){
                         top.location.href="https://www.miyoushe.com/ys/article/33731264"
@@ -295,23 +291,23 @@
             <p>&emsp;&emsp;好的，咱也是觉得第二个网站太垃圾然后又换了好吧</p>
             <p>&emsp;&emsp;欢迎过来！</p>
             <p>&emsp;&emsp;这里有一些修工具和一些好玩的<span style="text-decoration: line-through;">&ensp;ikun&ensp;</span>修游戏，反正就是做着玩的，就这些hhhh，看着玩吧</p>
-            <div class="xing-fgx" onclick="xing_fgx()">
-                <div><img src="media/picture/fun/qt/xing.png"></div>
-                <div><img src="media/picture/fun/qt/xing.png"></div>
-                <div><img src="media/picture/fun/qt/xing.png"></div>
-                <div><img src="media/picture/fun/qt/xing.png"></div>
-                <div><img src="media/picture/fun/qt/xing.png"></div>
-                <div><img src="media/picture/fun/qt/xing.png"></div>
-                <div><img src="media/picture/fun/qt/xing.png"></div>
-                <div><img src="media/picture/fun/qt/xing.png"></div>
-                <div><img src="media/picture/fun/qt/xing.png"></div>
-                <div><img src="media/picture/fun/qt/xing.png"></div>
-                <div><img src="media/picture/fun/qt/xing.png"></div>
-                <div><img src="media/picture/fun/qt/xing.png"></div>
-                <div><img src="media/picture/fun/qt/xing.png"></div>
-                <div><img src="media/picture/fun/qt/xing.png"></div>
+            <div class="xing-fgx">
+                <div><img src="media/picture/fun/qt/xing.png" onclick="xing_fgx()"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="xing_fgx()"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="xing_fgx()"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="xing_fgx()"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="xing_fgx()"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="xing_fgx()"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="xing_fgx()"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="xing_fgx()"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="xing_fgx()"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="xing_fgx()"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="xing_fgx()"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="xing_fgx()"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="xing_fgx()"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="xing_fgx()"></div>
                 <script>
-                    function cing_fgx(){
+                    function xing_fgx(){
                         alert("114514")
                     }
                 </script>

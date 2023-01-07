@@ -36,6 +36,7 @@
             }
             #main-before{
                 color: yellow;
+                background-color: #75aac8;
                 font-family: 楷体;
             }
             .notice-content{
@@ -48,14 +49,22 @@
                 padding-left: 12px;
                 padding-right: 12px;
             }
-            .notice-content ul{
-                margin-left: 22px;
+            .content-boss{
+                width: calc(100% - 24px);
+                height: 356px;
+                margin-left: 10px;
                 margin-right: 22px;
+                border: 3px solid #609dbf;
+                overflow-y: scroll;
+            }
+            .content-boss ul{
+                margin: 3px;
                 list-style-type: none;
                 overflow-y: auto;
             }
-            .notice-content ul li{
-                border: 3px dashed #75aac8;
+            .content-boss ul li{
+                margin-top: 3px;
+                border: 3px solid #75aac8;
             }
             #content-body{
                 font-family: 仿宋;
@@ -63,6 +72,7 @@
             }
             #content-author{
                 font-family: 楷体;
+                font-weight: bold;
                 text-align: right;
                 background-color: #75aac8;
             }
@@ -87,7 +97,7 @@
                 <li><a onclick="notice6()">&emsp;测试</a></li>
                 <li><a onclick="notice7()">&emsp;测试</a></li>
                 <li>&emsp;</li>
-                <li><a onclick="noticebefore()" id="main-before">&emsp;往期公告</a></li>
+                <li>&emsp;<a onclick="noticebefore()" id="main-before">往期公告</a></li>
             </ul>
             <script>
                 function notice1(){
@@ -121,19 +131,22 @@
         <div class="notice-content">
             <h2 id="notice-title">网友投稿</h2>
             <br>
-            <ul>
-                <li>
-                    <p id="content-body">
-                        &emsp;&emsp;测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试
-                    </p>
-                    <p id="content-body">
-                        &emsp;&emsp;测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试
-                    </p>
-                    <p id="content-author">作者</p>
-                </li>
-            </ul>
+            <div class="content-boss">
+                <ul>
+                    <li>
+                        <p id="content-body">
+                            &emsp;&emsp;测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试
+                        </p>
+                        <p id="content-body">
+                            &emsp;&emsp;测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试
+                        </p>
+                        <p id="content-author">作者</p>
+                    </li>
+                    <li style="border:3px solid red"><p style="text-align:center;color:red;background-color:#75aac8;">到底了</p></li>
+                </ul>
+            </div>
             <br>
-            &emsp;
+            &ensp;
             <a onclick="notice_after1()" style="font-family: 仿宋;background-color: #75aac8;">我想投稿</a>&emsp;
             <a onclick="notice_after2()" style="font-family:仿宋;background-color: #75aac8;">我想举报</a>&emsp;
             <a onclick="notice_after3()" style="font-family:仿宋;background-color: #75aac8;">我想开飞只因</a>&emsp;
