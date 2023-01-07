@@ -24,8 +24,23 @@
 }
 .leftside h1{
     text-align: center;
+    font-family: 楷体;
+}
+.content-body h1 {
+    text-align: center;
+    font-family: 楷体;
+}
+.content-body h3 {
+    text-align: center;
+    font-family: 楷体;
 }
 .content-body p{
     word-break: break-all;
     word-wrap: break-word;
+    font-family: 仿宋;
+}
+#author{
+    text-align: right;
+    font-size: x-large;
+    font-family: 楷体;
 }

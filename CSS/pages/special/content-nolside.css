@@ -1,0 +1,26 @@
+.content-body {
+    /*主内容框*/
+    overflow: hidden;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.content-body h1{
+    text-align: center;
+    font-family: 楷体;
+}
+.content-body h3{
+    text-align: center;
+    font-family: 楷体;
+}
+.content-body p {
+    word-break: break-all;
+    word-wrap: break-word;
+    font-family: 仿宋;
+}
+#author {
+    text-align: right;
+    font-size: x-large;
+    font-family: 楷体;
+}
