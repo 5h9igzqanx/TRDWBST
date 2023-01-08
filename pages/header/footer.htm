@@ -11,28 +11,28 @@
     <br>
     <p>
         无版权信息-
-        <a onclick="anzi()">我为什么必须备案？</a>
+        <a onclick="yqlj(3)">我为什么必须备案？</a>
     </p>
     <br>
     <p>
         Zhang&ensp;X&emsp;TRDWBST&emsp;托管平台:
-        <a onclick="yqlja()" style="text-decoration: none;color: black;">Github</a>
+        <a onclick="yqlj(1)" style="text-decoration: none;color: black;">Github</a>
     </p>
     <br>
     <p>
         联系方式:
-        <a onclick="yqljb()" style="text-decoration: none;color: black;">QQ&ensp;</a>
+        <a onclick="yqlj(2)" style="text-decoration: none;color: black;">QQ&ensp;</a>
         2109511809
     </p>
 </div><!--版权信息-->
 <script>
-    function anzi(){
-        top.location.href="https://baijiahao.baidu.com/s?id=1726710343051334212"//百度专题
-    }
-    function yqlja(){
-        top.location.href="https://www.github.com"//github网址
-    }
-    function yqljb(){
-        top.location.href="https://im.qq.com/index"//qq官网
+    function yqlj(a){
+        if(a == 1){
+            top.location.href="https://www.github.com"//github官网
+        }else if(a == 2){
+            top.location.href="https://im.qq.com/index"//qq官网
+        }else if(a == 3){
+            top.location.href="https://baijiahao.baidu.com/s?id=1726710343051334212"//百度专题
+        }
     }
 </script>

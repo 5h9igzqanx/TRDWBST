@@ -3,60 +3,58 @@
 <link rel="stylesheet" href="../../CSS/header/nav.css">
 <link rel="stylesheet" href="../../CSS/header/boss.css">
 <div class="nav-bs">
-    <div class="nav-logo"><a onclick="navtz0()"><img src="../../media/picture/LOGO.jpg"></a></div>
+    <div class="nav-logo"><a onclick="navtz(0)"><img src="../../media/picture/LOGO.jpg"></a></div>
     <div class="nav">
         <div class="nav-link">
-            <a onclick="navtza()">&emsp;专题</a>
-            <a onclick="navtzb()">&emsp;项目</a>
-            <a onclick="navtzc()">&emsp;玩</a>
-            <a onclick="navtzd()">&emsp;d</a>
+            <a onclick="navtz(1)">&emsp;专题</a>
+            <a onclick="navtz(2)">&emsp;项目</a>
+            <a onclick="navtz(3)">&emsp;玩</a>
+            <a onclick="navtz(4)">&emsp;d</a>
         </div>
         <!--<a href="">
             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
         </a>-->
         <div class="honglvdeng">
-            <a onclick="navan0()"><img src="../../media/picture/nav/nav-0.png"></a>
-            <a onclick="navan1()"><img src="../../media/picture/nav/nav-1.png"></a>
-            <a onclick="navan2()"><img src="../../media/picture/nav/nav-2.png"></a>
+            <a onclick="navan(0)"><img src="../../media/picture/nav/nav-0.png"></a>
+            <a onclick="navan(1)"><img src="../../media/picture/nav/nav-1.png"></a>
+            <a onclick="navan(2)"><img src="../../media/picture/nav/nav-2.png"></a>
         </div> 
     </div>
 </div>
 <script>
-    function navtz0(){
-        top.location.href="https://5h9igzqanx.github.io/TRDWBST/"
+    function navtz(a){
+        if(a == 0){
+            top.location.href="https://5h9igzqanx.github.io/TRDWBST/"
+        }else if(a == 1){
+            top.location.href="https://5h9igzqanx.github.io/TRDWBST/pages/pages/special/0/"
+        }else if(a == 2){
+            top.location.href="https://5h9igzqanx.github.io/TRDWBST/pages/pages/project/0/"
+        }else if(a == 3){
+            top.location.href="https://5h9igzqanx.github.io/TRDWBST/pages/pages/fun/0/"
+        }else if(a == 4){
+            alert("正在建造……")
+            alert("敬请期待……")
+            alert("你怎么还不走？")
+            alert("走吧")
+            alert("这里没东西了")
+            alert("你为什么还不走啊？")
+            alert("赶紧走，别在这碍事！")
+            alert("哎哟我的小祖宗哟，算我求你了，走吧")
+            alert("再不走我打你了啊")
+            alert("欸，这才是好孩子")
+            alert("再见啊")
+        }
     }
-    function navtza(){
-        top.location.href="https://5h9igzqanx.github.io/TRDWBST/pages/pages/special/0/"
-    }
-    function navtzb(){
-        top.location.href="https://5h9igzqanx.github.io/TRDWBST/pages/pages/project/0/"
-    }
-    function navtzc(){
-        top.location.href="https://5h9igzqanx.github.io/TRDWBST/pages/pages/fun/0/"
-    }
-    function navtzd(){
-        alert("正在建造……")
-        alert("敬请期待……")
-        alert("你怎么还不走？")
-        alert("走吧")
-        alert("这里没东西了")
-        alert("你为什么还不走啊？")
-        alert("赶紧走，别在这碍事！")
-        alert("哎哟我的小祖宗哟，算我求你了，走吧")
-        alert("再不走我打你了啊")
-        alert("欸，这才是好孩子")
-        alert("再见啊")
-    }
-    function navan0(){
-        alert("（关不掉）")
-    }
-    function navan1(){
-        alert("（不会最大化）")
-    }
-    function navan2(){
-        alert("（你觉得你很幽默？）")
-        alert("（鬼！）")
-        top.location.href="https://www.baidu.com"
+    function navan(a){
+        if(a == 0){
+            alert("（关不掉）")
+        }else if(a == 1){
+            alert("（不会最大化）")
+        }else if(a == 2){
+            alert("（你觉得你很幽默？）")
+            alert("（鬼！）")
+            top.location.href="https://www.baidu.com"
+        }
     }
     //草为什么js只支持绝对路径！！！
 </script>
