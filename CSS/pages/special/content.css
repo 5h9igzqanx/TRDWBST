@@ -44,6 +44,11 @@
     font-size: x-large;
     font-family: 楷体;
 }
+#Rdate {
+    text-align: right;
+    font-size: x-large;
+    font-family: "Comic Sans MS";
+}
 @media screen and (max-width:700px) {
 
     .leftside,.content-body {
