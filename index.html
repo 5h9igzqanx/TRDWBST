@@ -17,6 +17,8 @@
                 border-radius: 15px;
                 margin-left: 10px;
                 margin-right: 10px;
+                border: 2px dashed #75aac8;
+                cursor: pointer;
                 /* 公告栏轮播代码来自
                 “https://www.bilibili.com/video/BV1354y1k7gQ/?spm_id_from=333.337.search-card.all.click&vd_source=dc8bb826ff686b2200b9b618418072a3” 
                 */
@@ -130,6 +132,9 @@
                 padding-bottom: 4px;
                 overflow-y: auto;
             }
+            .lside-content p{
+                font-family: 微软雅黑;
+            }
             .content-body{
                 /* 主内容框 */
                 overflow: hidden;
@@ -137,6 +142,9 @@
                 margin-right: 10px;
                 padding-left: 3px;
                 padding-right: 2px;
+            }
+            .content-body p{
+                font-family: 仿宋;
             }
             .xing-fgx{
                 /* 分隔线(星星版) */
@@ -192,6 +200,7 @@
                 alert("看样子能用hhhh")
                 //临时加的，有公告了可以删除
             }
+            //======================================================================
             function lside_cnt(a){
                 //左栏里可以点的地方
                 if(a == 1){
@@ -199,8 +208,71 @@
                     top.location.href="https://5h9igzqanx.github.io/SCDWBST/"
                 }else if(a == 2){
                     top.location.href="https://5h9igzqanx.github.io/TRDWBST/pages/pages/special/notice/"
+                }else if(a == 3){
+                    top.location.href="https://baike.baidu.com/link?url=oltg6sRjk33IahWboyL2e5RC-kRDITwSfZ4lXfp7nEx6g2tATCGtTctx2JIttKBW1byx1l_8BZaCMwM6p0vh_rZ6Z6K_qsGWnz_gU1jNtyv89bKePp4W2DparWsLE76v"//倒计时点击前往
                 }
             }
+            //======================================================================
+            setInterval(function(){
+                //左栏时间部分
+                var date = new Date();
+                var year = date.getFullYear();
+                var month = date.getMonth() + 1;
+                var day = date.getDate();
+                var week = date.getDay();
+                week = "星期" + "日一二三四五六".charAt(week);
+                /*switch(week){
+                    case 1:
+                        week="星期一";
+                        break;
+                    case 2:
+                        week="星期二";
+                        break;
+                    case 3:
+                        week="星期三";
+                        break;
+                    case 4:
+                        week="星期四";
+                        break;
+                    case 5:
+                        week="星期五";
+                        break;
+                    case 6:
+                        week="星期六";
+                        break;
+                    case 0:
+                        week="星期日";
+                        break;
+                }*/
+                var hour = date.getHours();
+                hour = hour < 10 ? "0" + hour : hour;
+                var minute = date.getMinutes();
+                minute = minute < 10 ? "0" + minute : minute;
+                var second = date.getSeconds();
+                second = second < 10 ? "0" + second : second;
+                var currentTime1 = year + "年" + month + "月" + day + "日&emsp;&emsp;" + week;
+                var currentTime2 = hour + ":" + minute + ":" + second;
+                document.getElementById("lside-content-sj-date").innerHTML = currentTime1;
+                document.getElementById("lside-content-sj-time").innerHTML = currentTime2;
+            },50)
+            //======================================================================
+            setInterval(function(){
+                //左栏倒计时部分
+                var nowdate = new Date();//从1970年1月1日
+                var enddate = (new Date('2023-2-5 00:00:00')).getTime();//从1970年1月1日到倒计时结束的毫秒数(人话:时间戳)
+                var ms = enddate - nowdate;//剩余时间,但是毫秒
+                var seconds = ms/1000;//剩余时间,但是秒
+                var points = seconds/60;//剩余时间,但是分
+                var hours = points/60;//小时数
+                var days = hours/24;//天数
+                var tm = document.getElementById("lside-content-djs")//div标签的id
+                if(ms <= 0){
+                    tm.innerHTML = "时间到";//如果时间到就输出时间到
+                }else{
+                    tm.innerHTML = "<span style='color:yellow;'>" + Math.floor(days) + "</span> 天 <span style='color:yellow;'>" + Math.floor(hours%24) + "</span> 时 <span style='color:yellow;'>" + Math.floor(points%60) + "</span> 分 <span style='color:red;'>" + Math.floor(seconds%60) + "</span> 秒";//求余输出剩余时间,Math.floor()为保留整数
+                };//时间到不输出负数
+            },50)
+            //======================================================================
             function main_body(a){
                 //正文里可以点的地方
                 if(a == 1){
@@ -209,13 +281,16 @@
                     alert("小脚子黑坤露出来了吧，油饼食不食啊")
                 }else if(a == 3){
                     alert("114514")
+                    alert("1919810")
+                    //星星分隔线hhhh
                 }
             }
+            //======================================================================
         </script>
         <!-- 框架灵感来自
             “https://www.bilibili.com/video/BV1sG411x77z/?spm_id_from=333.337.search-card.all.click&vd_source=dc8bb826ff686b2200b9b618418072a3” 
         -->
-        <!-- 各位爬虫们,你们没必要白费力气爬我这依托西施了,这里没有什么好爬的,真没币摇! -->
+        <!-- 各位爬虫们,请高抬贵手,不要再白费力气爬我这依托西施了,这里没有什么好爬的,你们真闲着没事去爬隔壁啊,真没币摇! -->
     </head>
     <body bgcolor="cadeea">
         <iframe src="pages/header/nav.htm" width="100%" height="64px" frameborder="0" scrolling="no" style="position: fixed;z-index: 9999;"></iframe>
@@ -258,64 +333,88 @@
                 <h2 style="text-align:center">📣公告</h2>
                 <br>
                 <p>&emsp;&emsp;这里是我第三个网站，没错，我又开了一个。因为github不要钱hhhh，咱就相当于薅羊毛了</p>
-                <p>&emsp;&emsp;如果你看不惯，可以<a onclick="lside_cnt(1)" style="background-color: #75aac8;">回去</a>旧的网站</p>
-                <p><a onclick="lside_cnt(2)">&emsp;&emsp;<span style="background-color: #75aac8;">点击</span>查看更多来自网友投稿的的公告……</a></p>
+                <p>&emsp;&emsp;如果你看不惯，可以<a onclick="lside_cnt(1)" style="background-color: #75aac8;cursor: pointer;">回去</a>旧的网站</p>
+                <p><a onclick="lside_cnt(2)">&emsp;&emsp;<span style="background-color: #75aac8;cursor: pointer;">点击</span>查看更多来自网友投稿的的公告……</a></p>
+            </div>
+            <br>
+            <div class="lside-content" style="height:130px;">
+                <p style="text-align: center;font-size: large">现在是</p>
+                <div style="font-size: xx-large;text-align: center;padding: 10px;cursor: not-allowed;font-family: ZX-E-ComicSansMS;" id="lside-content-sj-time">00:00:00</div>
+                <div style="font-size: small;text-align: center;cursor: not-allowed;" id="lside-content-sj-date">----年--月--日&emsp;&emsp;星期--</div>
+                <!-- 代码来自
+                “https://www.jb51.net/article/252112.htm”
+                -->
             </div>
             <br>
             <div class="lside-content" style="height:110px;">
-                <p style="text-align: center;">距离&ensp;<span onclick="lside_content_djs_qianwang()" style="color: red;">除夕</span>&ensp;还剩</p>
+                <p style="text-align: center;">距离&ensp;<span onclick="lside_cnt(3)" style="color: red;cursor: help;" title="元宵节 的详情页面,点击前往">元宵节</span>&ensp;还剩</p>
                 <br>
-                <div style="text-align: center;font-size: x-large;" id="lside-content-djs"></div>
-                <script>
-                    setInterval(function(){
-                        var nowdate = new Date();//从1970年1月1日
-                        var enddate = (new Date('2023-1-21 00:00:00')).getTime();//从1970年1月1日到倒计时结束的毫秒数
-                        var ms = enddate - nowdate;//剩余时间,但是毫秒
-                        var seconds = ms/1000;//剩余时间,但是秒
-                        var points = seconds/60;//剩余时间,但是分
-                        var hours = points/60;//小时数
-                        var days = hours/24;//天数
-                        var tm = document.getElementById("lside-content-djs")//div标签的id
-                        if(ms <= 0){
-                            tm.innerHTML = "时间到";//如果时间到就输出时间到
-                        }else{
-                            tm.innerHTML = Math.floor(days) + "天" + Math.floor(hours%24) + "时" + Math.floor(points%60) + "分" + Math.floor(seconds%60) + "秒";//求余输出剩余时间,Math.floor()为保留整数
-                        };//时间到不输出负数
-                    },1000);//倒计时
-                    function lside_content_djs_qianwang(){
-                        top.location.href="https://www.miyoushe.com/ys/article/33731264"
-                    }//点击前往，但是没必要
-                </script>
+                <div style="text-align: center;font-size: x-large;cursor: not-allowed;" id="lside-content-djs">呃…嗯…吧嘶…</div>
                 <!-- 代码来自
                 “https://www.bilibili.com/video/BV1Yt4y1Q7Ff/?spm_id_from=333.337.search-card.all.click&vd_source=dc8bb826ff686b2200b9b618418072a3”
                 -->
             </div>
+            <br>
         </div>
         <div class="content-body">
-            <h2 onclick="main_body(1)">🎉Welcome!🎉</h2>
+            <h2 onclick="main_body(1)" style="cursor: help;">🎉Welcome!🎉</h2>
             <p>&emsp;&emsp;好的，咱也是觉得第二个网站太垃圾然后又换了好吧</p>
-            <p>&emsp;&emsp;欢迎过来！</p>
-            <p>&emsp;&emsp;这里有一些修工具和一些好玩的<span style="text-decoration: line-through;" onclick="main_body(2)">&ensp;ikun&ensp;</span>修游戏，反正就是做着玩的，就这些hhhh，看着玩吧</p>
+            <p>&emsp;&emsp;欢迎回来！</p>
+            <p>&emsp;&emsp;这里有一些修工具和一些好玩的<span style="text-decoration: line-through;cursor: not-allowed;" onclick="main_body(2)">&ensp;ikun&ensp;</span>修游戏，反正就是做着玩的，就这些hhhh，看着玩吧</p>
             <div class="xing-fgx">
-                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)"></div>
-                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)"></div>
-                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)"></div>
-                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)"></div>
-                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)"></div>
-                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)"></div>
-                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)"></div>
-                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)"></div>
-                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)"></div>
-                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)"></div>
-                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)"></div>
-                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)"></div>
-                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)"></div>
-                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
             </div>
             <br>
-            <p>
+            <details>
+                <summary style="font-family: 仿宋;cursor: pointer;" title="点击展开或收起，我不信有人喜欢看广告">&emsp;&emsp;比如我现在要在这依托答辩上面打一个答辩广告</summary>
+                <p style="text-align:center">你 被 骗 了</p>
+                <br>
+                <div style="border: 1px dashed #000;margin: 9px; padding: 2px;">
+                    <br>
+                    <h3 style="text-align:center;font-family:'Comic Sans MS'">Github</h3>
+                    <p style="text-align:center;color:rgb(0,0,0,0.6);font-family: ZX-C-Aa卑微的我喜欢遥远的你;font-size: small;">一个<span style="text-decoration: line-through;">垃圾</span><span style="font-weight:bold;color:black">专业</span>的代码托管平台</p>
+                    <br>
+                    <div style="height: 350px;">
+                        <img src="media/picture/fun/ad/idx-ad1-1.png" width="60%" style="border-radius: 15px;float: left;">
+                        <div style="overflow: hidden;padding: 10px;">
+                            <h3 style="text-align:left;font-family:楷体">&emsp;更慢</h3>
+                            <p>&emsp;&emsp;服务器总是死机，不挂加速器根本打不开，打开也是没css的<span style="font-family: ZX-C-汉仪文黑85W;font-weight:bold;color:#f00">依托答辩</span>，马勒戈壁的</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div style="height: 350px;">
+                        <div style="padding: 10px;float: left;width: /*calc(100vw - 325px - 11px - 0.8px)*/454px;">
+                            <h3 style="text-align:right;font-family:楷体">更悬&emsp;</h3>
+                            <p>&emsp;&emsp;页面服务总是吞文件，查的时候一看，诶，不能上传超过100M的文件，我辛苦做的视频他妈上传不了，真是<span style="text-decoration:line-through">操你妈</span></p>
+                            <p>&emsp;&emsp;本地存储库没写完的一堆bug的代码直接就他妈直接给我推送了，还他妈追不回来，难道朋友们的电脑你他妈能负责啊</p>
+                            <p>&emsp;&emsp;哦，还有嗷，我，不想在这个存储库存字体文件，另创了一个<span><a href="https://5h9igzqanx.github.io/fonts-wbst/" style="font-family: ZX-C-汉仪文黑85W;text-decoration: none;color: black;font-weight: 100;">存储库</a></span>，你他妈竟然还他妈不能使用字体！我真是<span style="text-decoration:line-through">操你妈操你妈操你妈操你妈操你妈操你妈操你妈操你妈操你妈操你妈</span></p>
+                        </div>
+                        <img src="media/picture/fun/ad/idx-ad1-2.png" width="60%" style="border-radius: 15px;float: right;text-align: right;display: inline;">
+                    </div>
+                    <br>
+                    <div style="height: 350px;">
+                        <div></div>
+                    </div>
+                    <h3 style="text-align:center;font-family:楷体">更危险</h3>
+                    <br>
+                </div>
+            </details>
+            <!--<p>
                 &emsp;&emsp;内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
-            </p><!-- 概念(占位符) -->
+            </p>--><!-- 概念(占位符) -->
         </div>
     </body>
     <footer>

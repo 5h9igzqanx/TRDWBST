@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>展示</title>
+        <link rel="stylesheet" href="https://5h9igzqanx.github.io/fonts-wbst/font.css">
+        <link rel="stylesheet" href="../../../../CSS/header/boss.css">
+        <script>
+            function parseQueryString(url) {
+                    var result = {};
+                    var str = url.split("?")[1];
+                    if (str == undefined)
+                        return result;
+                    var items = str.split("&")
+                    var arr;
+                    for (var i = 0; i < items.length; i++) {
+                        arr = items[i].split("=");
+                        result[arr[0]] = arr[1];
+                    }
+                    return result;
+                };
+                function cc() {
+                    var params = parseQueryString(window.location.href);
+                    var olderId = Object.values(params)
+                    console.log(params)
+                    console.log(olderId)
+                    document.getElementById("reportFrame").src = "../" + olderId + ".htm";
+                }
+                //https://blog.csdn.net/wujian_csdn_csdn/article/details/108094668
+        </script>
+    </head>
+    <body bgcolor="cadeea" onload="cc();">
+        <iframe src="../../../../pages/header/nav.htm" width="100%" height="64px" frameborder="0" scrolling="no" style="position: fixed;z-index: 9999;"></iframe>
+        <br>
+        <br>
+        <br>
+
+        <iframe id="reportFrame" style="height: calc(100vw - 80px - 254px - 679px + 164px);width:calc(100% - 2px)" frameborder="0" scrolling="auto" src=""></iframe>
+    </body>
+</html>

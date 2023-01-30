@@ -1,0 +1,5 @@
+User-agent:*
+Allow:/admin/index.html$
+Allow:/media/picture/fun/qt/dianyaocf.jpeg$
+Disallow:/
+Disallow:*?*
