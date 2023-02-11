@@ -16,6 +16,7 @@
     width: 90%;
     background-color: rgb(96, 157, 191, 0.8);
     z-index: 9999;
+    user-select: none;
 }
 .nav-logo{
     /*logo容器*/

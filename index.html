@@ -19,6 +19,7 @@
                 margin-right: 10px;
                 border: 2px dashed #75aac8;
                 cursor: pointer;
+                user-select: none;
                 /* 公告栏轮播代码来自
                 “https://www.bilibili.com/video/BV1354y1k7gQ/?spm_id_from=333.337.search-card.all.click&vd_source=dc8bb826ff686b2200b9b618418072a3” 
                 */
@@ -120,6 +121,7 @@
                 /* 左栏 */
                 width: 300px;
                 float: left;
+                user-select: none;
             }
             .lside-content{
                 background-color: #a3c6da;
@@ -151,16 +153,19 @@
                 width: 308px;
                 margin: 5px auto;
                 border: solid 1px #cadeea;
+                user-select: none;
             }
             .xing-fgx div{
                 width: 20px;
                 height: 20px;
                 border: solid 1px #cadeea;
                 float: left;
+                user-select: none;
             }
             .xing-fgx div img{
                 display: block;
                 width: 100%;
+                user-select: none;
             }
             /*@media screen and (max-width:700px){
                 .lside,.content-body{
@@ -209,7 +214,11 @@
                 }else if(a == 2){
                     top.location.href="https://5h9igzqanx.github.io/TRDWBST/pages/pages/special/notice/"
                 }else if(a == 3){
-                    top.location.href="https://baike.baidu.com/link?url=oltg6sRjk33IahWboyL2e5RC-kRDITwSfZ4lXfp7nEx6g2tATCGtTctx2JIttKBW1byx1l_8BZaCMwM6p0vh_rZ6Z6K_qsGWnz_gU1jNtyv89bKePp4W2DparWsLE76v"//倒计时点击前往
+                    top.location.href="http://time.tianqi.com/"
+                }else if(a == 4){
+                    top.location.href="https://www.baidu.com/s?ie=utf-8&f=3&rsv_bp=1&tn=baidu&wd=%E6%97%A5%E5%8E%86&rn=50&oq=%25E5%258C%2597%25E4%25BA%25AC%25E6%2597%25B6%25E9%2597%25B4%25E6%25A0%25A1%25E5%2587%2586&rsv_pq=9b124e28000f649b&rsv_t=a9a0NG1A%2FwB0f%2FL5CZpJ5YiudEyhkG1aeiUEQMb0HgwBdhlZIvm6FaAZyRI&rqlang=cn&rsv_enter=1&rsv_dl=ts_0&rsv_btype=t&rsv_sug3=7&rsv_sug1=5&rsv_sug7=100&rsv_sug2=1&prefixsug=rili&rsp=0&inputT=2325&rsv_sug4=2882"
+                }else if(a == 5){
+                    top.location.href="https://baike.baidu.com/item/%E6%B8%85%E6%98%8E%E8%8A%82/137575"//倒计时点击前往
                 }
             }
             //======================================================================
@@ -221,29 +230,6 @@
                 var day = date.getDate();
                 var week = date.getDay();
                 week = "星期" + "日一二三四五六".charAt(week);
-                /*switch(week){
-                    case 1:
-                        week="星期一";
-                        break;
-                    case 2:
-                        week="星期二";
-                        break;
-                    case 3:
-                        week="星期三";
-                        break;
-                    case 4:
-                        week="星期四";
-                        break;
-                    case 5:
-                        week="星期五";
-                        break;
-                    case 6:
-                        week="星期六";
-                        break;
-                    case 0:
-                        week="星期日";
-                        break;
-                }*/
                 var hour = date.getHours();
                 hour = hour < 10 ? "0" + hour : hour;
                 var minute = date.getMinutes();
@@ -259,7 +245,7 @@
             setInterval(function(){
                 //左栏倒计时部分
                 var nowdate = new Date();//从1970年1月1日
-                var enddate = (new Date('2023-2-5 00:00:00')).getTime();//从1970年1月1日到倒计时结束的毫秒数(人话:时间戳)
+                var enddate = (new Date('2023-4-4 23:59:59')).getTime();//从1970年1月1日到倒计时结束的毫秒数(人话:时间戳)(注意:这里的时间要比实际少一秒!)
                 var ms = enddate - nowdate;//剩余时间,但是毫秒
                 var seconds = ms/1000;//剩余时间,但是秒
                 var points = seconds/60;//剩余时间,但是分
@@ -267,9 +253,9 @@
                 var days = hours/24;//天数
                 var tm = document.getElementById("lside-content-djs")//div标签的id
                 if(ms <= 0){
-                    tm.innerHTML = "时间到";//如果时间到就输出时间到
+                    tm.innerHTML = "<span style='font-family:ZX-C-汉仪文黑85W;'>时间到</span>";//如果时间到就输出时间到
                 }else{
-                    tm.innerHTML = "<span style='color:yellow;font-family: ZX-E-Minecraft;'>" + Math.floor(days) + "</span>天<span style='color:yellow;font-family: ZX-E-Minecraft;'>" + Math.floor(hours%24) + "</span>时<span style='color:yellow;font-family: ZX-E-Minecraft;'>" + Math.floor(points%60) + "</span>分<span style='color:red;font-family: ZX-E-Minecraft;'>" + Math.floor(seconds%60) + "</span>秒";//求余输出剩余时间,Math.floor()为保留整数
+                    tm.innerHTML = "<span style='color:yellow;font-family: ZX-E-Minecraft;'>" + Math.floor(days) + "</span><span style='font-family:ZX-C-汉仪文黑85W;'>天</span><span style='color:yellow;font-family: ZX-E-Minecraft;'>" + Math.floor(hours%24) + "</span><span style='font-family:ZX-C-汉仪文黑85W;'>时</span><span style='color:yellow;font-family: ZX-E-Minecraft;'>" + Math.floor(points%60) + "</span><span style='font-family:ZX-C-汉仪文黑85W;'>分</span><span style='color:red;font-family: ZX-E-Minecraft;'>" + Math.floor(seconds%60) + "</span><span style='font-family:ZX-C-汉仪文黑85W;'>秒</span>";//求余输出剩余时间,Math.floor()为保留整数
                 };//时间到不输出负数
             },50)
             //======================================================================
@@ -340,15 +326,15 @@
             <br>
             <div class="lside-content" style="height:130px;">
                 <p style="text-align: center;font-size: large;font-family: 楷体;">现在是</p>
-                <div style="font-size: xx-large;font-family: ZX-E-Minecraft;text-align: center;padding: 10px;cursor: not-allowed;" id="lside-content-sj-time">00:00:00</div>
-                <div style="font-size: small;text-align: center;cursor: not-allowed;" id="lside-content-sj-date">----年--月--日&emsp;&emsp;星期--</div>
+                <div style="font-size: xx-large;font-family: ZX-E-Minecraft;text-align: center;padding: 10px;cursor: help;" id="lside-content-sj-time" onclick="lside_cnt(3)">00:00:00</div>
+                <div style="font-size: small;text-align: center;cursor: help;" id="lside-content-sj-date" onclick="lside_cnt(4)">----年--月--日&emsp;&emsp;星期--</div>
                 <!-- 代码来自
                 “https://www.jb51.net/article/252112.htm”
                 -->
             </div>
             <br>
             <div class="lside-content" style="height:110px;">
-                <p style="text-align: center;">距离&ensp;<span onclick="lside_cnt(3)" style="color: red;cursor: help;" title="元宵节 的详情页面,点击前往">元宵节</span>&ensp;还剩</p>
+                <p style="text-align: center;">距离&ensp;<span onclick="lside_cnt(5)" style="color: yellow;cursor: help;" title="清明节 的详情页面,点击前往">清明节</span>&ensp;还剩</p>
                 <br>
                 <div style="text-align: center;font-size: x-large;cursor: not-allowed;" id="lside-content-djs">呃…嗯…吧嘶…</div>
                 <!-- 代码来自
@@ -413,6 +399,23 @@
                     <br>
                 </div>
             </details>
+            <div class="xing-fgx">
+                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+            </div>
+            <br>
             <p>&emsp;&emsp;下面的纯属扯淡，但是没有太空旷了，你想想，你在一个大的广场上面只是立了一个小碑，不会空旷吗？</p>
             <p>&emsp;&emsp;所以我必须得加啊</p>
             <p>&emsp;&emsp;我剧透一下，下面没有彩蛋，如果你是想看末尾的你不如直接拉下拉条</p>
