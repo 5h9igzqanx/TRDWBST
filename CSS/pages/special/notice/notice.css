@@ -10,6 +10,14 @@
     font-family: ZX-C-汉仪文黑85W;
     user-select: none;
 }
+.author{
+    padding-left: 50px;
+    text-align: left;
+    font-size: large;
+    font-family: ZX-C-汉仪文黑85W;
+    user-select: none;
+    color: rgb(0,0,0,0.6);
+}
 .state{
     padding-left: 50px;
     text-align: left;
@@ -18,3 +26,5 @@
     color: rgb(0,0,0,0.5);
     user-select: none;
 }
+.sp-linethrouge         {text-decoration: line-through;color: rgb(0,0,0,0.5);}
+.sp-underline           {text-decoration: underline red;}
