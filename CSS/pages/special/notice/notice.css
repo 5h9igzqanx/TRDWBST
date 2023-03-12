@@ -1,0 +1,20 @@
+.content{
+    text-align: center;
+    font-family: ZX-C-Aa卑微的我喜欢遥远的你;
+    font-weight: bold;
+}
+.title{
+    padding-left: 50px;
+    text-align: left;
+    font-size: xx-large;
+    font-family: ZX-C-汉仪文黑85W;
+    user-select: none;
+}
+.state{
+    padding-left: 50px;
+    text-align: left;
+    font-weight: bold;
+    font-family: 仿宋;
+    color: rgb(0,0,0,0.5);
+    user-select: none;
+}

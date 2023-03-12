@@ -2,7 +2,7 @@
     /*padding: 10px;*/
     text-align: center;
     background-color: #609dbf;
-    width: 100%;
+    width: 100vw;
     height: 150px;
     user-select: none;
 }
