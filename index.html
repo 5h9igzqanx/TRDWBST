@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
     <head>
         <meta charset="utf-8">
         <title>我第三个网站 - Zhang X</title>
@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="https://5h9igzqanx.github.io/fonts-wbst/font.css">
         <link rel="stylesheet" href="CSS/header/boss.css">
         <style>
+            /* 比较多余的傻逼css——我不想看到加载css之前的html的土老帽样子,服了操 */
             .notice{
                 /* 大公告栏 */
                 background-color: #a3c6da;
@@ -15,10 +16,10 @@
                 width: 1499px;
                 text-align: center;
                 border-radius: 15px;
-                margin-left: 10px;
-                margin-right: 10px;
+                margin: 0px auto;
                 border: 2px dashed #75aac8;
                 cursor: pointer;
+                -webkit-user-select: none;
                 user-select: none;
                 /* 公告栏轮播代码来自
                 “https://www.bilibili.com/video/BV1354y1k7gQ/?spm_id_from=333.337.search-card.all.click&vd_source=dc8bb826ff686b2200b9b618418072a3” 
@@ -121,7 +122,9 @@
                 /* 左栏 */
                 width: 300px;
                 float: left;
+                -webkit-user-select: none;
                 user-select: none;
+                /* Safari你为什么不兼容啊,鲨了你!*/
             }
             .lside-content{
                 background-color: #a3c6da;
@@ -153,6 +156,7 @@
                 width: 308px;
                 margin: 5px auto;
                 border: solid 1px #cadeea;
+                -webkit-user-select: none;
                 user-select: none;
             }
             .xing-fgx div{
@@ -160,11 +164,13 @@
                 height: 20px;
                 border: solid 1px #cadeea;
                 float: left;
+                -webkit-user-select: none;
                 user-select: none;
             }
             .xing-fgx div img{
                 display: block;
                 width: 100%;
+                -webkit-user-select: none;
                 user-select: none;
             }
             /*@media screen and (max-width:700px){
@@ -174,6 +180,7 @@
             }*//*弃用*/
         </style>
         <script>
+            //比较多余的勾丝——瘠薄全是“此网页显示”,服了操
             function noticeqw(a){
                 //大公告栏点击前往
                 if(a == 1){
@@ -281,7 +288,7 @@
         <!-- 流氓给爷爬! -->
     </head>
     <body bgcolor="cadeea">
-        <iframe src="pages/header/nav.htm" width="100%" height="64px" frameborder="0" scrolling="no" style="position: fixed;z-index: 9999;"></iframe>
+        <iframe src="pages/header/nav.htm" title="nav" width="100%" height="64px" frameborder="0" scrolling="no" style="position: fixed;z-index: 9999;"></iframe>
         <br class="nav-br">
         <br class="nav-br">
         <br class="nav-br">
@@ -316,6 +323,7 @@
             </ul>
         </div>
         <br class="nav-br">
+        <!-- 我操你妈,我凭什么非得把样式写在css文件里?我操你妈 -->
         <div class="lside">
             <div class="lside-content" style="height:280px;">
                 <h2 style="text-align:center;font-family: ZX-C-汉仪文黑85W;">📣公告</h2>
@@ -428,6 +436,6 @@
         </div>
     </body>
     <footer>
-        <iframe src="pages/header/footer.htm" width="100%" height="250px" frameborder="0" scrolling="no"></iframe>
+        <iframe src="pages/header/footer.htm" title="footer" height="250px" style="margin: 0px auto;width:calc(100vw - 17px)" frameborder="0" scrolling="no"></iframe>
     </footer>
 </html>

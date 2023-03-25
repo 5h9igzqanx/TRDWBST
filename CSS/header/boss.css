@@ -1,7 +1,13 @@
 * {
     margin: 0;
     padding: 0;
+    
+    /* filter: grayscale(1);1 *//* 网页黑白 */
 }
 .nav-br{
+    -webkit-user-select: none;
     user-select: none;
+}
+footer iframe{
+    width: 100vw;
 }

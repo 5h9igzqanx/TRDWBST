@@ -4,6 +4,7 @@
     background-color: #609dbf;
     width: 100vw;
     height: 150px;
+    -webkit-user-select: none;
     user-select: none;
 }
 .footer p{
