@@ -4,6 +4,9 @@
     
     /* filter: grayscale(1);1 *//* 网页黑白 */
 }
+body{
+    background-color:#cadeea;
+}
 .nav-br{
     -webkit-user-select: none;
     user-select: none;
