@@ -177,7 +177,7 @@
             }*//*弃用*/
         </style>
         <script>
-            //比较多余的勾丝——瘠薄全是“此网页显示”,服了操
+            //比较多余的勾丝——瘠薄全是“显示”,服了操
             function noticeqw(a){
                 //大公告栏点击前往
                 if(a == 1){
@@ -224,7 +224,12 @@
                 }else if(a == 5){
                     top.location.href="https://www.baidu.com/s?ie=utf-8&f=3&rsv_bp=1&tn=baidu&wd=%E6%97%A5%E5%8E%86&rn=50&oq=%25E5%258C%2597%25E4%25BA%25AC%25E6%2597%25B6%25E9%2597%25B4%25E6%25A0%25A1%25E5%2587%2586&rsv_pq=9b124e28000f649b&rsv_t=a9a0NG1A%2FwB0f%2FL5CZpJ5YiudEyhkG1aeiUEQMb0HgwBdhlZIvm6FaAZyRI&rqlang=cn&rsv_enter=1&rsv_dl=ts_0&rsv_btype=t&rsv_sug3=7&rsv_sug1=5&rsv_sug7=100&rsv_sug2=1&prefixsug=rili&rsp=0&inputT=2325&rsv_sug4=2882"
                 }else if(a == 6){
-                    top.location.href="https://baike.baidu.com/item/%E4%BA%94%E4%B8%80%E5%9B%BD%E9%99%85%E5%8A%B3%E5%8A%A8%E8%8A%82/810559?fromtitle=%E5%8A%B3%E5%8A%A8%E8%8A%82&fromid=128047"//倒计时点击前往
+                    top.location.href="https://baike.baidu.com/item/%E7%AB%AF%E5%8D%88%E8%8A%82/1054"//倒计时点击前往
+                }else if(a == 7){
+                    alert("我要关了嗷")
+                    var elem = document.getElementById('lside-content-ad');
+                    elem.parentNode.removeChild(elem);
+                    setTimeout('alert("关了嗷")',1)//广告关闭,为了应付
                 }
             }
             //======================================================================
@@ -251,7 +256,7 @@
             setInterval(function(){
                 //左栏倒计时部分
                 var nowdate = new Date();//从1970年1月1日
-                var enddate = (new Date('2023-4-30 23:59:59')).getTime();//从1970年1月1日到倒计时结束的毫秒数(人话:时间戳)(注意:这里的时间要比实际少一秒!)
+                var enddate = (new Date('2023-6-21 23:59:59')).getTime();//从1970年1月1日到倒计时结束的毫秒数(人话:时间戳)(注意:这里的时间要比实际少一秒!)
                 var ms = enddate - nowdate;//剩余时间,但是毫秒
                 var seconds = ms/1000;//剩余时间,但是秒
                 var points = seconds/60;//剩余时间,但是分
@@ -296,7 +301,7 @@
     </head>
     <body bgcolor="cadeea">
         <iframe src="pages/header/nav.htm" title="nav" width="100%" height="64px" frameborder="0" scrolling="no" style="position: fixed;z-index: 9999;"></iframe>
-        <br class="nav-br">
+        <p style="color:#cadeea;user-select: none;">你为什么能看见这句话？快关掉F12!</p>
         <br class="nav-br">
         <br class="nav-br">
         <br class="nav-br">
@@ -341,6 +346,17 @@
                 <p>遇到问题了？<a onclick="lside_cnt(3)"><span style="background-color: #75aac8;cursor: pointer;"></span>反馈</a></p>
             </div>
             <br>
+            <div class="lside-content" style="height:300px;">
+                <h2 style="text-align:center;font-family: ZX-C-汉仪文黑85W;">📜目录</h2>
+                <br>
+                <ul style="width:200px;float: left;">
+                    <li><a href="#SP1">🎉Welcome🎉</a></li>
+                    <li><a href="#SP2">😅广告</a></li>
+                </ul>
+                
+                
+            </div>
+            <br>
             <div class="lside-content" style="height:130px;">
                 <p style="text-align: center;font-size: large;font-family: 楷体;">现在是</p>
                 <div style="font-size: xx-large;font-family: ZX-E-Minecraft;text-align: center;padding: 10px;cursor: help;" id="lside-content-sj-time" onclick="lside_cnt(4)">00:00:00</div>
@@ -351,7 +367,7 @@
             </div>
             <br>
             <div class="lside-content" style="height:110px;">
-                <p style="text-align: center;">距离&ensp;<span onclick="lside_cnt(6)" style="color: yellow;cursor: help;" title="劳动节 的详情页面,点击前往">劳动节</span>&ensp;还剩</p>
+                <p style="text-align: center;">距离&ensp;<span onclick="lside_cnt(6)" style="color: yellow;cursor: help;" title="端午节 的详情页面,点击前往">端午节</span>&ensp;还剩</p>
                 <br>
                 <div style="text-align: center;font-size: x-large;cursor: not-allowed;" id="lside-content-djs">呃…嗯…吧嘶…</div>
                 <!-- 代码来自
@@ -359,7 +375,7 @@
                 -->
             </div>
             <br>
-            <div class="lside-content" style="height:480px;">
+            <div class="lside-content" style="height:480px;" id="lside-content-ad">
                 <div class="lside-content-ad">
                     <p style="background-color:red;color:white;">
                         &ensp;
@@ -367,7 +383,7 @@
                         &ensp;
                         <span>flesh旧推荐</span>
                         &emsp;&emsp;&emsp;&emsp;&ensp;
-                        <span style="font-family: ZX-O-IMG-FontAwesome;text-align: right;">&#61453;</span>
+                        <span style="font-family: ZX-O-IMG-FontAwesome;text-align: right;" onclick="lside_cnt(7)">&#61453;</span>
                     </p>
                     <ul>
                         <li>
@@ -501,11 +517,12 @@
             <br class="nav-br">
         </div>
         <div class="content-body">
-            <h2 onclick="main_body(1)" style="cursor: help;">🎉Welcome!🎉</h2>
-            <p>&emsp;&emsp;好的，咱也是觉得第二个网站太垃圾然后又换了好吧</p>
-            <p>&emsp;&emsp;欢迎回来！</p>
-            <p>&emsp;&emsp;这里有一些修工具和一些好玩的<span style="text-decoration: line-through;cursor: not-allowed;" onclick="main_body(2)">&ensp;ikun&ensp;</span>修游戏，反正就是做着玩的，就这些hhhh，看着玩吧</p>
-            <div class="xing-fgx">
+            <section name="SP1" id="SP1">
+                <h2 onclick="main_body(1)" style="cursor: help;">🎉Welcome!🎉</h2>
+                <p>&emsp;&emsp;好的，咱也是觉得第二个网站太垃圾然后又换了好吧</p>
+                <p>&emsp;&emsp;欢迎回来！</p>
+                <p>&emsp;&emsp;这里有一些修工具和一些好玩的<span style="text-decoration: line-through;cursor: not-allowed;" onclick="main_body(2)">&ensp;ikun&ensp;</span>修游戏，反正就是做着玩的，就这些hhhh，看着玩吧</p>
+                <div class="xing-fgx">
                 <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
                 <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
                 <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
@@ -520,59 +537,64 @@
                 <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
                 <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
                 <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
-            </div>
-            <br class="nav-br">
-            <details style="user-select: none;">
-                <summary style="cursor: pointer;" title="点击展开或收起，我不信有人喜欢看广告"><span style="font-family: 仿宋;">&emsp;比如我现在要在这依托答辩上面打一个答辩</span><h2>😅广告</h2></summary>
-                <p style="text-align:center">你 被 骗 了</p>
-                <br>
-                <div style="border: 1px dashed #000;margin: 9px; padding: 2px;">
-                    <br>
-                    <h3 style="text-align:center;font-family:'Comic Sans MS'">Github</h3>
-                    <p style="text-align:center;color:rgb(0,0,0,0.6);font-family: ZX-C-Aa卑微的我喜欢遥远的你;font-size: small;">一个<span style="text-decoration: line-through;">垃圾</span><span style="font-weight:bold;color:black">专业</span>的代码托管平台</p>
-                    <br>
-                    <div style="height: 350px;">
-                        <img src="media/picture/fun/ad/idx-ad1-1.png" width="60%" style="border-radius: 15px;float: left;">
-                        <div style="overflow: hidden;padding: 10px;">
-                            <h3 style="text-align:left;font-family:楷体">&emsp;更慢</h3>
-                            <p>&emsp;&emsp;服务器总是gg，不挂加速器根本打不开，打开也是没css的<span style="font-family: ZX-C-汉仪文黑85W;font-weight:bold;color:#f00">依托答辩</span>，马勒戈壁的</p>
-                        </div>
-                    </div>
-                    <br>
-                    <div style="height: 350px;">
-                        <div style="padding: 10px;float: left;width: /*calc(100vw - 325px - 11px - 0.8px)*/454px;">
-                            <h3 style="text-align:right;font-family:楷体">更悬&emsp;</h3>
-                            <p>&emsp;&emsp;页面服务总是吞文件，查的时候一看，诶，不能上传超过100M的文件，我辛苦做的视频他妈上传不了，真是<span style="text-decoration:line-through">操你妈</span></p>
-                            <p>&emsp;&emsp;本地存储库没写完的一堆bug的代码直接就他妈直接给我推送了，还他妈追不回来，难道朋友们的电脑你他妈能负责啊</p>
-                            <p>&emsp;&emsp;哦，还有嗷，我不想在这个存储库存字体文件，另创了一个<span><a href="https://5h9igzqanx.github.io/fonts-wbst/" style="font-family: ZX-C-汉仪文黑85W;text-decoration: none;color: black;font-weight: 100;">存储库</a></span>，你他妈竟然还他妈不能使用那里的字体！我对照着css文件搞了大半夜，真是<span style="text-decoration:line-through">操你妈操你妈操你妈操你妈操你妈操你妈操你妈操你妈操你妈操你妈</span></p>
-                        </div>
-                        <img src="media/picture/fun/ad/idx-ad1-2.png" width="60%" style="border-radius: 15px;float: right;text-align: right;display: inline;">
-                    </div>
-                    <br>
-                    <div style="height: 350px;">
-                        <div></div>
-                    </div>
-                    <h3 style="text-align:center;font-family:楷体">更危险</h3>
-                    <br>
                 </div>
-            </details>
-            <div class="xing-fgx">
-                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
-                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
-                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
-                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
-                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
-                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
-                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
-                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
-                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
-                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
-                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
-                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
-                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
-                <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
-            </div>
-            <br>
+            </section>
+            <br class="nav-br">
+            <section name="SP2" id="SP2">
+                <details style="user-select: none;">
+                    <summary style="cursor: pointer;" title="点击展开或收起，我不信有人喜欢看广告"><span style="font-family: 仿宋;">&emsp;比如我现在要在这依托答辩上面打一个答辩</span><h2>😅广告</h2></summary>
+                    <p style="text-align:center">你 被 骗 了</p>
+                    <br>
+                    <div style="border: 1px dashed #000;margin: 9px; padding: 2px;">
+                        <br>
+                        <h3 style="text-align:center;font-family:'Comic Sans MS'">Github</h3>
+                        <p style="text-align:center;color:rgb(0,0,0,0.6);font-family: ZX-C-Aa卑微的我喜欢遥远的你;font-size: small;">一个<span style="text-decoration: line-through;">垃圾</span><span style="font-weight:bold;color:black">专业</span>的代码托管平台</p>
+                        <br>
+                        <div style="height: 350px;">
+                            <img src="media/picture/fun/ad/idx-ad1-1.png" width="60%" style="border-radius: 15px;float: left;">
+                            <div style="overflow: hidden;padding: 10px;">
+                                <h3 style="text-align:left;font-family:楷体">&emsp;更慢</h3>
+                                <p>&emsp;&emsp;服务器总是gg，不挂加速器根本打不开，打开也是没css的<span style="font-family: ZX-C-汉仪文黑85W;font-weight:bold;color:#f00">依托答辩</span>，马勒戈壁的</p>
+                            </div>
+                        </div>
+                        <br>
+                        <div style="height: 350px;">
+                            <div style="padding: 10px;float: left;width: /*calc(100vw - 325px - 11px - 0.8px)*/454px;">
+                                <h3 style="text-align:right;font-family:楷体">更悬&emsp;</h3>
+                                <p>&emsp;&emsp;页面服务总是吞文件，查的时候一看，诶，不能上传超过100M的文件，我辛苦做的视频他妈上传不了，真是<span style="text-decoration:line-through">操你妈</span></p>
+                                <p>&emsp;&emsp;本地存储库没写完的一堆bug的代码直接就他妈直接给我推送了，还他妈追不回来，难道朋友们的电脑你他妈能负责啊</p>
+                                <p>&emsp;&emsp;哦，还有嗷，我不想在这个存储库存字体文件，另创了一个<span><a href="https://5h9igzqanx.github.io/fonts-wbst/" style="font-family: ZX-C-汉仪文黑85W;text-decoration: none;color: black;font-weight: 100;">存储库</a></span>，你他妈竟然还他妈不能使用那里的字体！我对照着css文件搞了大半夜，真是<span style="text-decoration:line-through">操你妈操你妈操你妈操你妈操你妈操你妈操你妈操你妈操你妈操你妈</span></p>
+                            </div>
+                            <img src="media/picture/fun/ad/idx-ad1-2.png" width="60%" style="border-radius: 15px;float: right;text-align: right;display: inline;">
+                        </div>
+                        <br>
+                        <div style="height: 350px;">
+                            <div></div>
+                        </div>
+                        <h3 style="text-align:center;font-family:楷体">更危险</h3>
+                        <br>
+                    </div>
+                    <video src="https://5h9igzqanx.github.io/SCDWBST/MEDIA/videos/diao/rickroll.mp4" style="text-align: center;"></video>
+                </details>
+                <div class="xing-fgx">
+                    <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                    <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                    <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                    <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                    <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                    <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                    <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                    <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                    <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                    <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                    <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                    <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                    <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                    <div><img src="media/picture/fun/qt/xing.png" onclick="main_body(3)" alt="屮"></div>
+                </div>
+            </section>
+            <br class="nav-br">
+            <section></section>
             <p>&emsp;&emsp;下面的纯属扯淡，但是没有太空旷了，你想想，你在一个大的广场上面只是立了一个小碑，不会空旷吗？</p>
             <p>&emsp;&emsp;所以我必须得加啊</p>
             <p>&emsp;&emsp;我剧透一下，下面没有彩蛋，如果你是想看末尾的你不如直接拉下拉条</p>
