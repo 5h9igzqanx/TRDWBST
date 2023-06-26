@@ -9,6 +9,10 @@
         <link rel="stylesheet" href="https://5h9igzqanx.github.io/TRDWBST/CSS/header/boss.css">
         <style>
             /* 比较多余的傻逼css——我不想看到加载css之前的html的土老帽样子,服了操 */
+            *{
+                margin: 0;
+                padding: 0;
+            }
             .notice{
                 /* 大公告栏 */
                 background-color: #a3c6da;
@@ -170,11 +174,14 @@
                 -webkit-user-select: none;
                 user-select: none;
             }
-            /*@media screen and (max-width:700px){
-                .lside,.content-body{
-                    width: 100%;
+            /*@media screen and (250px <=width <=500px){
+                .lside,.notice,footer{
+                    display: none;
                 }
-            }*//*弃用*/
+                .content-body{
+                    width: 100vw;
+                }
+            }*/
         </style>
         <script>
             //比较多余的勾丝——瘠薄全是“显示”,服了操
@@ -280,13 +287,27 @@
                     alert("114514")
                     alert("1919810")
                     //星星分隔线hhhh(你也是homo)
+                }else if(a == 4){
+                    alert("佛祖感受到了你的虔诚")
+                    alert("你的功德+5")
+                }else if(a == 5){
+                    function fozuzhenjing(){
+                        document.getElementById("fozubiaoqing").innerHTML = "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(|&ensp;0_0&ensp;|)";
+                    }
+                    function fozuhuanhuiqule(){
+                        document.getElementById("fozubiaoqing").innerHTML = "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(|&ensp;-_-&ensp;|)";
+                    }
+                    fozuzhenjing()
+                    alert("佛祖感受到了你的虔诚，祂极为震惊")
+                    setTimeout('alert("你的功德+114514")',1000)
+                    fozuhuanhuiqule()
                 }
             }
             //======================================================================
             setInterval(function(){
                 //依托答辩
-                console.log("114514");
-                console.log("1919810");
+                //console.log("114514");
+                //console.log("1919810");
             },0.000005)
             //======================================================================
         </script>
@@ -353,6 +374,8 @@
                 <div class="directory">
                     <p><a href="#SP1">· Welcome</a></p>
                     <p><a href="#SP2">· 广告</a></p>
+                    <p><a href="#SP3">· 参拜佛祖</a></p>
+                    <p><a href="#SPlaomo">· 扯淡</a></p>
                 </div>
                 <style>
                     .directory{
@@ -528,7 +551,7 @@
         </div>
         <div class="content-body">
             <section name="SP1" id="SP1">
-                <h2 onclick="main_body(1)" style="cursor: help;">🎉Welcome!🎉</h2>
+                <h2 onclick="main_body(1)" style="cursor: help;">Welcome!🎉</h2>
                 <p>&emsp;&emsp;好的，咱也是觉得第二个网站太垃圾然后又换了好吧</p>
                 <p>&emsp;&emsp;欢迎回来！</p>
                 <p>&emsp;&emsp;这里有一些修工具和一些好玩的<span style="text-decoration: line-through;cursor: not-allowed;" onclick="main_body(2)">&ensp;ikun&ensp;</span>修游戏，反正就是做着玩的，就这些hhhh，看着玩吧</p>
@@ -552,7 +575,7 @@
             <br class="nav-br">
             <section name="SP2" id="SP2">
                 <details style="user-select: none;">
-                    <summary style="cursor: pointer;" title="点击展开或收起，我不信有人喜欢看广告"><span style="font-family: 仿宋;">&emsp;比如我现在要在这依托答辩上面打一个答辩</span><h2>😅广告</h2></summary>
+                    <summary style="cursor: pointer;" title="点击展开或收起，我不信有人喜欢看广告"><span style="font-family: 仿宋;">&emsp;比如我现在要在这依托答辩上面打一个答辩</span><h2>广告😅</h2></summary>
                     <p style="text-align:center">你 被 骗 了</p>
                     <br>
                     <div style="border: 1px dashed #000;margin: 9px; padding: 2px;">
@@ -604,15 +627,37 @@
                 </div>
             </section>
             <br class="nav-br">
-            <section name="SP3" id="SP3"></section>
+            <section name="SP3" id="SP3">
+                <h2>参拜佛祖</h2>
+                <p>&emsp;&emsp;OK呀，也是把赛博佛祖请过来了好吧</p>
+                <p>&emsp;&emsp;你知道要做什么了吧</p>&ensp;
+                <p style="font-family: ZX-E-FiraCode;">
+                    <p style="font-family: 宋体;user-select: none;cursor: help;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;_oo0oo_</p>
+                    <p style="font-family: 宋体;user-select: none;cursor: help;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;o8888888o</p>
+                    <p style="font-family: 宋体;user-select: none;cursor: help;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;88"&ensp;.&ensp;"88</p>
+                    <p style="font-family: 宋体;user-select: none;cursor: help;" id="fozubiaoqing">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(|&ensp;-_-&ensp;|)</p>
+                    <p style="font-family: 宋体;user-select: none;cursor: help;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;0\&emsp;=&emsp;/0</p>
+                    <p style="font-family: 宋体;user-select: none;cursor: help;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;____/`---'\____</p>
+                    <p style="font-family: 宋体;user-select: none;cursor: help;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;.'&emsp;\\|&emsp;&emsp;&ensp;|//&emsp;`.</p>
+                    <p style="font-family: 宋体;user-select: none;cursor: help;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;/&emsp;\\|||&emsp;:&emsp;|||//&emsp;\</p>
+                    <p style="font-family: 宋体;user-select: none;cursor: help;">&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;/&emsp;_|||||&ensp;-:-&ensp;|||||-&emsp;\</p>
+                    <p style="font-family: 宋体;user-select: none;cursor: help;">&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;|&emsp;&ensp;|&emsp;&ensp;\\\-///&emsp;&ensp;|&emsp;&ensp;|</p>
+                    <p style="font-family: 宋体;user-select: none;cursor: help;">&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;|&ensp;\_|&emsp;''\---/''&emsp;|&emsp;&ensp;|</p>
+                    <p style="font-family: 宋体;user-select: none;cursor: help;">&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;\&emsp;.-\__&emsp;`-`&emsp;__/-.&emsp;/</p>
+                    <p style="font-family: 宋体;user-select: none;cursor: help;">&emsp;&emsp;&emsp;&emsp;&ensp;___`.&ensp;.'&emsp;/--.--\&emsp;&emsp;`.&ensp;.&ensp;__</p>
+                    <p style="font-family: 宋体;user-select: none;cursor: help;">&emsp;&emsp;&emsp;.""&ensp;'<&emsp;`.___\_<|>_/___.'&emsp;&emsp;>'"".</p>
+                    <p style="font-family: 宋体;user-select: none;cursor: help;">&emsp;&emsp;&ensp;|&ensp;|&ensp;:&emsp;`-&ensp;\`.;`\&ensp;_&ensp;/`;.`/-&ensp;`&emsp;:&ensp;|&ensp;|</p>
+                    <p style="font-family: 宋体;user-select: none;cursor: help;">&emsp;&emsp;&ensp;\&emsp;\&emsp;&emsp;`-.|_&ensp;__\&ensp;/__&ensp;_/&emsp;&emsp;.-`/&emsp;/</p>
+                    <p style="font-family: 宋体;user-select: none;cursor: help;">======`-.____`-.___\_____/___.-`____.-'======</p>    
+                </p>
+                <button onclick="main_body(4)">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;为佛祖点一枝香&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</button>
+                <br>
+                <button onclick="main_body(5)">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;为佛祖点五枝香&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</button>
+            </section>
+            <section name="SPlaomo" id="SPlaomo"></section>
             <p>&emsp;&emsp;下面的纯属扯淡，但是没有太空旷了，你想想，你在一个大的广场上面只是立了一个小碑，不会空旷吗？</p>
             <p>&emsp;&emsp;所以我必须得加啊</p>
-            <p>&emsp;&emsp;我剧透一下，下面没有彩蛋，如果你是想看末尾的你不如直接拉下拉条</p>
-            <p>
-                &emsp;&emsp;内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容（你可真有毅力）内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
-                <br>
-                <p>&emsp;&emsp;我可真差劲，连一个网页都做不好，唉</p>
-            </p><!-- 概念(占位符) -->
+            <p>&emsp;&emsp;不是搁哪儿了？好了消失了，不用<del>智能家居</del>钻牛角尖了</p>
         </div>
     </body>
     <footer>
