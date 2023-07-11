@@ -2,3 +2,6 @@ User-agent:*
 Allow:/admin/index.html$
 Disallow:/
 Disallow:*?*
+
+User-agent:DingTalkBot
+Allow:*?*
