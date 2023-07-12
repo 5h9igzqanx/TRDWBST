@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     color-scheme: light;
+    scroll-behavior: smooth;
     /* filter: grayscale(1);1 *//* 网页黑白 */
 }
 body{
