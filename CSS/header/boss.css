@@ -13,6 +13,10 @@ body{
     -webkit-user-select: none;
     user-select: none;
 }
+br {
+    -webkit-user-select: none;
+    user-select: none;
+}
 footer iframe{
     width: 100vw;
 }
