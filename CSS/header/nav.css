@@ -51,7 +51,7 @@
     cursor: pointer;
     /*display: inline-block;*/
 }
-.nav a{
+.nav a :hover{
     color: #75aac8;
 }
 .nav-link{
