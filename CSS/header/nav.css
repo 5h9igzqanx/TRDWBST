@@ -51,6 +51,9 @@
     cursor: pointer;
     /*display: inline-block;*/
 }
+.nav a{
+    color: #75aac8;
+}
 .nav-link{
     width: 400px;
     text-align: left;
