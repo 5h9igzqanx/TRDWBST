@@ -513,7 +513,7 @@
             <div class="content-body">
                 <div class="slider">
                     <div class="slider-wrapper">
-                        <a onclick="Noticeqw(1)" id="NoticeLink"><img src="1a.png" alt="" id="NoticeImg"></a>
+                        <a id="NoticeLink"><img src="1a.png" alt="" id="NoticeImg"></a>
                     </div>
                     <div class="slider-footer">
                         <p id="NoticeTitle">&emsp;什么都没</p>
@@ -533,16 +533,16 @@
                     </div>
                     <script>
                         const sliderData = [
-                                { url: 'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/1.png', title: '&emsp;TRDWBST竣工！', href: 'Noticeqw(1)' },
-                                { url: 'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/2.png', title: '&emsp;广告位招租', href: 'Noticeqw(2)' },
-                                { url: 'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/3.png', title: '&emsp;广告位招租', href: 'Noticeqw(3)' },
-                                { url: 'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/4.png', title: '&emsp;广告位招租', href: 'Noticeqw(4)' },
-                                { url: 'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/5.png', title: '&emsp;广告位招租', href: 'Noticeqw(5)' },
-                                { url: 'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/6.png', title: '&emsp;广告位招租', href: 'Noticeqw(6)' },
-                                { url: 'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/7.png', title: '&emsp;广告位招租', href: 'Noticeqw(7)' },
+                                { url: 'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/1.png', title: '&emsp;TRDWBST竣工！', href: '1' },
+                                { url: 'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/2.png', title: '&emsp;广告位招租', href: '2' },
+                                { url: 'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/3.png', title: '&emsp;广告位招租', href: '3' },
+                                { url: 'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/4.png', title: '&emsp;广告位招租', href: '4' },
+                                { url: 'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/5.png', title: '&emsp;广告位招租', href: '5' },
+                                { url: 'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/6.png', title: '&emsp;广告位招租', href: '6' },
+                                { url: 'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/7.png', title: '&emsp;广告位招租', href: '7' },
                             ]//大公告栏数据，url为图片地址，title为标题，href为啥也不是，详见第193行
                             let NoticeNumber = 0
-                            let img = document.querySelector('#NoticeImg')
+                            let Nimg = document.querySelector('#NoticeImg')
                             let p = document.querySelector('#NoticeTitle')
                             let a = document.querySelector('#NoticeLink')
                             let liList = document.querySelectorAll('#NoticeSchedule')
@@ -550,8 +550,8 @@
                             NoticeDingshiqiehuan()
                             function NoticeDianjiqiehuan() {
                                 //点击(指按键)切换
-                                img.src = sliderData[NoticeNumber].url
-                                a.onclick = sliderData[NoticeNumber].href
+                                Nimg.src = sliderData[NoticeNumber].url
+                                //a.onclick = function(a=sliderData[NoticeNumber].href){}
                                 p.innerHTML = sliderData[NoticeNumber].title
                                 let active = document.querySelector('.active')
                                 active.classList.remove('active')
@@ -593,6 +593,12 @@
                             })
                             slider.addEventListener('mouseleave', function () {
                                 NoticeDingshiqiehuan()
+                            })
+                            //鼠标点击
+                            a.addEventListener('click',function(){
+                                var Nqw = NoticeNumber + 1
+                                console.log(Nqw)
+                                Noticeqw(a = Nqw)
                             })
                             function Noticeqw(a) {
                                 //大公告栏点击前往
