@@ -13,110 +13,72 @@
                 margin: 0;
                 padding: 0;
             }
-            .notice{
-                /* 大公告栏 */
-                background-color: #a3c6da;
-                height: 250px;
-                width: 1499px;
-                text-align: center;
-                border-radius: 15px;
-                margin: 0px auto;
-                border: 2px dashed #75aac8;
-                cursor: pointer;
+            .slider{
+                background-color:#a3c6da;
+                border-radius:25px;
+                width: 1190px;
+                /* 移植谨记，宽为1210px！！！ */
+                border: 2px solid #75aac8;
                 -webkit-user-select: none;
                 user-select: none;
-                /* 公告栏代码来自
-                “https://www.bilibili.com/video/BV1354y1k7gQ/?spm_id_from=333.337.search-card.all.click&vd_source=dc8bb826ff686b2200b9b618418072a3” 
-                */
-            	position: relative;
-            	overflow: hidden;
+            }
+            .slider-wrapper a img{
+                width:100%;
+                border-radius: 25px;
+                z-index: 1;
+                margin-bottom: -25px;
+            }
+            .slider-footer{
                 z-index: 2;
+                background-color: #a3c6da;
+                border-radius: 25px;
             }
-            .notice input{
-                display: none;
+            .slider-footer p{
+                z-index: 3;
+                background-color: #a3c6da;
+                font-family: 仿宋;
+                font-size: x-large;
             }
-            .notice label{
-                position: absolute;
-                bottom: 30px;
-                width: 20px;
-                height: 20px;
-                border: 3px solid #fff;
-                border-radius: 50%;
-                background-color: #fff;
-            }
-            .notice label[for="btn1"]{
-                left: 41%;
-            }
-            .notice label[for="btn2"]{
-                left: 44%;
-            }
-            .notice label[for="btn3"]{
-                left: 47%;
-            }
-            .notice label[for="btn4"]{
-                left: 50%;
-            }
-            .notice label[for="btn5"]{
-                left: 53%;
-            }
-            .notice label[for="btn6"]{
-                left: 56%;
-            }
-            .notice label[for="btn7"]{
-                left: 59%;
-            }
-            .notice ul{
+            .slider-indicator{
                 display: flex;
-                width: calc(1499px * 7);
-                transition: all 0.5s;
+                height: 20px;
+                margin-left: 20px;
+                padding-bottom: 10px;
             }
-            .notice ul li{
+            .slider-indicator .active{
                 list-style-type: none;
+                width: 14px;
+                height: 14px;
+                background-color: rgb(255,200,200);
+                border-radius: 50%;
+                border: 1px solid rgb(255, 150, 150);
+                margin: 2px;
+                vertical-align: bottom;
             }
-            .notice ul li img{
-                width: 100%;
+            .slider-indicator li{
+                list-style-type: none;
+                width: 10px;
+                height: 10px;
+                background-color: rgba(255,255,255,0.6);
+                border-radius: 50%;
+                border: 1px solid rgba(255,255,255,0.6);
+                margin: 2px;
+                vertical-align: bottom;
             }
-            #btn1:checked~ul{
-                margin-left: 0;
+            .toggle{
+                z-index: 4;
+                margin: 3px;
+                text-align: end;
+                margin-top: -25px;
             }
-            #btn2:checked~ul{
-                margin-left: -1499px;
-            }
-            #btn3:checked~ul{
-                margin-left: calc(-1499px * 2);
-            }
-            #btn4:checked~ul{
-                margin-left: calc(-1499px * 3);
-            }
-            #btn5:checked~ul{
-                margin-left: calc(-1499px * 4);
-            }
-            #btn6:checked~ul{
-                margin-left: calc(-1499px * 5);
-            }
-            #btn7:checked~ul{
-                margin-left: calc(-1499px * 6);
-            }
-            #btn1:checked~label[for="btn1"]{
-                background-color: #f00;
-            }
-            #btn2:checked~label[for="btn2"]{
-                background-color: #f00;
-            }
-            #btn3:checked~label[for="btn3"]{
-                background-color: #f00;
-            }
-            #btn4:checked~label[for="btn4"]{
-                background-color: #f00;
-            }
-            #btn5:checked~label[for="btn5"]{
-                background-color: #f00;
-            }
-            #btn6:checked~label[for="btn6"]{
-                background-color: #f00;
-            }
-            #btn7:checked~label[for="btn7"]{
-                background-color: #f00;
+            .toggle button{
+                width:30px;
+                height:30px;
+                background-color: #75aac8;
+                color: white;
+                font-family: simhei;
+                border-radius: 25%;
+                border: 0px;
             }
             /* 内容部分样式 */
             .all_content{
@@ -127,7 +89,7 @@
                 /* 左栏 */
                 width: 300px;
                 float: left;
-                -webkit-user-select: none;/* Safari你为什么不兼容啊,鲨了你!*/
+                -webkit-user-select: none;
                 user-select: none;
             }
             .lside-content{
@@ -166,38 +128,9 @@
         </style>
         <script>
             //比较多余的勾丝——瘠薄全是“显示”,服了操
-            function noticeqw(a){
-                //大公告栏点击前往
-                if(a == 1){
-                    top.location.href="https://5h9igzqanx.github.io/TRDWBST-pages/pages/special/notice/page/1.htm"
-                }else if(a == 2){
-                    top.location.href="https://5h9igzqanx.github.io/TRDWBST-pages/pages/special/notice/page/2.htm"
-                    //notice_ces()
-                }else if(a == 3){
-                    top.location.href="https://5h9igzqanx.github.io/TRDWBST-pages/pages/special/notice/page/3.htm"
-                    //notice_ces()
-                }else if(a == 4){
-                    top.location.href="https://5h9igzqanx.github.io/TRDWBST-pages/pages/special/notice/page/4.htm"
-                    //notice_ces()
-                }else if(a == 5){
-                    top.location.href="https://5h9igzqanx.github.io/TRDWBST-pages/pages/special/notice/page/5.htm"
-                    //notice_ces()
-                }else if(a == 6){
-                    top.location.href="https://5h9igzqanx.github.io/TRDWBST-pages/pages/special/notice/page/6.htm"
-                    //notice_ces()
-                }else if(a == 7){
-                    top.location.href="https://5h9igzqanx.github.io/TRDWBST-pages/pages/special/notice/page/7.htm"
-                    //notice_ces()
-                }
-            }
-            function notice_ces(){
-                alert("暂无公告")
-                alert("这只是测试！")
-                alert("看样子能用hhhh")
-                //临时加的，有公告了可以删除
-            }
+            //公告栏的在第532行，在这里不能运行哈哈哈
             //======================================================================
-            function lside_cnt(a){
+            function LsideCnt(a){
                 //左栏里可以点的地方
                 if(a == 1){
                     alert("点击确认回到旧版")
@@ -257,7 +190,7 @@
                 };//时间到不输出负数
             },50)
             //======================================================================
-            function main_body(a){
+            function MainBody(a){
                 //正文里可以点的地方
                 if(a == 1){
                     alert("欢迎来到我的第三个网站！")
@@ -304,39 +237,9 @@
     </head>
     <body bgcolor="cadeea">
         <iframe src="https://5h9igzqanx.github.io/TRDWBST-pages/header/nav.htm" title="nav" width="100%" height="64px" frameborder="0" scrolling="no" style="position: fixed;z-index: 9999;"></iframe>
-        <p style="color:#cadeea;user-select: none;">你为什么能看见这句话？快关掉F12!</p>
+        <p style="color:#cadeea;user-select: none;" name="top" id="top">你为什么能看见这句话？快关掉F12!</p>
         <br>
         <br>
-        <br>
-        <div class="notice" name="notice" id="notice">
-            <!--放置公告(图片,1499px*250px)-->
-            <!--来自
-                “https://www.bilibili.com/video/BV1354y1k7gQ/?spm_id_from=333.337.search-card.all.click&vd_source=dc8bb826ff686b2200b9b618418072a3”
-            -->
-            <input type="radio" name="btn" id="btn1" checked />
-            <input type="radio" name="btn" id="btn2" />
-            <input type="radio" name="btn" id="btn3" />
-            <input type="radio" name="btn" id="btn4" />
-            <input type="radio" name="btn" id="btn5" />
-            <input type="radio" name="btn" id="btn6" />
-            <input type="radio" name="btn" id="btn7" />
-            <label for="btn1"></label>
-            <label for="btn2"></label>
-            <label for="btn3"></label>
-            <label for="btn4"></label>
-            <label for="btn5"></label>
-            <label for="btn6"></label>
-            <label for="btn7"></label>
-            <ul>
-                <li><img onclick="noticeqw(1)" src="https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/1a.png" title="公告:TRDWBST正式启用！" alt="公告图片,没有显示就他妈的别看!" /></li>
-                <li><img onclick="noticeqw(2)" src="https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/2a.png" title="公告:公告内容" alt="公告图片,没有显示就他妈的别看!" /></li>
-                <li><img onclick="noticeqw(3)" src="https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/3a.png" title="公告:公告内容" alt="公告图片,没有显示就他妈的别看!" /></li>
-                <li><img onclick="noticeqw(4)" src="https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/4a.png" title="公告:公告内容" alt="公告图片,没有显示就他妈的别看!" /></li>
-                <li><img onclick="noticeqw(5)" src="https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/5a.png" title="公告:公告内容" alt="公告图片,没有显示就他妈的别看!" /></li>
-                <li><img onclick="noticeqw(6)" src="https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/6a.png" title="公告:公告内容" alt="公告图片,没有显示就他妈的别看!" /></li>
-                <li><img onclick="noticeqw(7)" src="https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/7a.png" title="公告:公告内容" alt="公告图片,没有显示就他妈的别看!" /></li>
-            </ul>
-        </div>
         <br>
         <div class="all_content">
             <div class="lside">
@@ -384,11 +287,11 @@
                     <h2 style="text-align:center;font-family: ZX-C-汉仪文黑85W;">📣公告</h2>
                     <br>
                     <p>&emsp;&emsp;这里是我第三个网站，没错，我又开了一个。因为github不要钱hhhh，咱就相当于薅羊毛了</p>
-                    <p>&emsp;&emsp;如果你看不惯，可以<a onclick="lside_cnt(1)"
+                    <p>&emsp;&emsp;如果你看不惯，可以<a onclick="LsideCnt(1)"
                             style="background-color: #75aac8;cursor: pointer;">回去</a>旧的网站</p>
-                    <p>&emsp;&emsp;<a onclick="lside_cnt(2)"><span
+                    <p>&emsp;&emsp;<a onclick="LsideCnt(2)"><span
                                 style="background-color: #75aac8;cursor: pointer;">点击</span>查看更多来自网友投稿的的公告……</a></p>
-                    <p>&emsp;&emsp;遇到问题了？<a onclick="lside_cnt(3)"><span
+                    <p>&emsp;&emsp;遇到问题了？<a onclick="LsideCnt(3)"><span
                                 style="background-color: #75aac8;cursor: pointer;">反馈</span></a></p>
                     <p>&emsp;&emsp;<a onclick="alert('April fools!')"
                             style="background-color: #75aac8;cursor: pointer;">v我50看看实力</a></p>
@@ -398,7 +301,7 @@
                     <h2 style="text-align:center;font-family: ZX-C-汉仪文黑85W;">📜目录</h2>
                     <br>
                     <div class="directory">
-                        <p><a href="#notice">&emsp;&ensp;TOP</a></p>
+                        <p><a href="#top">&emsp;&ensp;TOP</a></p>
                         <br>
                         <p><a href="#SP1">·&ensp;Welcome</a></p>
                         <p><a href="#SP2">·&ensp;广告</a></p>
@@ -426,16 +329,16 @@
                 <div class="lside-content" style="height:130px;">
                     <p style="text-align: center;font-size: large;font-family: 楷体;">现在是</p>
                     <div style="font-size: xx-large;font-family: ZX-E-Minecraft;text-align: center;padding: 10px;cursor: help;"
-                        id="lside-content-sj-time" onclick="lside_cnt(4)">00:00:00</div>
+                        id="lside-content-sj-time" onclick="LsideCnt(4)">00:00:00</div>
                     <div style="font-size: small;text-align: center;cursor: help;" id="lside-content-sj-date"
-                        onclick="lside_cnt(5)">----年--月--日&emsp;&emsp;星期--</div>
+                        onclick="LsideCnt(5)">----年--月--日&emsp;&emsp;星期--</div>
                     <!-- 代码来自
                         “https://www.jb51.net/article/252112.htm”
                         -->
                 </div>
                 <br>
                 <div class="lside-content" style="height:110px;">
-                    <p style="text-align: center;">距离&ensp;<span onclick="lside_cnt(6)" style="color: yellow;cursor: help;"
+                    <p style="text-align: center;">距离&ensp;<span onclick="LsideCnt(6)" style="color: yellow;cursor: help;"
                             title="端午节 的详情页面,点击前往">端午节</span>&ensp;还剩</p>
                     <br>
                     <div style="text-align: center;font-size: x-large;cursor: not-allowed;" id="lside-content-djs">呃…嗯…吧嘶…</div>
@@ -453,7 +356,7 @@
                             <span>flesh旧推荐</span>
                             &emsp;&emsp;&emsp;&emsp;&ensp;
                             <span style="font-family: ZX-O-IMG-FontAwesome;text-align: right;"
-                                onclick="lside_cnt(7)">&#61453;</span>
+                                onclick="LsideCnt(7)">&#61453;</span>
                         </p>
                         <ul>
                             <li>
@@ -608,14 +511,130 @@
                 <br>
             </div>
             <div class="content-body">
+                <div class="slider">
+                    <div class="slider-wrapper">
+                        <a onclick="Noticeqw(1)" id="NoticeLink"><img src="1a.png" alt="" id="NoticeImg"></a>
+                    </div>
+                    <div class="slider-footer">
+                        <p id="NoticeTitle">&emsp;什么都没</p>
+                        <div class="toggle">
+                            <button class="prev">&lt;</button>
+                            <button class="next">&gt;</button>
+                        </div>
+                        <ul class="slider-indicator">
+                            <li id="NoticeSchedule" class="active"> </li>
+                            <li id="NoticeSchedule"> </li>
+                            <li id="NoticeSchedule"> </li>
+                            <li id="NoticeSchedule"> </li>
+                            <li id="NoticeSchedule"> </li>
+                            <li id="NoticeSchedule"> </li>
+                            <li id="NoticeSchedule"> </li>
+                        </ul>
+                    </div>
+                    <script>
+                        const sliderData = [
+                                { url: 'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/1.png', title: '&emsp;TRDWBST竣工！', href: 'Noticeqw(1)' },
+                                { url: 'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/2.png', title: '&emsp;广告位招租', href: 'Noticeqw(2)' },
+                                { url: 'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/3.png', title: '&emsp;广告位招租', href: 'Noticeqw(3)' },
+                                { url: 'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/4.png', title: '&emsp;广告位招租', href: 'Noticeqw(4)' },
+                                { url: 'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/5.png', title: '&emsp;广告位招租', href: 'Noticeqw(5)' },
+                                { url: 'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/6.png', title: '&emsp;广告位招租', href: 'Noticeqw(6)' },
+                                { url: 'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/7.png', title: '&emsp;广告位招租', href: 'Noticeqw(7)' },
+                            ]//大公告栏数据，url为图片地址，title为标题，href为啥也不是，详见第193行
+                            let NoticeNumber = 0
+                            let img = document.querySelector('#NoticeImg')
+                            let p = document.querySelector('#NoticeTitle')
+                            let a = document.querySelector('#NoticeLink')
+                            let liList = document.querySelectorAll('#NoticeSchedule')
+                            NoticeDianjiqiehuan()
+                            NoticeDingshiqiehuan()
+                            function NoticeDianjiqiehuan() {
+                                //点击(指按键)切换
+                                img.src = sliderData[NoticeNumber].url
+                                a.onclick = sliderData[NoticeNumber].href
+                                p.innerHTML = sliderData[NoticeNumber].title
+                                let active = document.querySelector('.active')
+                                active.classList.remove('active')
+                                liList[NoticeNumber].classList.add('active')
+                            }
+                            let prev = document.querySelector('.prev')
+                            prev.addEventListener('click', function () {
+                                //左边的prev
+                                if (NoticeNumber <= 0) {
+                                    NoticeNumber = 7
+                                }
+                                NoticeNumber--
+                                NoticeDianjiqiehuan()
+                            })
+                            let next = document.querySelector('.next')
+                            next.addEventListener('click', function () {
+                                //右边的next
+                                if (NoticeNumber === 6) {
+                                    NoticeNumber = -1
+                                }
+                                NoticeNumber++
+                                NoticeDianjiqiehuan()
+                            })
+                            function NoticeDingshiqiehuan() {
+                                //定时轮播
+                                timeId = setInterval(function () {
+                                    if (NoticeNumber === 6) {
+                                        NoticeNumber = -1
+                                    }
+                                    NoticeNumber++
+                                    NoticeDianjiqiehuan()
+                                    //就是右边next内容哈哈哈
+                                }, 5000)
+                            }
+                            //鼠标放入框时的动作，再往下是移出
+                            let slider = document.querySelector('.slider')
+                            slider.addEventListener('mouseenter', function () {
+                                clearInterval(timeId)
+                            })
+                            slider.addEventListener('mouseleave', function () {
+                                NoticeDingshiqiehuan()
+                            })
+                            function Noticeqw(a) {
+                                //大公告栏点击前往
+                                if (a == 1) {
+                                    top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/special/notice/page/1.htm"
+                                } else if (a == 2) {
+                                    top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/special/notice/page/2.htm"
+                                    //NoticeCes()
+                                } else if (a == 3) {
+                                    top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/special/notice/page/3.htm"
+                                    //NoticeCes()
+                                } else if (a == 4) {
+                                    top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/special/notice/page/4.htm"
+                                    //NoticeCes()
+                                } else if (a == 5) {
+                                    top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/special/notice/page/5.htm"
+                                    //NoticeCes()
+                                } else if (a == 6) {
+                                    top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/special/notice/page/6.htm"
+                                    //NoticeCes()
+                                } else if (a == 7) {
+                                    top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/special/notice/page/7.htm"
+                                    //NoticeCes()
+                                }
+                            }
+                            function NoticeCes() {
+                                alert("暂无公告")
+                                alert("这只是测试！")
+                                alert("看样子能用hhhh")
+                                //临时加的，有公告了可以删除
+                            }
+                    </script>
+                </div>
+                <br>
                 <section name="SP1" id="SP1">
-                    <h2 onclick="main_body(1)" style="cursor: help;">Welcome!🎉</h2>
+                    <h2 onclick="MainBody(1)" style="cursor: help;">Welcome!🎉</h2>
                     <p>&emsp;&emsp;好的，咱也是觉得第二个网站太垃圾然后又换了好吧</p>
                     <p>&emsp;&emsp;欢迎回来！</p>
                     <p>&emsp;&emsp;这也算一个个人的blog页面了哈哈哈，所以这里也就是整活或者聊天了哈哈哈。哦顺便说一下，这个页面没有用任何css库或者js库，我真的是泰裤辣</p>
                     <p>&emsp;&emsp;或者就是在这里更新一些"uttd"组织的内容了</p>
                     <p>&emsp;&emsp;这里有一些修工具和一些好玩的<span style="text-decoration: line-through;cursor: not-allowed;"
-                            onclick="main_body(2)">&ensp;ikun&ensp;</span>修游戏，反正就是做着玩的</p>
+                            onclick="MainBody(2)">&ensp;ikun&ensp;</span>修游戏，反正就是做着玩的</p>
                     <p>&emsp;&emsp;就这些哈哈哈，看着玩吧</p>
                     <p>&emsp;&emsp;比如我现在要在这依托答辩上面打一个答辩</p>
                 </section>
@@ -712,13 +731,13 @@
                         &emsp;&emsp;======`-.____`-.___\_____/___.-`____.-'======</p>
                     </p>
                     &emsp;&emsp;<button
-                        onclick="main_body(3)">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;为佛祖点一枝香&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</button>
+                        onclick="MainBody(3)">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;为佛祖点一枝香&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</button>
                     <br>
                     &emsp;&emsp;<button
-                        onclick="main_body(4)">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;为佛祖点五枝香&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</button>
+                        onclick="MainBody(4)">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;为佛祖点五枝香&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</button>
                     <br>
                     &emsp;&emsp;<button
-                        onclick="main_body(5)">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;让佛祖停止震惊&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</button>
+                        onclick="MainBody(5)">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;让佛祖停止震惊&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</button>
                 </section>
                 <section name="SPlaomo" id="SPlaomo">
                     <p>&emsp;&emsp;下面的纯属扯淡，但是没有太空旷了，你想想，你在一个大的广场上面只是立了一个小碑，不会空旷吗？</p>
