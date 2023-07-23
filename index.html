@@ -14,29 +14,34 @@
                 padding: 0;
             }
             .slider{
+                position: sticky;
                 background-color:#a3c6da;
                 border-radius:25px;
                 width: 1190px;
                 /* 移植谨记，宽为1210px！！！ */
                 border: 2px solid #75aac8;
+                z-index: 2;
                 -webkit-user-select: none;
                 user-select: none;
             }
-            .slider-wrapper a img{
+            .slider-wrapper,.slider-wrapper img{
                 width:100%;
-                border-radius: 25px;
+                border-radius: 24px;
                 z-index: 1;
-                margin-bottom: -25px;
+                margin-bottom: -35px;
+                -webkit-user-select: none;
+                user-select: none;
             }
             .slider-footer{
                 z-index: 2;
                 background-color: #a3c6da;
                 border-radius: 25px;
             }
-            .slider-footer p{
+            .slider-footer #NoticeTitle{
+                
                 z-index: 3;
                 background-color: #a3c6da;
-                font-family: 仿宋;
+                font-family: ZX-C-汉仪文黑85W;
                 font-size: x-large;
             }
             .slider-indicator{
@@ -66,6 +71,7 @@
                 vertical-align: bottom;
             }
             .toggle{
+                
                 z-index: 4;
                 margin: 3px;
                 text-align: end;
@@ -78,7 +84,10 @@
                 color: white;
                 font-family: simhei;
                 border-radius: 25%;
-                border: 0px;
+                border: 1px solid #577e94;
+            }
+            .toggle button:hover{
+                background-color: #577e94;
             }
             /* 内容部分样式 */
             .all_content{
@@ -512,14 +521,18 @@
             </div>
             <div class="content-body">
                 <div class="slider">
+                    <!-- 公告栏(css除外的)代码来自
+                    “https://www.bilibili.com/video/BV15D4y1s7Si/?spm_id_from=333.337.search-card.all.click&vd_source=dc8bb826ff686b2200b9b618418072a3”
+                    -->
                     <div class="slider-wrapper">
-                        <a id="NoticeLink"><img src="1a.png" alt="" id="NoticeImg"></a>
+                        <img src="1a.png" alt="" id="NoticeImg">
                     </div>
                     <div class="slider-footer">
                         <p id="NoticeTitle">&emsp;什么都没</p>
                         <div class="toggle">
-                            <button class="prev">&lt;</button>
-                            <button class="next">&gt;</button>
+                            <button type="button" class="prev">&lt;</button>
+                            <button type="button" class="next">&gt;</button>
+                            &emsp;
                         </div>
                         <ul class="slider-indicator">
                             <li id="NoticeSchedule" class="active"> </li>
@@ -544,14 +557,12 @@
                             let NoticeNumber = 0
                             let Nimg = document.querySelector('#NoticeImg')
                             let p = document.querySelector('#NoticeTitle')
-                            let a = document.querySelector('#NoticeLink')
                             let liList = document.querySelectorAll('#NoticeSchedule')
                             NoticeDianjiqiehuan()
                             NoticeDingshiqiehuan()
                             function NoticeDianjiqiehuan() {
                                 //点击(指按键)切换
                                 Nimg.src = sliderData[NoticeNumber].url
-                                //a.onclick = function(a=sliderData[NoticeNumber].href){}
                                 p.innerHTML = sliderData[NoticeNumber].title
                                 let active = document.querySelector('.active')
                                 active.classList.remove('active')
@@ -595,7 +606,7 @@
                                 NoticeDingshiqiehuan()
                             })
                             //鼠标点击
-                            a.addEventListener('click',function(){
+                            Nimg.addEventListener('click',function(){
                                 var Nqw = NoticeNumber + 1
                                 console.log(Nqw)
                                 Noticeqw(a = Nqw)
@@ -684,9 +695,13 @@
                             </div>
                             <br>
                             <div style="height: 350px;">
-                                <div></div>
+                                <img src="https://5h9igzqanx.github.io/TRDWBST-media/picture/fun/ad/idx-ad1-1.png" width="60%"
+                                    style="border-radius: 15px;float: left;" title="ad">
+                                <div style="overflow: hidden;padding: 10px;">
+                                    <h3 style="text-align:left;font-family:楷体">&emsp;更危险</h3>
+                                    <p>&emsp;&emsp;114514114514114514</p>
+                                </div>
                             </div>
-                            <h3 style="text-align:center;font-family:楷体">更危险</h3>
                             <br>
                         </div>
                         <!-- <p style="text-align: center;"><video src="https://5h9igzqanx.github.io/SCDWBST/MEDIA/videos/diao/rickroll.mp4" style="width: 35%;height: 35%;"></video></p> -->
