@@ -12,6 +12,7 @@
             *{
                 margin: 0;
                 padding: 0;
+                scroll-behavior: auto;
             }
             .slider{
                 position: sticky;
@@ -27,22 +28,28 @@
             .slider-wrapper,.slider-wrapper img{
                 width:100%;
                 border-radius: 24px;
-                z-index: 1;
-                margin-bottom: -35px;
+                position: sticky;
+                z-index: 2;
+                margin-bottom: -16px;
                 -webkit-user-select: none;
                 user-select: none;
             }
             .slider-footer{
-                z-index: 2;
+                position: sticky;
+                z-index: 3;
                 background-color: #a3c6da;
                 border-radius: 25px;
             }
             .slider-footer #NoticeTitle{
-                
-                z-index: 3;
+                position: sticky;
+                z-index: 7;
                 background-color: #a3c6da;
+                color: black;
                 font-family: ZX-C-汉仪文黑85W;
                 font-size: x-large;
+            }
+            .slider-footer #NoticeTitle:hover{
+                color: #75aac8;
             }
             .slider-indicator{
                 display: flex;
@@ -52,12 +59,12 @@
             }
             .slider-indicator .active{
                 list-style-type: none;
-                width: 14px;
-                height: 14px;
+                width: 16px;
+                height: 16px;
                 background-color: rgb(255,200,200);
                 border-radius: 50%;
                 border: 1px solid rgb(255, 150, 150);
-                margin: 2px;
+                margin: 3px;
                 vertical-align: bottom;
             }
             .slider-indicator li{
@@ -67,15 +74,15 @@
                 background-color: rgba(255,255,255,0.6);
                 border-radius: 50%;
                 border: 1px solid rgba(255,255,255,0.6);
-                margin: 2px;
+                margin: 3px;
                 vertical-align: bottom;
             }
             .toggle{
-                
-                z-index: 4;
+                position: sticky;
+                z-index: 7;
                 margin: 3px;
                 text-align: end;
-                margin-top: -25px;
+                margin-top: -10px;
             }
             .toggle button{
                 width:30px;
@@ -83,7 +90,8 @@
                 background-color: #75aac8;
                 color: white;
                 font-family: simhei;
-                border-radius: 25%;
+                font-weight: bold;
+                border-radius: 40%;
                 border: 1px solid #577e94;
             }
             .toggle button:hover{
@@ -525,23 +533,23 @@
                     “https://www.bilibili.com/video/BV15D4y1s7Si/?spm_id_from=333.337.search-card.all.click&vd_source=dc8bb826ff686b2200b9b618418072a3”
                     -->
                     <div class="slider-wrapper">
-                        <img src="1a.png" alt="" id="NoticeImg">
+                        <img src="" alt="" id="NoticeImg">
                     </div>
                     <div class="slider-footer">
                         <p id="NoticeTitle">&emsp;什么都没</p>
                         <div class="toggle">
                             <button type="button" class="prev">&lt;</button>
                             <button type="button" class="next">&gt;</button>
-                            &emsp;
+                            &emsp;&emsp;
                         </div>
                         <ul class="slider-indicator">
-                            <li id="NoticeSchedule" class="active"> </li>
-                            <li id="NoticeSchedule"> </li>
-                            <li id="NoticeSchedule"> </li>
-                            <li id="NoticeSchedule"> </li>
-                            <li id="NoticeSchedule"> </li>
-                            <li id="NoticeSchedule"> </li>
-                            <li id="NoticeSchedule"> </li>
+                            <li onclick="NoticeDianjijindutiaoqiehuan(0)" id="NoticeSchedule" class="active"> </li>
+                            <li onclick="NoticeDianjijindutiaoqiehuan(1)" id="NoticeSchedule"> </li>
+                            <li onclick="NoticeDianjijindutiaoqiehuan(2)" id="NoticeSchedule"> </li>
+                            <li onclick="NoticeDianjijindutiaoqiehuan(3)" id="NoticeSchedule"> </li>
+                            <li onclick="NoticeDianjijindutiaoqiehuan(4)" id="NoticeSchedule"> </li>
+                            <li onclick="NoticeDianjijindutiaoqiehuan(5)" id="NoticeSchedule"> </li>
+                            <li onclick="NoticeDianjijindutiaoqiehuan(6)" id="NoticeSchedule"> </li>
                         </ul>
                     </div>
                     <script>
@@ -556,14 +564,17 @@
                             ]//大公告栏数据，url为图片地址，title为标题，href为啥也不是，详见第193行
                             let NoticeNumber = 0
                             let Nimg = document.querySelector('#NoticeImg')
-                            let p = document.querySelector('#NoticeTitle')
+                            let Ntitle = document.querySelector('#NoticeTitle')
                             let liList = document.querySelectorAll('#NoticeSchedule')
                             NoticeDianjiqiehuan()
                             NoticeDingshiqiehuan()
                             function NoticeDianjiqiehuan() {
                                 //点击(指按键)切换
+                                var Nlog = "[info]公告切换为"+NoticeNumber
+                                console.log(Nlog)
                                 Nimg.src = sliderData[NoticeNumber].url
-                                p.innerHTML = sliderData[NoticeNumber].title
+                                Nimg.title = sliderData[NoticeNumber].title
+                                Ntitle.innerHTML = sliderData[NoticeNumber].title
                                 let active = document.querySelector('.active')
                                 active.classList.remove('active')
                                 liList[NoticeNumber].classList.add('active')
@@ -594,7 +605,6 @@
                                     }
                                     NoticeNumber++
                                     NoticeDianjiqiehuan()
-                                    //就是右边next内容哈哈哈
                                 }, 5000)
                             }
                             //鼠标放入框时的动作，再往下是移出
@@ -606,11 +616,19 @@
                                 NoticeDingshiqiehuan()
                             })
                             //鼠标点击
-                            Nimg.addEventListener('click',function(){
+                            Nimg.addEventListener('click',function(){//图片的
                                 var Nqw = NoticeNumber + 1
-                                console.log(Nqw)
                                 Noticeqw(a = Nqw)
                             })
+                            Ntitle.addEventListener('click',function(){//标题的，因为按钮遮住标题了点不到，css不行就只能js了
+                                var Nqw = NoticeNumber + 1
+                                Noticeqw(a = Nqw)
+                            })
+                            function NoticeDianjijindutiaoqiehuan(a = 0){
+                                //点击进度条切换
+                                NoticeNumber = a
+                                NoticeDianjiqiehuan()
+                            }
                             function Noticeqw(a) {
                                 //大公告栏点击前往
                                 if (a == 1) {
