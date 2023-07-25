@@ -10,15 +10,72 @@
         <style>
             /* 比较多余的傻逼css——我不想看到加载css之前的html的土老帽样子,服了操 */
             *{
+                /*去掉外边距*/
                 margin: 0;
                 padding: 0;
                 scroll-behavior: auto;
             }
+            /* 内容部分样式 */
+            .all_content{
+                /* 大到能包全部内容(除nav之外)的盒子,为了适配各种宽度
+                尽管我已经设置了绝对定位,但我还是不敢删,怕崩了
+                屎山万岁! */
+                max-width: 1920px;
+                margin: 0px auto;
+            }
+            /* 左栏及内容样式 */
+            .lside{
+                width: 300px;
+                float: left;
+                position: absolute;
+                top: 90px;
+                left:0px;
+                -webkit-user-select: none;
+                user-select: none;
+            }
+            .lside-content{
+                background-color: #a3c6da;
+                border-radius: 15px;
+                margin-left: 10px;
+                margin-right: 20px;
+                padding-left: 8px;
+                padding-right: 8px;
+                padding-top: 20px;
+                padding-bottom: 4px;
+                overflow-y: auto;
+            }
+            .lside-content p{
+                font-family: 微软雅黑;
+            }
+            .lside-content .dj{
+                color: black;
+                cursor: pointer;
+            }
+            .lside-content .dj:hover{
+                color:#75aac8;
+            }
+            .content-body{
+                /* 主内容框 */
+                overflow: hidden;
+                width: calc(100vw - 325px);
+                margin-right: 10px;
+                padding-left: 3px;
+                padding-right: 2px;
+                position: absolute;
+                top: 90px;
+                left: 300px;
+                right: 0px;
+            }
+            .content-body p{
+                font-family: 仿宋;
+            }
+            /* 公告栏样式 */
             .slider{
                 position: sticky;
                 background-color:#a3c6da;
                 border-radius:25px;
-                width: 1190px;
+                width: calc(100vw - 335px);
+                margin-right: 10px;
                 border: 2px solid #75aac8;
                 z-index: 2;
                 -webkit-user-select: none;
@@ -97,43 +154,6 @@
             }
             .toggle button:hover{
                 background-color: #577e94;
-            }
-            /* 内容部分样式 */
-            .all_content{
-                max-width: 1920px;
-                margin: 0px auto;
-            }
-            .lside{
-                /* 左栏 */
-                width: 300px;
-                float: left;
-                -webkit-user-select: none;
-                user-select: none;
-            }
-            .lside-content{
-                background-color: #a3c6da;
-                border-radius: 15px;
-                margin-left: 10px;
-                margin-right: 20px;
-                padding-left: 8px;
-                padding-right: 8px;
-                padding-top: 20px;
-                padding-bottom: 4px;
-                overflow-y: auto;
-            }
-            .lside-content p{
-                font-family: 微软雅黑;
-            }
-            .content-body{
-                /* 主内容框 */
-                overflow: hidden;
-                width: calc(100vw - 325px);
-                margin-right: 10px;
-                padding-left: 3px;
-                padding-right: 2px;
-            }
-            .content-body p{
-                font-family: 仿宋;
             }
             /*@media screen and (250px <=width <=500px){
                 .lside,.notice,footer{
@@ -301,20 +321,6 @@
                     </table>
                 </div>
                 <br>
-                <div class="lside-content" style="height:280px;">
-                    <h2 style="text-align:center;font-family: ZX-C-汉仪文黑85W;">📣公告</h2>
-                    <br>
-                    <p>&emsp;&emsp;这里是我第三个网站，没错，我又开了一个。因为github不要钱hhhh，咱就相当于薅羊毛了</p>
-                    <p>&emsp;&emsp;如果你看不惯，可以<a onclick="LsideCnt(1)"
-                            style="background-color: #75aac8;cursor: pointer;">回去</a>旧的网站</p>
-                    <p>&emsp;&emsp;<a onclick="LsideCnt(2)"><span
-                                style="background-color: #75aac8;cursor: pointer;">点击</span>查看更多来自网友投稿的的公告……</a></p>
-                    <p>&emsp;&emsp;遇到问题了？<a onclick="LsideCnt(3)"><span
-                                style="background-color: #75aac8;cursor: pointer;">反馈</span></a></p>
-                    <p>&emsp;&emsp;<a onclick="alert('April fools!')"
-                            style="background-color: #75aac8;cursor: pointer;">v我50看看实力</a></p>
-                </div>
-                <br>
                 <div class="lside-content" style="height:250px;">
                     <h2 style="text-align:center;font-family: ZX-C-汉仪文黑85W;">📜目录</h2>
                     <br>
@@ -344,6 +350,15 @@
                     </style>
                 </div>
                 <br>
+                <div class="lside-content" style="height:280px;">
+                    <h2 style="text-align:center;font-family: ZX-C-汉仪文黑85W;">📣公告</h2>
+                    <br>
+                    <p>&emsp;&emsp;这里是我第三个网站，没错，我又开了一个。因为github不要钱hhhh，咱就相当于薅羊毛了</p>
+                    <p>&emsp;&emsp;如果你看不惯，可以<a onclick="LsideCnt(1)" class="dj">回去</a>旧的网站</p>
+                    <p>&emsp;&emsp;<a onclick="LsideCnt(2)"><span class="dj">点击</span>查看更多来自网友投稿的的公告……</a></p>
+                    <p>&emsp;&emsp;<a onclick="alert('April fools!')" class="dj">v我50看看实力</a></p>
+                </div>
+                <br>
                 <div class="lside-content" style="height:130px;">
                     <p style="text-align: center;font-size: large;font-family: 楷体;">现在是</p>
                     <div style="font-size: xx-large;font-family: ZX-E-Minecraft;text-align: center;padding: 10px;cursor: help;"
@@ -363,6 +378,27 @@
                     <!-- 代码来自
                         “https://www.bilibili.com/video/BV1Yt4y1Q7Ff/?spm_id_from=333.337.search-card.all.click&vd_source=dc8bb826ff686b2200b9b618418072a3”
                         -->
+                </div>
+                <br>
+                <div class="lside-content" style="height:150px;text-align: center;font-size: x-small;">
+                    <br>
+                    <p style="font-family: ZX-C-汉仪文黑85W,仿宋;">暂无版权信息(不会弄)&ensp;-&emsp;<span onclick="yqlj(3)" class="dj">我为什么必须备案？</span></p>
+                    <br>
+                    <p style="font-family: ZX-C-汉仪文黑85W,仿宋;">5h9igzqanx&emsp;TRDWBST&emsp;托管平台:<span onclick="yqlj(1)" class="dj">Github</span></p>
+                    <br>
+                    <p style="font-family: ZX-C-汉仪文黑85W,仿宋;">联系方式见上</p>
+                    <script>
+                        function yqlj(a) {
+                            if (a == 1) {
+                                alert("你觉得呢？")
+                                top.location.href = "https://www.github.com"//github官网
+                            } else if (a == 2) {
+                                top.location.href = "https://im.qq.com/index"//qq官网
+                            } else if (a == 3) {
+                                top.location.href = "https://baijiahao.baidu.com/s?id=1726710343051334212"//百度专题
+                            }
+                        }
+                    </script>
                 </div>
                 <br>
                 <div class="lside-content" style="height:480px;" id="lside-content-ad">
@@ -779,6 +815,7 @@
                     &emsp;&emsp;<button
                         onclick="MainBody(5)">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;让佛祖停止震惊&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</button>
                 </section>
+                <br>
                 <section name="SPlaomo" id="SPlaomo">
                     <p>&emsp;&emsp;下面的纯属扯淡，但是没有太空旷了，你想想，你在一个大的广场上面只是立了一个小碑，不会空旷吗？</p>
                     <p>&emsp;&emsp;所以我必须得加啊</p>
@@ -787,7 +824,4 @@
             </div>
         </div>
     </body>
-    <footer>
-        <iframe src="https://5h9igzqanx.github.io/TRDWBST-pages/header/footer.htm" title="footer" height="250px" style="margin: 0px auto;width:calc(100vw - 17px)" frameborder="0" scrolling="no"></iframe>
-    </footer>
 </html>
