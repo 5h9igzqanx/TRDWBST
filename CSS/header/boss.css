@@ -1,3 +1,6 @@
+/* 这里是TRDWBST的总样式表,这里规定了一些元素防止 */
+
+/* 去掉内外边距防止页面像屎一样 */
 * {
     margin: 0;
     padding: 0;
@@ -9,14 +12,25 @@
 body{
     background-color:#cadeea;
 }
-.nav-br{
-    -webkit-user-select: none;
-    user-select: none;
-}
+/* 设置某些常规标签的样式 */
 br {
     -webkit-user-select: none;
     user-select: none;
 }
+hr{
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 5px;
+    border-radius: 2.5px;
+    background-color: #cadeea;
+    border: 1px solid #cadeea;
+    cursor: not-allowed;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+/* 鸣谢栏宽度铺满 */
 footer iframe{
     width: 100vw;
 }
