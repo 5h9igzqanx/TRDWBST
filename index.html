@@ -20,7 +20,7 @@
                 /* 大到能包全部内容(除nav之外)的盒子,为了适配各种宽度
                 尽管我已经设置了绝对定位,但我还是不敢删,怕崩了
                 屎山万岁! */
-                max-width: 1920px;
+                /* max-width: 1920px; */
                 margin: 0px auto;
             }
             /* 左栏及内容样式 */
@@ -54,6 +54,46 @@
             .lside-content .dj:hover{
                 color:#75aac8;
             }
+            .lside-content .directory{
+                /* 左栏目录样式 */
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .lside-content .directory p a{
+                color: black;
+                text-decoration: none;
+                font-family: ZX-C-汉仪文黑85W;
+            }
+            .lside-content-ad{
+                /* flesh推荐 样式 */
+                background-color: rgb(230, 230, 230);
+                margin: 0px auto;
+                border: 2px soild rgb(30, 30, 30);
+                padding: 2px;
+                height: 380px;
+                width: 245px;
+                overflow-y: auto;
+            }
+            .lside-content-ad ul{
+                width: 226px;
+                padding: 1px;
+                display: flex;
+                flex-direction: column;
+            }
+            .lside-content-ad-ContentDivider{
+                list-style: none;
+                width: 100%;
+                height: 1px;
+                background: rgba(0, 0, 0, 0.3);
+                overflow: hidden;
+                line-height: 1px;
+                margin: 0px;
+                padding: 0px;
+                font-size: 0px;
+            }
+            .lside-content-ad ul li img{
+                width: 30%;
+            }
             .content-body{
                 /* 主内容框 */
                 overflow: hidden;
@@ -74,7 +114,11 @@
             a{
                 color: black;
                 text-decoration: none;
+                cursor: pointer;
             }
+            /*a:hover{
+                color: #75aac8;
+            }*/
             /* 公告栏样式 */
             .slider{
                 position: sticky;
@@ -227,6 +271,8 @@
                 var hours = points/60;//小时数
                 var days = hours/24;//天数
                 var tm = document.getElementById("lside-content-djs")//div标签的id
+                var tmtitle= document.getElementById("lside-content-djs-title")
+                tmtitle.innerHTML = "端午节"
                 if(ms <= 0){
                     tm.innerHTML = "<span style='font-family:ZX-C-汉仪文黑85W;'>时间到</span>";//如果时间到就输出时间到
                 }else{
@@ -268,6 +314,15 @@
                 //console.log("1919810");
             },0.000005)
             //======================================================================
+            function rickroll(){
+                //弹出一个播放rickroll的窗口哈哈哈
+                alert("RICKROLL!")
+                window.open(
+                    "https://www.bilibili.com/video/BV1GJ411x7h7?t=5.2",
+                    "你 被 骗 了",
+                    "height=600,width=745,top=100,left=100,toolbar=no,menubar=no,scroolbars=no,resizable=no,location=no,status=no,depended=yes,z-look=yes"
+                )
+            }
         </script>
         <!-- 框架灵感来自
             “https://www.bilibili.com/video/BV1sG411x77z/?spm_id_from=333.337.search-card.all.click&vd_source=dc8bb826ff686b2200b9b618418072a3” 
@@ -292,7 +347,7 @@
                     <img src="https://5h9igzqanx.github.io/TRDWBST-media/picture/LOGO.jpg" title="5h9igzqanx" alt="头像"
                         style="width: 30%;display:block;margin: 0px auto;border-radius: 50%;border: 4px solid #75aac8;">
                     <br>
-                    <h3 style="text-align:center;font-family: ZX-C-汉仪文黑85W;">5h9igzqanx</h3>
+                    <h3 style="text-align:center;font-family: ZX-C-汉仪文黑85W,simhei;">5h9igzqanx</h3>
                     <br>
                     <table style="font-family: ZX-E-Minecraft;margin: 0px auto;">
                         <thead>
@@ -328,57 +383,47 @@
                 </div>
                 <br>
                 <div class="lside-content" style="height:250px;">
-                    <h2 style="text-align:center;font-family: ZX-C-汉仪文黑85W;">📑目录</h2>
+                    <h2 style="text-align:center;font-family: ZX-C-汉仪文黑85W,楷体;">📑目录</h2>
                     <br>
                     <div class="directory">
-                        <p><a href="#top">&emsp;&ensp;TOP</a></p>
+                        <p><a class="dj" href="#top">&emsp;&ensp;TOP</a></p>
                         <br>
-                        <p><a href="#SP1">·&ensp;Welcome</a></p>
-                        <p><a href="#SP2">·&ensp;广告</a></p>
-                        <p><a href="#SP3">·&ensp;参拜佛祖</a></p>
-                        <p><a href="#SPlaomo">·&ensp;扯淡(BOTTOM)</a></p>
+                        <p><a class="dj" href="#SP1">·&ensp;Welcome</a></p>
+                        <p><a class="dj" href="#SP2">·&ensp;广告</a></p>
+                        <p><a class="dj" href="#SP3">·&ensp;参拜佛祖</a></p>
+                        <p><a class="dj" href="#SPlaomo">·&ensp;扯淡(BOTTOM)</a></p>
                     </div>
-                    <style>
-                        .directory {
-                            padding-left: 20px;
-                            padding-right: 20px;
-                        }
-        
-                        .directory p a {
-                            color: black;
-                            text-decoration: none;
-                            font-family: ZX-C-汉仪文黑85W;
-                        }
-        
-                        .directory p a:hover {
-                            color: #75aac8;
-                        }
-                    </style>
                 </div>
                 <br>
-                <div class="lside-content" style="height:280px;">
+                <div class="lside-content" style="height:330px;">
                     <h2 style="text-align:center;font-family: ZX-C-汉仪文黑85W;">📣公告</h2>
                     <br>
                     <p>&emsp;&emsp;这里是我第三个网站，没错，我又开了一个。因为github不要钱hhhh，咱就相当于薅羊毛了</p>
                     <p>&emsp;&emsp;如果你看不惯，可以<a onclick="LsideCnt(1)" class="dj">回去</a>旧的网站</p>
-                    <p>&emsp;&emsp;<a onclick="LsideCnt(2)"><span class="dj">点击</span>查看更多来自网友投稿的的公告……</a></p>
-                    <p>&emsp;&emsp;<a onclick="alert('April fools!')" class="dj">v我50看看实力</a></p>
+                    <p>&emsp;&emsp;<a onclick="LsideCnt(2)"><span class="dj">点击前往查看更多来自网友投稿的的公告……</span></a></p>
+                    <p>&emsp;&emsp;<a onclick="rickroll()" class="dj">点击前往查看《GTA6预告片》……</a></p>
+                    <hr>
+                    <div style="width: 254px; height: 80px;">
+                        <br>
+                        <br>
+                        <p style="text-align: center;font-size: x-small;">这里应该是一个小人跳舞的动画,但是我找不到素材,请谅解</p>
+                    </div>
                 </div>
                 <br>
                 <div class="lside-content" style="height:240px;">
                     <p style="text-align: center;font-size: large;font-family: 楷体;">现在是</p>
                     <div style="font-size: xx-large;font-family: ZX-E-Minecraft;text-align: center;padding: 10px;cursor: help;"
-                        id="lside-content-sj-time" onclick="LsideCnt(4)">00:00:00</div>
+                        id="lside-content-sj-time" onclick="LsideCnt(4)">11:45:14</div>
                     <div style="font-size: small;text-align: center;cursor: help;" id="lside-content-sj-date"
-                        onclick="LsideCnt(5)">----年--月--日&emsp;&emsp;星期--</div>
+                        onclick="LsideCnt(5)">----年--月--日&emsp;&emsp;星期九</div>
                     <!-- 代码来自
                         “https://www.jb51.net/article/252112.htm”
                         -->
                         <br>
                         <hr style="color: #cadeea;">
                         <br>
-                    <p style="text-align: center;">距离&ensp;<span onclick="LsideCnt(6)" style="color: yellow;cursor: help;"
-                            title="端午节 的详情页面,点击前往">端午节</span>&ensp;还剩</p>
+                    <p style="text-align: center;font-family: 楷体;">距离&ensp;<span id="lside-content-djs-title" onclick="LsideCnt(6)" style="color: yellow;cursor: help;font-family: ZX-C-汉仪文黑85W,楷体;"
+                            title="详情页面,点击前往">啥也不是の节</span>&ensp;还剩</p>
                     <br>
                     <div style="text-align: center;font-size: x-large;cursor: not-allowed;" id="lside-content-djs">呃…嗯…吧嘶…</div>
                     <!-- 代码来自
@@ -528,41 +573,6 @@
                                 <span>拉取失败</span>
                             </li>
                         </ul>
-                        <style>
-                            .lside-content-ad {
-                                background-color: rgb(230, 230, 230);
-                                margin: 0px auto;
-                                border: 2px soild rgb(30, 30, 30);
-                                padding: 2px;
-                                height: 380px;
-                                width: 245px;
-                                overflow-y: auto;
-                            }
-        
-                            .lside-content-ad ul {
-                                width: 226px;
-                                padding: 1px;
-                                display: flex;
-                                flex-direction: column;
-                            }
-        
-                            .lside-content-ad-ContentDivider {
-                                list-style: none;
-                                width: 100%;
-                                height: 1px;
-                                background: rgba(0, 0, 0, 0.3);
-                                overflow: hidden;
-                                line-height: 1px;
-                                margin: 0px;
-                                padding: 0px;
-                                font-size: 0px;
-                            }
-        
-                            .lside-content-ad ul li img {
-                                width: 30%;
-                                height: 30%;
-                            }
-                        </style>
                         <!-- 代码来自
                             “https://5h9igzqanx.github.io/TRDWBST/”
                             没想到吧,是你爹我自己写的!
