@@ -14,6 +14,8 @@
                 margin: 0;
                 padding: 0;
                 scroll-behavior: auto;
+                /* 覆盖boss.css中“overflow-x:hidden;”声明,否则公告栏及其他的东西就毁啦! */
+                overflow-x: visible;
             }
             /* 内容部分样式 */
             .all_content{
@@ -161,7 +163,7 @@
             }
             .slider-indicator{
                 display: flex;
-                height: 20px;
+                height: 22px;
                 margin-left: 20px;
                 padding-bottom: 10px;
             }
@@ -216,7 +218,9 @@
         </style>
         <script>
             //比较多余的勾丝——瘠薄全是“显示”,服了操
-            //公告栏的在第532行，在这里不能运行哈哈哈
+            //啊对对对,这里都是没脑子都能运行的,有脑子的都在下面唷!
+            //公告栏的在第613行,在这里不能运行哈哈哈
+            //左栏显时间的在第393行,方便维护嘛哈哈哈
             //======================================================================
             function LsideCnt(a){
                 //左栏里可以点的地方
@@ -240,45 +244,6 @@
                     setTimeout('alert("关了嗷")',1)//广告关闭,为了应付
                 }
             }
-            //======================================================================
-            setInterval(function(){
-                //左栏时间部分
-                var date = new Date();
-                var year = date.getFullYear();
-                var month = date.getMonth() + 1;
-                var day = date.getDate();
-                var week = date.getDay();
-                week = "星期" + "日一二三四五六".charAt(week);
-                var hour = date.getHours();
-                hour = hour < 10 ? "0" + hour : hour;
-                var minute = date.getMinutes();
-                minute = minute < 10 ? "0" + minute : minute;
-                var second = date.getSeconds();
-                second = second < 10 ? "0" + second : second;
-                var currentTime1 = year + "年" + month + "月" + day + "日&emsp;&emsp;" + week;
-                var currentTime2 = hour + ":" + minute + ":" + second;
-                document.getElementById("lside-content-sj-date").innerHTML = currentTime1;
-                document.getElementById("lside-content-sj-time").innerHTML = currentTime2;
-            },50)
-            //======================================================================
-            setInterval(function(){
-                //左栏倒计时部分
-                var nowdate = new Date();//从1970年1月1日
-                var enddate = (new Date('2023-6-21 23:59:59')).getTime();//从1970年1月1日到倒计时结束的毫秒数(人话:时间戳)(注意:这里的时间要比实际少一秒!)
-                var ms = enddate - nowdate;//剩余时间,但是毫秒
-                var seconds = ms/1000;//剩余时间,但是秒
-                var points = seconds/60;//剩余时间,但是分
-                var hours = points/60;//小时数
-                var days = hours/24;//天数
-                var tm = document.getElementById("lside-content-djs")//div标签的id
-                var tmtitle= document.getElementById("lside-content-djs-title")
-                tmtitle.innerHTML = "端午节"
-                if(ms <= 0){
-                    tm.innerHTML = "<span style='font-family:ZX-C-汉仪文黑85W;'>时间到</span>";//如果时间到就输出时间到
-                }else{
-                    tm.innerHTML = "<span style='color:yellow;font-family: ZX-E-Minecraft;'>" + Math.floor(days) + "</span><span style='font-family:ZX-C-汉仪文黑85W;'>天</span><span style='color:yellow;font-family: ZX-E-Minecraft;'>" + Math.floor(hours%24) + "</span><span style='font-family:ZX-C-汉仪文黑85W;'>时</span><span style='color:yellow;font-family: ZX-E-Minecraft;'>" + Math.floor(points%60) + "</span><span style='font-family:ZX-C-汉仪文黑85W;'>分</span><span style='color:red;font-family: ZX-E-Minecraft;'>" + Math.floor(seconds%60) + "</span><span style='font-family:ZX-C-汉仪文黑85W;'>秒</span>";//求余输出剩余时间,Math.floor()为保留整数
-                };//时间到不输出负数
-            },50)
             //======================================================================
             function MainBody(a){
                 //正文里可以点的地方
@@ -332,9 +297,8 @@
         -->
         <!-- 各位爬虫们,请高抬贵手,不要再白费力气爬我这依托西施了,这里没有什么好爬的,你们真闲着没事去爬隔壁啊,真没币摇! -->
         <!-- 好像你们进不来，因为我在”robots.txt“中设置了禁止访问hhhh -->
-        <!-- 流氓给爷爬! -->
     </head>
-    <body bgcolor="cadeea">
+    <body>
         <iframe src="https://5h9igzqanx.github.io/TRDWBST-pages/header/nav.htm" title="nav" width="100%" height="64px" frameborder="0" scrolling="no" style="position: fixed;z-index: 9999;"></iframe>
         <p style="color:#cadeea;user-select: none;" name="top" id="top">你为什么能看见这句话？快关掉F12!</p>
         <br>
@@ -426,6 +390,46 @@
                             title="详情页面,点击前往">啥也不是の节</span>&ensp;还剩</p>
                     <br>
                     <div style="text-align: center;font-size: x-large;cursor: not-allowed;" id="lside-content-djs">呃…嗯…吧嘶…</div>
+                    <script>
+                        setInterval(function () {
+                            //左栏时间部分
+                            var date = new Date();
+                            var year = date.getFullYear();
+                            var month = date.getMonth() + 1;
+                            var day = date.getDate();
+                            var week = date.getDay();
+                            week = "星期" + "日一二三四五六".charAt(week);
+                            var hour = date.getHours();
+                            hour = hour < 10 ? "0" + hour : hour;
+                            var minute = date.getMinutes();
+                            minute = minute < 10 ? "0" + minute : minute;
+                            var second = date.getSeconds();
+                            second = second < 10 ? "0" + second : second;
+                            var currentTime1 = year + "年" + month + "月" + day + "日&emsp;&emsp;" + week;
+                            var currentTime2 = hour + ":" + minute + ":" + second;
+                            document.getElementById("lside-content-sj-date").innerHTML = currentTime1;
+                            document.getElementById("lside-content-sj-time").innerHTML = currentTime2;
+                        }, 50)
+                        //======================================================================
+                        setInterval(function () {
+                            //左栏倒计时部分
+                            var nowdate = new Date();//从1970年1月1日
+                            var enddate = (new Date('2023-6-21 23:59:59')).getTime();//从1970年1月1日到倒计时结束的毫秒数(人话:时间戳)(注意:这里的时间要比实际少一秒!)
+                            var ms = enddate - nowdate;//剩余时间,但是毫秒
+                            var seconds = ms / 1000;//剩余时间,但是秒
+                            var points = seconds / 60;//剩余时间,但是分
+                            var hours = points / 60;//小时数
+                            var days = hours / 24;//天数
+                            var tm = document.getElementById("lside-content-djs")//div标签的id
+                            var tmtitle = document.getElementById("lside-content-djs-title")
+                            tmtitle.innerHTML = "端午节"
+                            if (ms <= 0) {
+                                tm.innerHTML = "<span style='font-family:ZX-C-汉仪文黑85W;'>时间到</span>";//如果时间到就输出时间到
+                            } else {
+                                tm.innerHTML = "<span style='color:yellow;font-family: ZX-E-Minecraft;'>" + Math.floor(days) + "</span><span style='font-family:ZX-C-汉仪文黑85W;'>天</span><span style='color:yellow;font-family: ZX-E-Minecraft;'>" + Math.floor(hours % 24) + "</span><span style='font-family:ZX-C-汉仪文黑85W;'>时</span><span style='color:yellow;font-family: ZX-E-Minecraft;'>" + Math.floor(points % 60) + "</span><span style='font-family:ZX-C-汉仪文黑85W;'>分</span><span style='color:red;font-family: ZX-E-Minecraft;'>" + Math.floor(seconds % 60) + "</span><span style='font-family:ZX-C-汉仪文黑85W;'>秒</span>";//求余输出剩余时间,Math.floor()为保留整数
+                            };//时间到不输出负数
+                        }, 50)
+                    </script>
                     <!-- 代码来自
                         “https://www.bilibili.com/video/BV1Yt4y1Q7Ff/?spm_id_from=333.337.search-card.all.click&vd_source=dc8bb826ff686b2200b9b618418072a3”
                         -->
