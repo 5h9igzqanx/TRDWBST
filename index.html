@@ -186,6 +186,7 @@
                 border: 1px solid rgba(255,255,255,0.6);
                 margin: 3px;
                 vertical-align: bottom;
+                cursor: pointer;
             }
             .toggle{
                 position: sticky;
@@ -203,9 +204,13 @@
                 font-weight: bold;
                 border-radius: 40%;
                 border: 1px solid #577e94;
+                cursor: pointer;
             }
             .toggle button:hover{
                 background-color: #577e94;
+            }
+            #SP3 pre{
+                cursor: none;
             }
             /*@media screen and (250px <=width <=500px){
                 .lside,.notice,footer{
@@ -221,6 +226,8 @@
             //啊对对对,这里都是没脑子都能运行的,有脑子的都在下面唷!
             //公告栏的在第613行,在这里不能运行哈哈哈
             //左栏显时间的在第393行,方便维护嘛哈哈哈
+            //一些临时变量
+            var fozu = true//line-262,line-825
             //======================================================================
             function LsideCnt(a){
                 //左栏里可以点的地方
@@ -245,31 +252,35 @@
                 }
             }
             //======================================================================
+            
             function MainBody(a){
                 //正文里可以点的地方
+                //分支,我不想用switch
                 if(a == 1){
                     alert("欢迎来到我的第三个网站！")
                 }else if(a == 2){
                     alert("小脚子黑坤露出来了吧，油饼食不食啊")
                 }else if(a == 3){
+                    //赛博佛祖
                     alert("佛祖感受到了你的虔诚")
                     alert("你的功德+5")
-                    //赛博佛祖
                 }else if(a == 4){
-                    function fozuzhenjing(){
-                        document.getElementById("fozubiaoqing").innerHTML = "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(|&ensp;0_0&ensp;|)";
+                    //赛博佛祖,但是祂震惊了
+                    if(fozu==true){
+                        alert("佛祖感受到了你的虔诚very much，祂极为震惊以至于瞪大了眼睛（因为祂没料到这里还有洋文）")
+                        alert("你的功德+114514")
+                        document.getElementById("fozubiaoqing").innerHTML = "                        (| 0_0 |)";
+                        document.getElementById("fozudebtn").innerHTML = "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;佛祖饶命！&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"
+                        fozu = false
+                        console.log(fozu)
+                    }else if(fozu==false){
+                        alert("祂开怀大笑,看上去好像息怒了,但是你的功德没有减")
+                        alert("“哇，赛博活佛”")
+                        document.getElementById("fozubiaoqing").innerHTML = "                        (| -_- |)";
+                        document.getElementById("fozudebtn").innerHTML ="&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;就再上十根香吧&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"
+                        fozu = true
+                        console.log(fozu)
                     }
-                    fozuzhenjing()
-                    alert("佛祖感受到了你的虔诚very much，祂极为震惊（因为祂没料到这里还有洋文）")
-                    alert("你的功德+114514")
-                    //赛博佛祖,但是祂震惊了 
-                }else if(a == 5){
-                    function fozuhuanhuiqule(){
-                        document.getElementById("fozubiaoqing").innerHTML = "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(|&ensp;-_-&ensp;|)";
-                    }
-                    fozuhuanhuiqule()
-                    alert("祂开怀大笑,但是你的功德没有减")
-                    alert("“哇，赛博活佛”")
                 }
             }
             //======================================================================
@@ -732,6 +743,8 @@
                     <p>&emsp;&emsp;比如我现在要在这依托答辩上面打一个答辩……</p>
                 </section>
                 <br>
+                <hr style="background-color:#75aac8;border: 1px solid #75aac8;">
+                <br>
                 <section name="SP2" id="SP2">
                     <h2>广告😅</h2>
                     <details open style="user-select: none;">
@@ -784,58 +797,38 @@
                     </details>
                 </section>
                 <br>
+                <hr style="background-color:#75aac8;border: 1px solid #75aac8;">
+                <br>
                 <section name="SP3" id="SP3">
                     <h2>参拜佛祖</h2>
-                    <p>&emsp;&emsp;OK呀，也是把赛博佛祖请过来了好吧</p>
-                    <p>&emsp;&emsp;你知道要做什么了吧</p>&ensp;
-                    <p style="font-family: ZX-E-FiraCode;">
-                    <p style="font-family: 宋体;user-select: none;cursor: help;">
-                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;_oo0oo_</p>
-                    <p style="font-family: 宋体;user-select: none;cursor: help;">
-                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;o8888888o</p>
-                    <p style="font-family: 宋体;user-select: none;cursor: help;">
-                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;88"&ensp;.&ensp;"88</p>
-                    <p style="font-family: 宋体;user-select: none;cursor: help;" id="fozubiaoqing">
-                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(|&ensp;-_-&ensp;|)</p>
-                    <p style="font-family: 宋体;user-select: none;cursor: help;">
-                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;0\&emsp;=&emsp;/0</p>
-                    <p style="font-family: 宋体;user-select: none;cursor: help;">
-                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;____/`---'\____</p>
-                    <p style="font-family: 宋体;user-select: none;cursor: help;">
-                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;.'&emsp;\\|&emsp;&emsp;&ensp;|//&emsp;`.</p>
-                    <p style="font-family: 宋体;user-select: none;cursor: help;">
-                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;/&emsp;\\|||&emsp;:&emsp;|||//&emsp;\</p>
-                    <p style="font-family: 宋体;user-select: none;cursor: help;">
-                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;/&emsp;_|||||&ensp;-:-&ensp;|||||-&emsp;\</p>
-                    <p style="font-family: 宋体;user-select: none;cursor: help;">
-                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;|&emsp;&ensp;|&emsp;&ensp;\\\-///&emsp;&ensp;|&emsp;&ensp;|
-                    </p>
-                    <p style="font-family: 宋体;user-select: none;cursor: help;">
-                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;|&ensp;\_|&emsp;''\---/''&emsp;|&emsp;&ensp;|</p>
-                    <p style="font-family: 宋体;user-select: none;cursor: help;">
-                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;\&emsp;.-\__&emsp;`-`&emsp;__/-.&emsp;/</p>
-                    <p style="font-family: 宋体;user-select: none;cursor: help;">
-                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;___`.&ensp;.'&emsp;/--.--\&emsp;&emsp;`.&ensp;.&ensp;__</p>
-                    <p style="font-family: 宋体;user-select: none;cursor: help;">&emsp;&emsp;&emsp;&emsp;&emsp;.""&ensp;'
-                        <&emsp;`.___\_<|>_/___.'&emsp;&emsp;>'"".</p>
-                    <p style="font-family: 宋体;user-select: none;cursor: help;">
-                        &emsp;&emsp;&emsp;&emsp;&ensp;|&ensp;|&ensp;:&emsp;`-&ensp;\`.;`\&ensp;_&ensp;/`;.`/-&ensp;`&emsp;:&ensp;|&ensp;|
-                    </p>
-                    <p style="font-family: 宋体;user-select: none;cursor: help;">
-                        &emsp;&emsp;&emsp;&emsp;&ensp;\&emsp;\&emsp;&emsp;`-.|_&ensp;__\&ensp;/__&ensp;_/&emsp;&emsp;.-`/&emsp;/
-                    </p>
-                    <p style="font-family: 宋体;user-select: none;cursor: help;">
-                        &emsp;&emsp;======`-.____`-.___\_____/___.-`____.-'======</p>
-                    </p>
-                    &emsp;&emsp;<button
-                        onclick="MainBody(3)">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;为佛祖点一枝香&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</button>
+                    <pre>
+                         _oo0oo_
+                        o8888888o
+                        88" . "88</pre>
+                    <pre id="fozubiaoqing">
+                        (| -_- |)</pre>
+                    <pre>
+                         0\ = /0
+                     ____/`---'\____
+                  .'  \\|     |//   `.
+                 /  \\|||  :  |||//   \
+                /  _|||||  -:-  |||||- \
+                |   |    \\\-///    |  |
+                |  \_|  ''\---/''   |  |
+                \  .-\__   `-`   __/-. /
+              ___`.  .'  /--.--\  `.  .  __
+            ."" ' &lt; `.___\_&lt;|&gt;_/___.' &gt; ' "".
+           | | : ` - \`.;`\ _ /`;.`/- ` : | |
+           \  \  `-.|_  __\  /__  _/  .-`/ /
+      ======`-.____`-.___\_____/___.-`____.-'======</pre>
+                    &emsp;&emsp;<button type="button"
+                        onclick="MainBody(3)">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;为佛祖上一根香&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</button>
                     <br>
-                    &emsp;&emsp;<button
-                        onclick="MainBody(4)">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;为佛祖点五枝香&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</button>
-                    <br>
-                    &emsp;&emsp;<button
-                        onclick="MainBody(5)">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;让佛祖停止震惊&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</button>
+                    &emsp;&emsp;<button type="button" id="fozudebtn"
+                        onclick="MainBody(4)">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;为佛祖上十根香&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</button>
                 </section>
+                <br>
+                <hr style="background-color:#75aac8;border: 1px solid #75aac8;">
                 <br>
                 <section name="SPlaomo" id="SPlaomo">
                     <p>&emsp;&emsp;下面的纯属扯淡，但是没有太空旷了，你想想，你在一个大的广场上面只是立了一个小碑，不会空旷吗？</p>
