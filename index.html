@@ -13,11 +13,34 @@
                 /*去掉外边距*/
                 margin: 0;
                 padding: 0;
-                scroll-behavior: auto;
+                scroll-behavior: smooth;
+                scroll-padding-top: 64px;
                 /* 覆盖boss.css中“overflow-x:hidden;”声明,否则公告栏及其他的东西就毁啦! */
                 overflow-x: visible;
             }
             /* 内容部分样式 */
+            .page-back-to-top{
+                /* 返回顶部按钮 */
+                position: fixed;
+                z-index: 9998;
+                bottom: 25px;
+                right: 25px;
+            }
+            .page-back-to-top a button{
+                width: 40px;
+                height: 40px;
+                background-color: rgba(117, 170, 200, 0.6);
+                color: white;
+                font-family: simhei;
+                transform: rotate(90deg);
+                font-weight: bold;
+                border-radius: 40%;
+                border: 1px solid #577e94;
+                cursor: pointer;
+            }
+            .page-back-to-top a button:hover{
+                background-color: rgba(87, 126, 148, 0.6);
+            }
             .all_content{
                 /* 大到能包全部内容(除nav之外)的盒子,为了适配各种宽度
                 尽管我已经设置了绝对定位,但我还是不敢删,怕崩了
@@ -229,6 +252,14 @@
             //一些临时变量
             var fozu = true//line-262,line-825
             //======================================================================
+            console.warn("注意:未检测到引用的插件,部分功能可能不会正常工作!")
+            console.error("错误:调用方法不合法!")
+            console.error("错误:API接口失效,未获取到信息!")
+            console.warn("注意:端口'6685'拒绝访问!")
+            console.warn("注意:端口'7754'拒绝访问!")
+            console.error("404-not found...")
+            console.error("错误:参数不合法!")
+            //======================================================================
             function LsideCnt(a){
                 //左栏里可以点的地方
                 if(a == 1){
@@ -252,7 +283,6 @@
                 }
             }
             //======================================================================
-            
             function MainBody(a){
                 //正文里可以点的地方
                 //分支,我不想用switch
@@ -269,7 +299,7 @@
                     if(fozu==true){
                         alert("佛祖感受到了你的虔诚very much，祂极为震惊以至于瞪大了眼睛（因为祂没料到这里还有洋文）")
                         alert("你的功德+114514")
-                        document.getElementById("fozubiaoqing").innerHTML = "                        (| 0_0 |)";
+                        document.getElementById("fozubiaoqing").innerHTML = "                        (| 0_o |)";
                         document.getElementById("fozudebtn").innerHTML = "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;佛祖饶命！&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"
                         fozu = false
                         console.log(fozu)
@@ -283,12 +313,6 @@
                     }
                 }
             }
-            //======================================================================
-            setInterval(function(){
-                //依托答辩
-                //console.log("114514");
-                //console.log("1919810");
-            },0.000005)
             //======================================================================
             function rickroll(){
                 //弹出一个播放rickroll的窗口哈哈哈
@@ -311,6 +335,11 @@
     </head>
     <body>
         <iframe src="https://5h9igzqanx.github.io/TRDWBST-pages/header/nav.htm" title="nav" width="100%" height="64px" frameborder="0" scrolling="no" style="position: fixed;z-index: 9999;"></iframe>
+        <div class="page-back-to-top">
+            <a href="#top">
+                <button type="button" title="返回顶部">&lt;</button>
+            </a>
+        </div>
         <p style="color:#cadeea;user-select: none;" name="top" id="top">你为什么能看见这句话？快关掉F12!</p>
         <br>
         <br>
@@ -374,7 +403,7 @@
                     <h2 style="text-align:center;font-family: ZX-C-汉仪文黑85W;">📣公告</h2>
                     <br>
                     <p>&emsp;&emsp;这里是我第三个网站，没错，我又开了一个。因为github不要钱hhhh，咱就相当于薅羊毛了</p>
-                    <p>&emsp;&emsp;如果你看不惯，可以<a onclick="LsideCnt(1)" class="dj">回去</a>旧的网站</p>
+                    <p>&emsp;&emsp;如果你看不惯，可以<a onclick="LsideCnt(1)" class="dj">回去旧的网站</a></p>
                     <p>&emsp;&emsp;<a onclick="LsideCnt(2)"><span class="dj">点击前往查看更多来自网友投稿的的公告……</span></a></p>
                     <p>&emsp;&emsp;<a onclick="rickroll()" class="dj">点击前往查看《GTA6预告片》……</a></p>
                     <hr>
@@ -630,7 +659,7 @@
                                 { url: 'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/5.gif', title: '&emsp;广告位招租', href: '5' },
                                 { url: 'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/6.gif', title: '&emsp;广告位招租', href: '6' },
                                 { url: 'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/7.gif', title: '&emsp;广告位招租', href: '7' },
-                            ]//大公告栏数据，url为图片地址，title为标题，href为啥也不是，详见第193行
+                            ]//大公告栏数据,url为图片地址,title为标题,href为公告序号，详见第723行
                             let NoticeNumber = 0
                             let Nimg = document.querySelector('#NoticeImg')
                             let Ntitle = document.querySelector('#NoticeTitle')
@@ -640,7 +669,7 @@
                             function NoticeDianjiqiehuan() {
                                 //点击(指按键)切换
                                 var Nlog = "[info]公告切换为"+NoticeNumber
-                                console.log(Nlog)
+                                console.info(Nlog)
                                 Nimg.src = sliderData[NoticeNumber].url
                                 Nimg.title = sliderData[NoticeNumber].title
                                 Ntitle.innerHTML = sliderData[NoticeNumber].title
@@ -674,9 +703,9 @@
                                     }
                                     NoticeNumber++
                                     NoticeDianjiqiehuan()
-                                }, 5000)
+                                }, 5000)//间隔,现在是5秒
                             }
-                            //鼠标放入框时的动作，再往下是移出
+                            //鼠标放入框时的动作,再往下是移出
                             let slider = document.querySelector('.slider')
                             slider.addEventListener('mouseenter', function () {
                                 clearInterval(timeId)
@@ -741,6 +770,7 @@
                             onclick="MainBody(2)">&ensp;ikun&ensp;</del>修游戏，反正就是做着玩的</p>
                     <p>&emsp;&emsp;就这些哈哈哈，看着玩吧</p>
                     <p>&emsp;&emsp;比如我现在要在这依托答辩上面打一个答辩……</p>
+                    
                 </section>
                 <br>
                 <hr style="background-color:#75aac8;border: 1px solid #75aac8;">
@@ -771,12 +801,12 @@
                             <div style="height: 350px;">
                                 <div style="padding: 10px;float: left;width: /*calc(100vw - 325px - 11px - 0.8px)*/454px;">
                                     <h3 style="text-align:right;font-family:楷体">更悬&emsp;</h3>
-                                    <p>&emsp;&emsp;页面服务总是吞文件，查的时候一看，诶，不能上传超过100M的文件，我辛苦做的视频他妈上传不了，真是<span
+                                    <p>&emsp;&emsp;页面服务总是吞文件，查的时候一看，诶，不能上传超过100M的文件，我辛苦做的视频™上传不了，真是<span
                                             style="text-decoration:line-through">操你妈</span></p>
-                                    <p>&emsp;&emsp;本地存储库没写完的一堆bug的代码直接就他妈直接给我推送了，还他妈追不回来，难道朋友们的电脑你他妈能负责啊</p>
+                                    <p>&emsp;&emsp;本地存储库没写完的一堆bug的代码直接就™直接给我推送了，还™追不回来，难道朋友们的电脑你™能负责啊</p>
                                     <p>&emsp;&emsp;哦，还有嗷，我不想在这个存储库存字体文件，另创了一个<span><a
                                                 href="https://5h9igzqanx.github.io/fonts-wbst/"
-                                                style="font-family: ZX-C-汉仪文黑85W;text-decoration: none;color: black;font-weight: 100;">存储库</a></span>，你他妈竟然还他妈不能使用那里的字体！我对照着css文件搞了大半夜，真是<del>操你妈操你妈操你妈操你妈操你妈操你妈操你妈操你妈操你妈操你妈</del>
+                                                style="font-family: ZX-C-汉仪文黑85W;text-decoration: none;color: black;font-weight: 100;">存储库</a></span>，你™竟然还™不能使用那里的字体！我对照着css文件搞了大半夜，真是<del>操你妈操你妈操你妈操你妈操你妈操你妈操你妈操你妈操你妈操你妈</del>
                                     </p>
                                 </div>
                                 <img src="https://5h9igzqanx.github.io/TRDWBST-media/picture/fun/ad/idx-ad1-2.gif" width="60%"
@@ -799,6 +829,7 @@
                 <br>
                 <hr style="background-color:#75aac8;border: 1px solid #75aac8;">
                 <br>
+                <!-- TODO 准备添枝加叶 -->
                 <section name="SP3" id="SP3">
                     <h2>参拜佛祖</h2>
                     <pre>
