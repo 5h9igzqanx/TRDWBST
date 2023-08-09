@@ -136,6 +136,10 @@
             .content-body p{
                 font-family: 仿宋;
             }
+            .content-body hr{
+                background-color:#75aac8;
+                border: 1px solid #75aac8;
+            }
             a{
                 color: black;
                 text-decoration: none;
@@ -156,7 +160,7 @@
                 -webkit-user-select: none;
                 user-select: none;
             }
-            .slider-wrapper,.slider-wrapper img{
+            .slider .slider-wrapper,.slider-wrapper img{
                 width:100%;
                 border-radius: 24px;
                 position: sticky;
@@ -165,13 +169,13 @@
                 -webkit-user-select: none;
                 user-select: none;
             }
-            .slider-footer{
+            .slider .slider-footer{
                 position: sticky;
                 z-index: 3;
                 background:linear-gradient(to bottom,rgba(163,198,218,0),rgba(163,198,218,1));
                 border-radius: 25px;
             }
-            .slider-footer #NoticeTitle{
+            .slider .slider-footer #NoticeTitle{
                 position: sticky;
                 border-radius: 0%;
                 padding-top: 20px;
@@ -181,16 +185,16 @@
                 font-family: ZX-C-汉仪文黑85W;
                 font-size: x-large;
             }
-            .slider-footer #NoticeTitle:hover{
+            .slider .slider-footer #NoticeTitle:hover{
                 color: #75aac8;
             }
-            .slider-indicator{
+            .slider .slider-indicator{
                 display: flex;
                 height: 22px;
                 margin-left: 20px;
                 padding-bottom: 10px;
             }
-            .slider-indicator .active{
+            .slider .slider-indicator .active{
                 list-style-type: none;
                 width: 16px;
                 height: 16px;
@@ -200,7 +204,7 @@
                 margin: 3px;
                 vertical-align: bottom;
             }
-            .slider-indicator li{
+            .slider .slider-indicator li{
                 list-style-type: none;
                 width: 10px;
                 height: 10px;
@@ -211,14 +215,14 @@
                 vertical-align: bottom;
                 cursor: pointer;
             }
-            .toggle{
+            .slider .toggle{
                 position: sticky;
                 z-index: 7;
                 margin: 3px;
                 text-align: end;
                 margin-top: -10px;
             }
-            .toggle button{
+            .slider .toggle button{
                 width:30px;
                 height:30px;
                 background-color: #75aac8;
@@ -229,10 +233,82 @@
                 border: 1px solid #577e94;
                 cursor: pointer;
             }
-            .toggle button:hover{
+            .slider .toggle button:hover{
                 background-color: #577e94;
             }
-            #SP3 pre{
+            /* 关于GitHub的广告 */
+            #SP2 details{
+                -webkit-user-select: none;
+                user-select: none;
+            }
+            #SP2 details summary{
+                cursor: pointer;
+            }
+            #SP2 .ad{
+                border: 1px dashed #000;
+                border-radius: 15px;
+                margin: 9px;
+                padding: 2px;
+            }
+            #SP2 .ad .ad1{
+                height:350px;
+            }
+            #SP2 .ad .ad13zi{
+                overflow: hidden;
+                padding: 10px;
+            }
+            /* 百度搜索框的副本 */
+            #SP3 .baidussk{
+                background-color: white;
+                margin-left: 10px;
+                margin-right: 10px;
+                border-radius: 25px;
+                border: 2px solid #75aac8;
+            }
+            #SP3 .baidussk-top-img{
+                width:420px;
+                height: 131px;
+                background-color:pink;
+                margin:80px auto;
+                background:url(https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png)no-repeat -60px -102px;
+                zoom:.5;
+            }
+            #SP3 .baidussk-top-search{
+                width:680px;
+                height: 75px;
+                margin:30px auto;
+            }
+            #SP3 .baidussk-search-box{
+                display:flex;
+                position:relative;
+            }
+            #SP3 .baidussk-search-left{
+                width:600px;
+                height:40px;
+                border:2px solid rgb(196,199,206);
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                outline-color:rgb(78,110,242);
+            }
+            #SP3 .baidussk-icom-xiangji{
+                position:absolute;
+                right:150px;
+                top: 12px;
+                font-size:24px;
+                color:rgb(196,199,206);
+            }
+            #SP3 .baidussk-search-right{
+                color:#fff;
+                font-size:18px;
+                width:80px;
+                height:40px;
+                border:0px;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+                background-color:rgb(78,110,242);
+                cursor: pointer;
+            }
+            #SP4 pre{
                 cursor: none;
             }
             /*@media screen and (250px <=width <=500px){
@@ -254,7 +330,7 @@
             //======================================================================
             console.warn("注意:未检测到引用的插件,部分功能可能不会正常工作!")
             console.error("错误:调用方法不合法!")
-            console.error("错误:API接口失效,未获取到信息!")
+            console.error("错误:API接口'4E0D-662F-54E5-4EEC-513F-4F60-771F-641C-554A-FF0C-4F60-771F-662F-95F2-6B7B-4E86'失效,未获取到信息!")
             console.warn("注意:端口'6685'拒绝访问!")
             console.warn("注意:端口'7754'拒绝访问!")
             console.error("404-not found...")
@@ -291,14 +367,17 @@
                 }else if(a == 2){
                     alert("小脚子黑坤露出来了吧，油饼食不食啊")
                 }else if(a == 3){
+                    top.location,href="https://www.baidu.com/s?wd=%E7%99%BE%E5%BA%A6%E7%83%AD%E6%90%9C"
+                }else if(a == 4){
                     //赛博佛祖
                     alert("佛祖感受到了你的虔诚")
                     alert("你的功德+5")
-                }else if(a == 4){
+                }else if(a == 5){
                     //赛博佛祖,但是祂震惊了
                     if(fozu==true){
                         alert("佛祖感受到了你的虔诚very much，祂极为震惊以至于瞪大了眼睛（因为祂没料到这里还有洋文）")
                         alert("你的功德+114514")
+                        alert("佛祖：“尊嘟假嘟？”")
                         document.getElementById("fozubiaoqing").innerHTML = "                        (| 0_o |)";
                         document.getElementById("fozudebtn").innerHTML = "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;佛祖饶命！&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"
                         fozu = false
@@ -480,7 +559,7 @@
                     <br>
                     <p style="font-family: ZX-C-汉仪文黑85W,仿宋;font-size: x-small;">暂无版权信息(不会弄)&ensp;-&emsp;<span onclick="yqlj(3)" class="dj">我为什么必须备案？</span></p>
                     <br>
-                    <p style="font-family: ZX-C-汉仪文黑85W,仿宋;font-size: x-small;">5h9igzqanx&emsp;TRDWBST&emsp;托管平台:<span onclick="yqlj(1)" class="dj">Github</span></p>
+                    <p style="font-family: ZX-C-汉仪文黑85W,仿宋;font-size: x-small;">5h9igzqanx&emsp;TRDWBST&emsp;托管平台:<span onclick="yqlj(1)" class="dj">GitHub</span></p>
                     <br>
                     <p style="font-family: ZX-C-汉仪文黑85W,仿宋;font-size: x-small;"><a class="dj" href="#top">联系方式见上</a></p>
                     <script>
@@ -773,32 +852,33 @@
                     
                 </section>
                 <br>
-                <hr style="background-color:#75aac8;border: 1px solid #75aac8;">
+                <hr>
                 <br>
                 <section name="SP2" id="SP2">
                     <h2>广告😅</h2>
-                    <details open style="user-select: none;">
-                        <summary style="cursor: pointer;" title="点击展开或收起，我不信有人喜欢看广告😅">点击展开或收起，我不信有人喜欢看广告😅</summary>
+                    <details open>
+                        <summary title="点击展开或收起，我不信有人喜欢看广告😅">点击展开或收起，我不信有人喜欢看广告😅</summary>
                         <p style="text-align:center">你 被 骗 了</p>
                         <br>
-                        <div style="border: 1px dashed #000;border-radius: 15px;margin: 9px; padding: 2px;">
+                        <style>
+                            
+                        </style>
+                        <div class="ad">
                             <br>
-                            <h3 style="text-align:center;font-family:'Comic Sans MS'">Github</h3>
+                            <h3 style="text-align:center;font-family:'Comic Sans MS'">GitHub</h3>
                             <p style="text-align:center;color:rgb(0,0,0,0.6);font-family: ZX-C-Aa卑微的我喜欢遥远的你;font-size: small;">
-                                一个<span style="text-decoration: line-through;">垃圾</span><span
-                                    style="font-weight:bold;color:black">专业</span>的代码托管平台</p>
+                                一个<span style="text-decoration: line-through;">垃圾</span><span style="font-weight:bold;color:black">专业</span>的代码托管平台</p>
                             <br>
-                            <div style="height: 350px;">
+                            <div class="ad1">
                                 <img src="https://5h9igzqanx.github.io/TRDWBST-media/picture/fun/ad/idx-ad1-1.gif" width="60%"
                                     style="border-radius: 15px;float: left;" title="ad">
-                                <div style="overflow: hidden;padding: 10px;">
+                                <div class="ad13zi">
                                     <h3 style="text-align:left;font-family:楷体">&emsp;更慢</h3>
-                                    <p>&emsp;&emsp;服务器总是gg，不挂加速器根本打不开，打开也是没css的<span
-                                            style="font-family: ZX-C-汉仪文黑85W;font-weight:bold;color:#f00">依托答辩</span>，马勒戈壁的</p>
+                                    <p>&emsp;&emsp;服务器总是gg，不挂加速器根本打不开，打开也是没css的<span style="font-family: ZX-C-汉仪文黑85W;font-weight:bold;color:#f00">依托答辩</span>，马勒戈壁的</p>
                                 </div>
                             </div>
                             <br>
-                            <div style="height: 350px;">
+                            <div class="ad1">
                                 <div style="padding: 10px;float: left;width: /*calc(100vw - 325px - 11px - 0.8px)*/454px;">
                                     <h3 style="text-align:right;font-family:楷体">更悬&emsp;</h3>
                                     <p>&emsp;&emsp;页面服务总是吞文件，查的时候一看，诶，不能上传超过100M的文件，我辛苦做的视频™上传不了，真是<span
@@ -813,10 +893,10 @@
                                     style="border-radius: 15px;float: right;text-align: right;display: inline;" title="ad">
                             </div>
                             <br>
-                            <div style="height: 350px;">
+                            <div class="ad1">
                                 <img src="https://5h9igzqanx.github.io/TRDWBST-media/picture/fun/ad/idx-ad1-1.gif" width="60%"
                                     style="border-radius: 15px;float: left;" title="ad">
-                                <div style="overflow: hidden;padding: 10px;">
+                                <div class="ad13zi">
                                     <h3 style="text-align:left;font-family:楷体">&emsp;更危险</h3>
                                     <p>&emsp;&emsp;114514114514114514</p>
                                 </div>
@@ -827,18 +907,57 @@
                     </details>
                 </section>
                 <br>
-                <hr style="background-color:#75aac8;border: 1px solid #75aac8;">
+                <hr>
+                <br>
+                <section name="SP3" id="SP3">
+                    <h2>真&ensp;·《百度》</h2>
+                    <p>因为我这里只是一个静态网页，不支持搜索。况且我做了你们也会觉得不适应，所以我就直接把百度的搜索页面搬过来了哈哈</p>
+                    <div class="baidussk">
+                        <br>
+                        <div class="baidussk-top-img" onclick="MainBody(3)" title="点击一下，了解更多"></div>
+                        <div class="baidussk-top-search">
+                            <br>
+                            <div class="baidussk-search-box">
+                                <input type="text" name="search" class="baidussk-search-left" spellcheck="false" data-ms-editor="true" id="bdIpt">
+                                <span class="iconfont baidussk-icon-xiangji"></span>
+                                <input class="baidussk-search-right" type="submit" name="btn" id="bdBtn" value="搜索" onclick="bdSearch()">
+                                <br>
+                            </div>
+                        </div>
+                        <br>
+                        <script>
+                            var bdIpt = document.getElementById("bdIpt")
+                            let bdIptAn = document.querySelector("#bdIpt")
+                            let bdBtnAn = document.querySelector("#bdBtn")
+                            bdIptAn.addEventListener("keyup",function(event){
+                                if(event.keyCode === 13){
+                                    bdSearch()
+                                }
+                            })
+                            bdBtnAn.addEventListener("click",function(){
+                                bdSearch()
+                            })
+                            function bdSearch(){
+                                var schurl = "https://www.baidu.com/s?wd="+bdIpt.value
+                                top.location.href = schurl
+                            }
+                        </script>
+                    </div>
+                </section>
+                <br>
+                <hr>
                 <br>
                 <!-- TODO 准备添枝加叶 -->
-                <section name="SP3" id="SP3">
+                <section name="SP4" id="SP4">
                     <h2>参拜佛祖</h2>
-                    <pre>
+                    <div class="fozu">
+                        <pre>
                          _oo0oo_
                         o8888888o
                         88" . "88</pre>
-                    <pre id="fozubiaoqing">
+                        <pre id="fozubiaoqing">
                         (| -_- |)</pre>
-                    <pre>
+                        <pre>
                          0\ = /0
                      ____/`---'\____
                   .'  \\|     |//   `.
@@ -852,14 +971,15 @@
            | | : ` - \`.;`\ _ /`;.`/- ` : | |
            \  \  `-.|_  __\  /__  _/  .-`/ /
       ======`-.____`-.___\_____/___.-`____.-'======</pre>
+                    </div>
                     &emsp;&emsp;<button type="button"
-                        onclick="MainBody(3)">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;为佛祖上一根香&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</button>
+                        onclick="MainBody(4)">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;为佛祖上一根香&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</button>
                     <br>
                     &emsp;&emsp;<button type="button" id="fozudebtn"
-                        onclick="MainBody(4)">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;为佛祖上十根香&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</button>
+                        onclick="MainBody(5)">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;为佛祖上十根香&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</button>
                 </section>
                 <br>
-                <hr style="background-color:#75aac8;border: 1px solid #75aac8;">
+                <hr>
                 <br>
                 <section name="SPlaomo" id="SPlaomo">
                     <p>&emsp;&emsp;下面的纯属扯淡，但是没有太空旷了，你想想，你在一个大的广场上面只是立了一个小碑，不会空旷吗？</p>
@@ -867,7 +987,7 @@
                     <p>&emsp;&emsp;不是搁哪儿了？好了消失了，不用<del>智能家居</del>钻牛角尖了</p>
                 </section>
                 <br>
-                <hr style="background-color:#75aac8;border: 1px solid #75aac8;">
+                <hr>
             </div>
         </div>
     </body>
