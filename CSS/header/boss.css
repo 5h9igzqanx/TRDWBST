@@ -21,10 +21,10 @@ br {
 hr{
     margin-left: 5px;
     margin-right: 5px;
-    height: 5px;
+    height: 7px;
     border-radius: 2.5px;
     background-color: #cadeea;
-    border: 1px solid #cadeea;
+    border: none;
     cursor: not-allowed;
 }
 a{
