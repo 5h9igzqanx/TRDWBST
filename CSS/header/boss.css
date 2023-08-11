@@ -1,38 +1,38 @@
 /* 这里是TRDWBST的总样式表,这里规定了一些元素防止还得再定义一遍,很节省空间 */
 
-/* 去掉内外边距防止页面像屎一样 */
+/*               声 明               *//*                 注 释                 */
 * {
-    margin: 0;
-    padding: 0;
-    color-scheme: light;
-    scroll-behavior: smooth;
-    scroll-padding-top:64px;
-    overflow-x: hidden;
-    /* filter: grayscale(1);1 *//* 网页黑白 */
+    margin: 0;                        /* 去外边距 */
+    padding: 0;                       /* 去内边距 */
+    color-scheme: light;              /* 亮色模式 */
+    scroll-behavior: smooth;          /* 滚动动画 */
+    scroll-padding-top:64px;          /* 考虑到nav栏的动画 */
+    overflow-x: hidden;               /* 取消x轴(就是横轴)的滚动条 */
+    /* filter: grayscale(1);1            网页黑白 */
 }
 body{
-    background-color:#cadeea;
+    background-color:#cadeea;       /* 背景颜色 */
 }
 /* 设置某些常规标签的样式 */
-br {
-    -webkit-user-select: none;
-    user-select: none;
+br{
+    -webkit-user-select: none;        /* 不让用户选中——safari3.0以下版 */
+    user-select: none;                /* 不让用户选中 */
 }
 hr{
-    margin-left: 5px;
-    margin-right: 5px;
-    height: 7px;
-    border-radius: 4px;
-    background-color: #cadeea;
-    border: none;
-    cursor: not-allowed;
+    margin-left: 5px;                 /* 左外边距 */
+    margin-right: 5px;                /* 右外边距 */
+    height: 7px;                      /* 高度 */
+    border-radius: 4px;               /* 圆角比方角耐看 */
+    background-color: #cadeea;      /* 背景颜色 */
+    border: none;                     /* 取消边界,因为默认<hr>是有边界的 */
+    cursor: none;                     /* 不渲染鼠标 */
 }
 a{
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+    color: black;                   /* 前景色,因为默认<a>前景色是蓝的,报看 */
+    text-decoration: none;            /* 取消下划线 */
+    cursor: pointer;                  /* 鼠标渲染 */
 }
-/* 鸣谢栏宽度铺满 */
+/* 特有的标签样式 */
 footer iframe{
-    width: 100vw;
+    width: 100vw;                     /* 鸣谢栏宽度铺满 */
 }

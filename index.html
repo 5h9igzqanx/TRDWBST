@@ -307,8 +307,49 @@
                 background-color:rgb(78,110,242);
                 cursor: pointer;
             }
+            /* 佛祖的背景 */
+            #SP4 .fozu{
+                border: 2px solid #75aac8;
+                border-radius: 25px;
+                background-color: black;
+                width: 370px;
+            }
             #SP4 pre{
                 cursor: none;
+                color: white;
+            }
+            /* 一个按钮的*情故事 */
+            #SP5 .Btn50{
+                width: 30%;
+                text-align: center;
+                border-radius: 4px;
+                border: 1px solid black;
+            }
+            #SP5 .Btn52{
+                background-color: #daa3a3;
+                color: red;
+                border: 1px solid #c87575;
+                animation: SP5shake 0.1s cubic-bezier(.36,.07,.19,.97) both infinite;
+                transform-origin: center;
+            }
+            #SP5 .Btn53{
+                height: 550px;
+                animation: SP5shake 0.01s cubic-bezier(.36,.07,.19,.97) both infinite;
+                transform-origin: center;
+            }
+            @keyframes SP5shake {
+                10%, 90% {
+                  transform: translate3d(-0.2px, -0.2px, 0);
+                }
+                20%, 80% {
+                  transform: translate3d(0.4px, 0.4px, 0);
+                }
+                30%, 50%, 70% {
+                  transform: translate3d(-0.8px, -0.8px, 0);
+                }
+                40%, 60% {
+                  transform: translate3d(0.8px, 0.8px, 0);
+                }
             }
             /*@media screen and (250px <=width <=500px){
                 .lside,.notice,footer{
@@ -358,7 +399,7 @@
                 }
             }
             //======================================================================
-            function MainBody(a){
+            function MainBody(a = 114514){
                 //正文里可以点的地方
                 //分支,我不想用switch
                 if(a == 1){
@@ -376,7 +417,7 @@
                     if(fozu==true){
                         alert("佛祖感受到了你的虔诚very much，祂极为震惊以至于瞪大了眼睛（因为祂没料到这里还有洋文）")
                         alert("你的功德+114514")
-                        alert("佛祖：“尊嘟假嘟？”")
+                        alert("佛祖:“尊嘟假嘟？”")
                         document.getElementById("fozubiaoqing").innerHTML = "                        (| 0_o |)";
                         document.getElementById("fozudebtn").innerHTML = "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;佛祖饶命！&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"
                         fozu = false
@@ -389,6 +430,8 @@
                         fozu = true
                         console.info("[info]发射取消")
                     }
+                }else if(a == 114514){
+                    rickroll()
                 }
             }
             //======================================================================
@@ -911,7 +954,7 @@
                 <br>
                 <section name="SP3" id="SP3">
                     <h2>真&ensp;·《百度》</h2>
-                    <p>因为我这里只是一个静态网页，不支持搜索。况且我做了你们也会觉得不适应，所以我就直接把百度的搜索页面搬过来了哈哈</p>
+                    <p>&emsp;&emsp;因为我这里只是一个静态网页，不支持搜索。况且我做了你们也会觉得不适应，所以我就直接把百度的搜索页面搬过来了哈哈</p>
                     <div class="baidussk">
                         <br>
                         <div class="baidussk-top-img" onclick="MainBody(3)" title="点击一下，了解更多"></div>
@@ -951,6 +994,8 @@
                 <section name="SP4" id="SP4">
                     <h2>参拜佛祖</h2>
                     <div class="fozu">
+                        <br>
+                        <br>
                         <pre>
                          _oo0oo_
                         o8888888o
@@ -971,6 +1016,7 @@
            | | : ` - \`.;`\ _ /`;.`/- ` : | |
            \  \  `-.|_  __\  /__  _/  .-`/ /
       ======`-.____`-.___\_____/___.-`____.-'======</pre>
+                        <br>
                     </div>
                     &emsp;&emsp;<button type="button"
                         onclick="MainBody(4)">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;为佛祖上一根香&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</button>
@@ -981,10 +1027,72 @@
                 <br>
                 <hr>
                 <br>
+                <section name="SP5" id="SP5">
+                    <h2>只是一个按钮</h2>
+                    <p>&emsp;&emsp;没错你看到的就是一个普通的按钮，你真的确定不点一下试试吗？</p>
+                    &emsp;&emsp;<button type="button" title="" onclick="SP5Btn()" id="SP5Btn" class="Btn50">一个按钮</button>
+                    <script>
+                        var SP5B = 0
+                        var SP5BtnEle = document.getElementById("SP5Btn")
+                        function SP5Btn(){
+                            switch(SP5B){
+                                case 0:
+                                    alert("一个按钮，似乎没什么特别的…")
+                                    alert("它似乎有意识的活了起来，因为它说起了话")
+                                    alert("按钮:“前辈，请狠狠地惩罚我”")
+                                    alert("咝，怎么这么不对劲…你确定要按吗？")
+                                    SP5B = 1
+                                    break
+                                case 1:
+                                    alert("你点了一下它，但它除了发出了一声娇喘没有一丝动静")
+                                    alert("按钮:“啊~❤哦啊~❤”")
+                                    alert("你要再点一下吗？")
+                                    SP5B = 2
+                                    console.log(SP5B)
+                                    break
+                                case 2:
+                                    alert("按钮:“啊嗷~❤啊哈啊~❤哈啊~”")
+                                    alert("按钮:“要~❤要变成~变成前~❤前辈的形~形状了~❤啊啊啊嗷~❤”")
+                                    alert("它的脸上泛起红色，嘴里流出了涎水，身体微微发颤，说出的话含糊不清，但还能听懂…但是…")
+                                    alert("咝…这话好不对劲…额…")
+                                    alert("喂喂，你只是点击了它两下…对…对吧")
+                                    SP5BtnEle.innerHTML = "一…❤一个按…❤按钮❤"
+                                    //SP5BtnEle.classList.remove("Btn50")
+                                    SP5BtnEle.classList.toggle("Btn52")
+                                    SP5B = 3
+                                    break
+                                case 3:
+                                    alert("按钮:“啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊”")
+                                    alert("它的下体红肿不堪，甚至还有白色的水渍…你不对劲！")
+                                    alert("按钮:哼哼声")
+                                    document.getElementById("fozubiaoqing").innerHTML = "                        (| 0_0 |)"
+                                    //SP5BtnEle.classList.remove("Btn52")
+                                    SP5BtnEle.classList.toggle("Btn53")
+                                    SP5B = 4
+                                    break
+                                case 4:
+                                    alert("它竟然分娩了！你个出生连按钮都操！！！")
+                                    alert("怎么说呢？你牛逼！")
+                                    document.getElementById("fozubiaoqing").innerHTML = "                        (| -_- |)"
+                                    SP5BtnEle.innerHTML = "那个按钮与你的子儿"
+                                    SP5BtnEle.classList.remove("Btn53")
+                                    SP5BtnEle.classList.remove("Btn52")
+                                    //SP5BtnEle.classList.toggle("Btn50")
+                                    SP5B = 5
+                                    break
+                                default:
+                                    rickroll()
+                            }
+                        }
+                    </script>
+                </section>
+                <br>
+                <hr>
+                <br>
                 <section name="SPlaomo" id="SPlaomo">
                     <p>&emsp;&emsp;下面的纯属扯淡，但是没有太空旷了，你想想，你在一个大的广场上面只是立了一个小碑，不会空旷吗？</p>
                     <p>&emsp;&emsp;所以我必须得加啊</p>
-                    <p>&emsp;&emsp;不是搁哪儿了？好了消失了，不用<del>智能家居</del>钻牛角尖了</p>
+                    <p>&emsp;&emsp;不是搁哪儿了？好了消失了，不用<del>智能家居</del>钻牛角尖了</p><!-- 智能家居哈哈哈哈哈哈哈哈,哈哈 -->
                 </section>
                 <br>
                 <hr>
