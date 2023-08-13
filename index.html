@@ -18,9 +18,10 @@
                 /* 覆盖boss.css中“overflow-x:hidden;”声明,否则公告栏及其他的东西就毁啦! */
                 overflow-x: visible;
             }
-            /* 内容部分样式 */
+            /* 👇内容部分样式 */
+            /* =========== */
+            /* 返回顶部按钮 */
             .page-back-to-top{
-                /* 返回顶部按钮 */
                 position: fixed;
                 z-index: 9998;
                 bottom: 25px;
@@ -79,8 +80,8 @@
             .lside-content .dj:hover{
                 color:#75aac8;
             }
+            /* 左栏目录样式 */
             .lside-content .directory{
-                /* 左栏目录样式 */
                 padding-left: 20px;
                 padding-right: 20px;
             }
@@ -89,11 +90,11 @@
                 text-decoration: none;
                 font-family: ZX-C-汉仪文黑85W;
             }
+            /* flesh推荐 样式 */
             .lside-content-ad{
-                /* flesh推荐 样式 */
-                background-color: rgb(230, 230, 230);
+                background-color: #e6e6e6;
                 margin: 0px auto;
-                border: 2px soild rgb(30, 30, 30);
+                border: 2px soild #1e1e1e;
                 padding: 2px;
                 height: 380px;
                 width: 245px;
@@ -119,8 +120,8 @@
             .lside-content-ad ul li img{
                 width: 30%;
             }
+            /* 主内容框 */
             .content-body{
-                /* 主内容框 */
                 overflow: hidden;
                 width: calc(100vw - 325px);
                 margin-right: 10px;
@@ -197,9 +198,9 @@
                 list-style-type: none;
                 width: 16px;
                 height: 16px;
-                background-color: rgb(255,200,200);
+                background-color: #ffc8c8;
                 border-radius: 50%;
-                border: 1px solid rgb(255, 150, 150);
+                border: 1px solid #ff9696;
                 margin: 3px;
                 vertical-align: bottom;
             }
@@ -244,7 +245,7 @@
                 cursor: pointer;
             }
             #SP2 .ad{
-                border: 1px dashed #000;
+                border: 1px dashed black;
                 border-radius: 15px;
                 margin: 9px;
                 padding: 2px;
@@ -269,6 +270,7 @@
                 height: 131px;
                 background-color:pink;
                 margin:80px auto;
+                cursor: pointer;
                 background:url(https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png)no-repeat -60px -102px;
                 zoom:.5;
             }
@@ -282,12 +284,15 @@
                 position:relative;
             }
             #SP3 .baidussk-search-left{
-                width:600px;
+                width:570px;
                 height:40px;
-                border:2px solid rgb(196,199,206);
+                border:2px solid #c4c7ce;
                 border-top-left-radius: 10px;
                 border-bottom-left-radius: 10px;
-                outline-color:rgb(78,110,242);
+                outline-color:#4e6ef2;
+                padding-left:16px;
+                font-size: 16px;
+                font-family: Arial,sans-serif;
             }
             #SP3 .baidussk-icom-xiangji{
                 position:absolute;
@@ -297,15 +302,20 @@
                 color:rgb(196,199,206);
             }
             #SP3 .baidussk-search-right{
-                color:#fff;
+                color: white;
                 font-size:18px;
-                width:80px;
-                height:40px;
+                width:110px;
+                height:42.6px;
                 border:0px;
                 border-top-right-radius: 10px;
                 border-bottom-right-radius: 10px;
-                background-color:rgb(78,110,242);
+                background-color:#4e6ef2;
                 cursor: pointer;
+                font-size: 17px;
+                font-family: Arial,sans-serif;
+            }
+            #SP3 .baidussk-search-right:hover{
+                background-color: #4662d9;
             }
             /* 佛祖的背景 */
             #SP4 .fozu{
@@ -351,14 +361,6 @@
                   transform: translate3d(0.8px, 0.8px, 0);
                 }
             }
-            /*@media screen and (250px <=width <=500px){
-                .lside,.notice,footer{
-                    display: none;
-                }
-                .content-body{
-                    width: 100vw;
-                }
-            }*/
         </style>
         <script>
             //比较多余的勾丝——瘠薄全是“显示”,服了操
@@ -517,6 +519,7 @@
                         <p><a class="dj" href="#SP2">·&ensp;广告</a></p>
                         <p><a class="dj" href="#SP3">·&ensp;真&ensp;·《百度》</a></p>
                         <p><a class="dj" href="#SP4">·&ensp;参拜佛祖</a></p>
+                        <p><a class="dj" href="#SP5">·&ensp;只是一个按钮</a></p>
                         <p><a class="dj" href="#SPlaomo">·&ensp;扯淡(BOTTOM)</a></p>
                     </div>
                 </div>
@@ -963,7 +966,7 @@
                             <div class="baidussk-search-box">
                                 <input type="text" name="search" class="baidussk-search-left" spellcheck="false" data-ms-editor="true" id="bdIpt">
                                 <span class="iconfont baidussk-icon-xiangji"></span>
-                                <input class="baidussk-search-right" type="submit" name="btn" id="bdBtn" value="搜索" onclick="bdSearch()">
+                                <input class="baidussk-search-right" type="submit" name="btn" id="bdBtn" value="百度一下" onclick="bdSearch()">
                                 <br>
                             </div>
                         </div>
@@ -990,7 +993,6 @@
                 <br>
                 <hr>
                 <br>
-                <!-- TODO 准备添枝加叶 -->
                 <section name="SP4" id="SP4">
                     <h2>参拜佛祖</h2>
                     <div class="fozu">
