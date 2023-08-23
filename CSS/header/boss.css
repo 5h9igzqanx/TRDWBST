@@ -15,7 +15,8 @@ body{
 }
 /* 设置某些常规标签的样式 */
 br{
-    -webkit-user-select: none;        /* 不让用户选中——safari3.0以下版 */
+    -webkit-user-select: none;        /* 不让用户选中——Safari3.0以下版 */
+    -moz-user-select: none;           /* 不让用户选中——Firefox版 */
     user-select: none;                /* 不让用户选中 */
 }
 hr{

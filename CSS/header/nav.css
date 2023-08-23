@@ -18,6 +18,7 @@
     background-color: rgb(96, 157, 191, 0.8);
     z-index: 9999;
     -webkit-user-select: none;
+    -moz-user-select: none;
     user-select: none;
 }
 .nav-logo{
