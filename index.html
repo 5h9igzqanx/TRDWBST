@@ -11,369 +11,399 @@
             /* 比较多余的傻逼css——我不想看到加载css之前的html的土老帽样子,服了操 */
             *{
                 /*去掉外边距*/
-                margin: 0;
-                padding: 0;
-                scroll-behavior: smooth;
-                scroll-padding-top: 64px;
+                margin:0;
+                padding:0;
+                scroll-behavior:smooth;
+                scroll-padding-top:64px;
                 /* 覆盖boss.css中“overflow-x:hidden;”声明,否则公告栏及其他的东西就毁啦! */
-                overflow-x: visible;
+                overflow-x:visible;
+            }
+            html{
+                background-color:#cadeea;
             }
             /* 👇内容部分样式 */
             /* =========== */
             /* 返回顶部按钮 */
             .page-back-to-top{
-                position: fixed;
-                z-index: 9998;
-                bottom: 25px;
-                right: 25px;
+                position:fixed;
+                z-index:9998;
+                bottom:25px;
+                right:25px;
             }
             .page-back-to-top a button{
-                width: 40px;
-                height: 40px;
-                background-color: rgba(117, 170, 200, 0.6);
-                color: white;
-                font-family: simhei;
-                transform: rotate(90deg);
-                font-weight: bold;
-                border-radius: 40%;
-                border: 1px solid #577e94;
-                cursor: pointer;
+                width:40px;
+                height:40px;
+                background-color:rgba(117, 170, 200, 0.6);
+                color:white;
+                font-family:simhei;
+                transform:rotate(90deg);
+                font-weight:bold;
+                border-radius:40%;
+                border:1px solid #577e94;
+                cursor:pointer;
             }
             .page-back-to-top a button:hover{
-                background-color: rgba(87, 126, 148, 0.6);
+                background-color:rgba(87, 126, 148, 0.6);
             }
             .all_content{
                 /* 大到能包全部内容(除nav之外)的盒子,为了适配各种宽度
                 尽管我已经设置了绝对定位,但我还是不敢删,怕崩了
                 屎山万岁! */
-                /* max-width: 1920px; */
-                margin: 0px auto;
+                /* max-width:1920px; */
+                margin:0px auto;
             }
             /* 左栏及内容样式 */
             .lside{
-                width: 300px;
-                float: left;
-                position: absolute;
-                top: 90px;
+                width:300px;
+                float:left;
+                position:absolute;
+                top:90px;
                 left:0px;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                user-select: none;
+                -webkit-user-select:none;
+                -moz-user-select:none;
+                user-select:none;
             }
             .lside-content{
-                background-color: #a3c6da;
-                border-radius: 15px;
-                margin-left: 10px;
-                margin-right: 20px;
-                padding-left: 8px;
-                padding-right: 8px;
-                padding-top: 20px;
-                padding-bottom: 4px;
-                overflow-y: auto;
+                background-color:#a3c6da;
+                border-radius:15px;
+                margin-left:10px;
+                margin-right:20px;
+                padding-left:8px;
+                padding-right:8px;
+                padding-top:20px;
+                padding-bottom:4px;
+                overflow-y:auto;
             }
             .lside-content h2{
-                text-align: center;
-                font-family: 'ZX-C-汉仪文黑85W',楷体;
+                text-align:center;
+                font-family:'ZX-C-汉仪文黑85W',楷体;
             }
             .lside-content p{
-                font-family: 微软雅黑;
+                font-family:微软雅黑;
             }
             .lside-content .dj{
-                color: black;
-                cursor: pointer;
+                color:black;
+                cursor:pointer;
             }
             .lside-content .dj:hover{
                 color:#75aac8;
             }
             /* 左栏目录样式 */
             .lside-content .directory{
-                padding-left: 20px;
-                padding-right: 20px;
+                padding-left:20px;
+                padding-right:20px;
             }
             .lside-content .directory p a{
-                color: black;
-                text-decoration: none;
-                font-family: 'ZX-C-汉仪文黑85W','黑体';
+                color:black;
+                text-decoration:none;
+                font-family:'ZX-C-汉仪文黑85W','黑体';
             }
             /* flesh推荐 样式 */
             .lside-content-ad{
-                background-color: #e6e6e6;
-                margin: 0px auto;
-                border: 2px soild #1e1e1e;
-                padding: 2px;
-                height: 380px;
-                width: 245px;
-                overflow-y: auto;
-                -webkit-user-select: text;
-                -moz-user-select: text;
-                user-select: text;
+                background-color:#e6e6e6;
+                margin:0px auto;
+                border:2px soild #1e1e1e;
+                padding:2px;
+                height:380px;
+                width:245px;
+                overflow-y:auto;
+                -webkit-user-select:text;
+                -moz-user-select:text;
+                user-select:text;
             }
             .lside-content-ad ul{
-                width: 226px;
-                padding: 1px;
-                display: flex;
-                flex-direction: column;
+                width:226px;
+                padding:1px;
+                display:flex;
+                flex-direction:column;
             }
             .lside-content-ad-ContentDivider{
-                list-style: none;
-                width: 100%;
-                height: 1px;
-                background: rgba(0, 0, 0, 0.3);
-                overflow: hidden;
-                line-height: 1px;
-                margin: 0px;
-                padding: 0px;
-                font-size: 0px;
+                list-style:none;
+                width:100%;
+                height:1px;
+                background:rgba(0, 0, 0, 0.3);
+                overflow:hidden;
+                line-height:1px;
+                margin:0px;
+                padding:0px;
+                font-size:0px;
             }
             .lside-content-ad ul li img{
-                width: 30%;
+                width:30%;
             }
             /* 主内容框 */
             .content-body{
-                overflow: hidden;
-                width: calc(100vw - 325px);
-                margin-right: 10px;
-                padding-left: 3px;
-                padding-right: 2px;
-                position: absolute;
-                top: 90px;
-                left: 300px;
-                right: 0px;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                user-select: none;
+                overflow:hidden;
+                width:calc(100vw - 325px);
+                margin-right:10px;
+                padding-left:3px;
+                padding-right:2px;
+                position:absolute;
+                top:90px;
+                left:300px;
+                right:0px;
+                -webkit-user-select:none;
+                -moz-user-select:none;
+                user-select:none;
             }
             .content-body p{
-                font-family: 仿宋;
+                font-family:仿宋;
             }
             .content-body hr{
                 background-color:#75aac8;
             }
             .content-body h2{
-                font-family: 'ZX-C-汉仪文黑85W','黑体';
+                font-family:'ZX-C-汉仪文黑85W','黑体';
             }
             a{
-                color: black;
-                text-decoration: none;
-                cursor: pointer;
+                color:black;
+                text-decoration:none;
+                cursor:pointer;
             }
-            /*a:hover{
-                color: #75aac8;
-            }*/
+            a:hover{
+                text-decoration: underline;
+            }
             /* 公告栏样式 */
             .slider{
-                position: sticky;
+                position:sticky;
                 background-color:#a3c6da;
                 border-radius:25px;
-                width: calc(100vw - 335px);
-                margin-right: 10px;
-                border: 2px solid #75aac8;
-                z-index: 2;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                user-select: none;
+                width:calc(100vw - 335px);
+                margin-right:10px;
+                border:2px solid #75aac8;
+                z-index:2;
+                -webkit-user-select:none;
+                -moz-user-select:none;
+                user-select:none;
             }
             .slider .slider-wrapper,.slider-wrapper img{
                 width:100%;
-                border-radius: 24px;
-                position: sticky;
-                z-index: 2;
-                margin-bottom: -26px;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                user-select: none;
+                border-radius:24px;
+                position:sticky;
+                z-index:2;
+                margin-bottom:-26px;
+                -webkit-user-select:none;
+                -moz-user-select:none;
+                user-select:none;
             }
             .slider .slider-footer{
-                position: sticky;
-                z-index: 3;
+                position:sticky;
+                z-index:3;
                 background:linear-gradient(to bottom,rgba(163,198,218,0),rgba(163,198,218,1));
-                border-radius: 25px;
+                border-radius:25px;
             }
             .slider .slider-footer #NoticeTitle{
-                position: sticky;
-                border-radius: 0%;
-                padding-top: 20px;
-                z-index: 7;
+                position:sticky;
+                border-radius:0%;
+                padding-top:20px;
+                z-index:7;
                 background:linear-gradient(to bottom,rgba(163,198,218,0),rgba(163,198,218,1));
-                color: black;
-                font-family: 'ZX-C-汉仪文黑85W';
-                font-size: x-large;
+                color:black;
+                font-family:'ZX-C-汉仪文黑85W';
+                font-size:x-large;
             }
             .slider .slider-footer #NoticeTitle:hover{
-                color: #75aac8;
+                color:#75aac8;
             }
             .slider .slider-indicator{
-                display: flex;
-                height: 22px;
-                margin-left: 20px;
-                padding-bottom: 10px;
+                display:flex;
+                height:22px;
+                margin-left:20px;
+                padding-bottom:10px;
             }
             .slider .slider-indicator .active{
-                list-style-type: none;
-                width: 16px;
-                height: 16px;
-                background-color: #ffc8c8;
-                border-radius: 50%;
-                border: 1px solid #ff9696;
-                margin: 3px;
-                vertical-align: bottom;
+                list-style-type:none;
+                width:16px;
+                height:16px;
+                background-color:#ffc8c8;
+                border-radius:50%;
+                border:1px solid #ff9696;
+                margin:3px;
+                vertical-align:bottom;
             }
             .slider .slider-indicator li{
-                list-style-type: none;
-                width: 10px;
-                height: 10px;
-                background-color: rgba(255,255,255,0.6);
-                border-radius: 50%;
-                border: 1px solid rgba(255,255,255,0.6);
-                margin: 3px;
-                vertical-align: bottom;
-                cursor: pointer;
+                list-style-type:none;
+                width:10px;
+                height:10px;
+                background-color:rgba(255,255,255,0.6);
+                border-radius:50%;
+                border:1px solid rgba(255,255,255,0.6);
+                margin:3px;
+                vertical-align:bottom;
+                cursor:pointer;
             }
             .slider .toggle{
-                position: sticky;
-                z-index: 7;
-                margin: 3px;
-                text-align: end;
-                margin-top: -10px;
+                position:sticky;
+                z-index:7;
+                margin:3px;
+                text-align:end;
+                margin-top:-10px;
             }
             .slider .toggle button{
                 width:30px;
                 height:30px;
-                background-color: #75aac8;
-                color: white;
-                font-family: "simhei";
-                font-weight: bold;
-                border-radius: 40%;
-                border: 1px solid #577e94;
-                cursor: pointer;
+                background-color:#75aac8;
+                color:white;
+                font-family:"simhei";
+                font-weight:bold;
+                border-radius:40%;
+                border:1px solid #577e94;
+                cursor:pointer;
             }
             .slider .toggle button:hover{
-                background-color: #577e94;
+                background-color:#577e94;
             }
             /* 关于GitHub的广告 */
             #SP2 details{
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                user-select: none;
+                -webkit-user-select:none;
+                -moz-user-select:none;
+                user-select:none;
             }
             #SP2 details summary{
-                cursor: pointer;
+                cursor:pointer;
             }
             #SP2 .ad{
-                border: 1px dashed black;
-                border-radius: 15px;
-                margin: 9px;
-                padding: 2px;
+                border:1px dashed black;
+                border-radius:15px;
+                margin:9px;
+                padding:2px;
+                overflow:hidden;
             }
             #SP2 .ad .ad1{
                 height:350px;
             }
             #SP2 .ad .ad13zi{
-                overflow: hidden;
-                padding: 10px;
+                overflow:hidden;
+                padding:10px;
             }
             /* 百度搜索框的副本 */
             #SP3 .baidussk{
-                background-color: white;
-                margin-left: 10px;
-                margin-right: 10px;
-                border-radius: 25px;
-                border: 2px solid #75aac8;
+                background-color:white;
+                margin-left:10px;
+                margin-right:10px;
+                border-radius:25px;
+                border:2px solid #75aac8;
+
             }
             #SP3 .baidussk-top-img{
                 width:420px;
-                height: 131px;
+                height:131px;
                 background-color:pink;
                 margin:80px auto;
-                cursor: pointer;
+                margin-bottom:20px;
+                cursor:pointer;
                 background:url(https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png)no-repeat -60px -102px;
-                zoom:.5;
+                transform:scale(.5);
             }
             #SP3 .baidussk-top-search{
                 width:680px;
-                height: 75px;
+                height:75px;
                 margin:30px auto;
             }
             #SP3 .baidussk-search-box{
                 display:flex;
                 position:relative;
+                transform:scale(.85);
+                align-items:center;
             }
             #SP3 .baidussk-search-left{
                 width:570px;
                 height:40px;
                 border:2px solid #c4c7ce;
-                border-top-left-radius: 10px;
-                border-bottom-left-radius: 10px;
+                border-top-left-radius:10px;
+                border-bottom-left-radius:10px;
                 outline-color:#4e6ef2;
                 padding-left:16px;
-                font-size: 16px;
-                font-family: "Arial",sans-serif;
+                font-size:16px;
+                font-family:"Arial",sans-serif;
             }
             #SP3 .baidussk-icom-xiangji{
                 position:absolute;
                 right:150px;
-                top: 12px;
+                top:12px;
                 font-size:24px;
                 color:rgb(196,199,206);
             }
             #SP3 .baidussk-search-right{
-                color: white;
+                color:white;
                 font-size:18px;
                 width:110px;
                 height:42.6px;
                 border:0px;
-                border-top-right-radius: 10px;
-                border-bottom-right-radius: 10px;
+                border-top-right-radius:10px;
+                border-bottom-right-radius:10px;
                 background-color:#4e6ef2;
-                cursor: pointer;
-                font-size: 17px;
-                font-family: "Arial",sans-serif;
+                cursor:pointer;
+                font-size:17px;
+                font-family:"Arial",sans-serif;
             }
             #SP3 .baidussk-search-right:hover{
-                background-color: #4662d9;
+                background-color:#4662d9;
             }
             /* 佛祖的背景 */
             #SP4 .fozu{
-                border: 2px solid #75aac8;
-                border-radius: 25px;
-                background-color: black;
-                width: 370px;
+                border:2px solid #75aac8;
+                border-radius:25px;
+                background-color:black;
+                width:370px;
             }
             #SP4 pre{
-                cursor: none;
-                color: white;
+                cursor:none;
+                color:white;
             }
             /* 一个按钮的*情故事 */
             #SP5 .Btn50{
-                width: 30%;
-                text-align: center;
-                border-radius: 4px;
-                border: 1px solid black;
+                width:30%;
+                text-align:center;
+                border-radius:4px;
+                border:1px solid black;
             }
             #SP5 .Btn52{
-                background-color: #daa3a3;
-                color: red;
-                border: 1px solid #c87575;
-                animation: SP5shake 0.1s cubic-bezier(.36,.07,.19,.97) both infinite;
-                transform-origin: center;
+                background-color:#daa3a3;
+                color:red;
+                border:1px solid #c87575;
+                animation:SP5shake 0.1s cubic-bezier(.36,.07,.19,.97) both infinite;
+                transform-origin:center;
             }
             #SP5 .Btn53{
-                height: 550px;
-                animation: SP5shake 0.01s cubic-bezier(.36,.07,.19,.97) both infinite;
-                transform-origin: center;
+                height:550px;
+                animation:SP5shake 0.01s cubic-bezier(.36,.07,.19,.97) both infinite;
+                transform-origin:center;
             }
-            @keyframes SP5shake {
+            @keyframes SP5shake{
                 10%, 90% {
-                  transform: translate3d(-0.2px, -0.2px, 0);
+                  transform:translate3d(-0.2px, -0.2px, 0);
                 }
                 20%, 80% {
-                  transform: translate3d(0.4px, 0.4px, 0);
+                  transform:translate3d(0.4px, 0.4px, 0);
                 }
                 30%, 50%, 70% {
-                  transform: translate3d(-0.8px, -0.8px, 0);
+                  transform:translate3d(-0.8px, -0.8px, 0);
                 }
                 40%, 60% {
-                  transform: translate3d(0.8px, 0.8px, 0);
+                  transform:translate3d(0.8px, 0.8px, 0);
+                }
+            }
+            /* 媒体查询,宽度小于1300px时 */
+            @media screen and (max-width:1000px){
+                #SP1{
+                    width:96vw;
+                }
+                #SP2{
+                    overflow:hidden;
+                    width:96vw;
+                }
+                #SP3,.lside{
+                    display:none;
+                }
+                .content-body{
+                    left:0px;
+                    right:0px;
+                    width:97.5vw;
+                }
+                .slider{
+                    width:95vw;
+                    margin-right:0px;
                 }
             }
         </style>
