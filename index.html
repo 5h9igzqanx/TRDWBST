@@ -410,87 +410,95 @@
         <script>
             //比较多余的勾丝——瘠薄全是“显示”,服了操
             //啊对对对,这里都是没脑子都能运行的,有脑子的都在下面唷!
-            //公告栏的在第613行,在这里不能运行哈哈哈
-            //左栏显时间的在第393行,方便维护嘛哈哈哈
+            //公告栏的在第814行,在这里不能运行哈哈哈
+            //左栏显时间的在第635行,方便维护嘛哈哈哈
+            //======================================================================
             //一些临时变量
-            var fozu = true//line-262,line-825
+            var fozu = true;//line-470
             //======================================================================
-            console.warn("注意:未检测到引用的插件,部分功能可能不会正常工作!")
-            console.error("错误:调用方法不合法!")
-            console.error("错误:API接口'4E0D-662F-54E5-4EEC-513F-4F60-771F-641C-554A-FF0C-4F60-771F-662F-95F2-6B7B-4E86'失效,未获取到信息!")
-            console.warn("注意:端口'6685'拒绝访问!")
-            console.warn("注意:端口'7754'拒绝访问!")
-            console.error("404-not found...")
-            console.error("错误:参数不合法!")
+            console.warn("[warn]未检测到引用的插件,部分功能可能不会正常工作!");
+            console.error("[err ]调用方法不合法!");
+            console.error("[err ]接口'4E0D-662F-54E5-4EEC-513F-4F60-771F-641C-554A-FF0C-4F60-771F-662F-95F2-6B7B-4E86'失效,未获取到信息!");
+            console.warn("[warn]端口'6685'拒绝访问!");
+            console.warn("[warn]端口'7754'拒绝访问!");
+            console.error("404-not found...");
+            console.error("[err ]参数不合法!");
             //======================================================================
+            //阻止右键菜单弹出
+            document.oncontextmenu = function(){
+                console.warn("[warn]右键菜单即将被呼出!");
+                console.log("[info]已及时阻拦即将弹出的右键菜单,用时",Math.random()*(2-0.1)+0.1,"s");
+                return false;
+            };
+            //======================================================================
+            //左栏里可以点的地方
             function LsideCnt(a){
-                //左栏里可以点的地方
                 if(a == 1){
-                    alert("点击确认回到旧版")
-                    top.location.href="https://5h9igzqanx.github.io/SCDWBST/"
+                    alert("点击确认回到旧版");
+                    top.location.href="https://5h9igzqanx.github.io/SCDWBST/";
                 }else if(a == 2){
-                    top.location.href="https://5h9igzqanx.github.io/TRDWBST-pages/pages/special/notice/"
+                    top.location.href="https://5h9igzqanx.github.io/TRDWBST-pages/pages/special/notice/";
                 }else if(a == 3){
-                    top.location.href="https://5h9igzqanx.github.io/TRDWBST-pages/pages/tool/0/feedback.htm"
+                    top.location.href="https://5h9igzqanx.github.io/TRDWBST-pages/pages/tool/0/feedback.htm";
                 }else if(a == 4){
-                    top.location.href="http://time.tianqi.com/"
+                    top.location.href="http://time.tianqi.com/";
                 }else if(a == 5){
-                    top.location.href="https://www.baidu.com/s?ie=utf-8&f=3&rsv_bp=1&tn=baidu&wd=%E6%97%A5%E5%8E%86&rn=50&oq=%25E5%258C%2597%25E4%25BA%25AC%25E6%2597%25B6%25E9%2597%25B4%25E6%25A0%25A1%25E5%2587%2586&rsv_pq=9b124e28000f649b&rsv_t=a9a0NG1A%2FwB0f%2FL5CZpJ5YiudEyhkG1aeiUEQMb0HgwBdhlZIvm6FaAZyRI&rqlang=cn&rsv_enter=1&rsv_dl=ts_0&rsv_btype=t&rsv_sug3=7&rsv_sug1=5&rsv_sug7=100&rsv_sug2=1&prefixsug=rili&rsp=0&inputT=2325&rsv_sug4=2882"
+                    top.location.href="https://www.baidu.com/s?ie=utf-8&f=3&rsv_bp=1&tn=baidu&wd=%E6%97%A5%E5%8E%86&rn=50&oq=%25E5%258C%2597%25E4%25BA%25AC%25E6%2597%25B6%25E9%2597%25B4%25E6%25A0%25A1%25E5%2587%2586&rsv_pq=9b124e28000f649b&rsv_t=a9a0NG1A%2FwB0f%2FL5CZpJ5YiudEyhkG1aeiUEQMb0HgwBdhlZIvm6FaAZyRI&rqlang=cn&rsv_enter=1&rsv_dl=ts_0&rsv_btype=t&rsv_sug3=7&rsv_sug1=5&rsv_sug7=100&rsv_sug2=1&prefixsug=rili&rsp=0&inputT=2325&rsv_sug4=2882";
                 }else if(a == 6){
-                    top.location.href="https://baike.baidu.com/item/%E7%AB%AF%E5%8D%88%E8%8A%82/1054"//倒计时点击前往
+                    top.location.href="https://baike.baidu.com/item/%E7%AB%AF%E5%8D%88%E8%8A%82/1054";//倒计时点击前往
                 }else if(a == 7){
-                    alert("我要关了嗷")
+                    alert("我要关了嗷");
                     var elem = document.getElementById('lside-content-ad');
                     elem.parentNode.removeChild(elem);
                     setTimeout('alert("关了嗷")',1)//广告关闭,为了应付
-                }
-            }
+                };
+            };
             //======================================================================
             function MainBody(a = 114514){
                 //正文里可以点的地方
                 //分支,我不想用switch
                 if(a == 1){
-                    alert("欢迎来到我的第三个网站！")
+                    alert("欢迎来到我的第三个网站！");
                 }else if(a == 2){
-                    alert("小脚子黑坤露出来了吧，油饼食不食啊")
+                    alert("小脚子黑坤露出来了吧，油饼食不食啊");
                 }else if(a == 3){
-                    top.location,href="https://www.baidu.com/s?wd=%E7%99%BE%E5%BA%A6%E7%83%AD%E6%90%9C"
+                    top.location,href="https://www.baidu.com/s?wd=%E7%99%BE%E5%BA%A6%E7%83%AD%E6%90%9C";
                 }else if(a == 4){
                     //赛博佛祖
-                    alert("佛祖感受到了你的虔诚")
-                    alert("你的功德+5")
+                    alert("佛祖感受到了你的虔诚");
+                    alert("你的功德+5");
                 }else if(a == 5){
                     //赛博佛祖,但是祂震惊了
                     if(fozu==true){
-                        alert("佛祖感受到了你的虔诚very much，祂极为震惊以至于瞪大了眼睛（因为祂没料到这里还有洋文）")
-                        alert("你的功德+114514")
-                        alert("佛祖:“尊嘟假嘟？”")
+                        alert("佛祖感受到了你的虔诚very much，祂极为震惊以至于瞪大了眼睛（因为祂没料到这里还有洋文）");
+                        alert("你的功德+114514");
+                        alert("佛祖:“尊嘟假嘟？”");
                         document.getElementById("fozubiaoqing").innerHTML = "                        (| 0_o |)";
-                        document.getElementById("fozudebtn").innerHTML = "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;佛祖饶命！&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"
-                        fozu = false
-                        console.info("[info]坐标已锁定,距离发射还剩30秒")
+                        document.getElementById("fozudebtn").innerHTML = "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;佛祖饶命！&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;";
+                        fozu = false;
+                        console.info("[info]坐标已锁定,距离发射还剩30秒");
                     }else if(fozu==false){
-                        alert("祂开怀大笑,看上去好像息怒了,但是你的功德没有减")
-                        alert("“哇，赛博活佛”")
+                        alert("祂开怀大笑,看上去好像息怒了,但是你的功德没有减");
+                        alert("“哇，赛博活佛”");
                         document.getElementById("fozubiaoqing").innerHTML = "                        (| -_- |)";
-                        document.getElementById("fozudebtn").innerHTML ="&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;就再上十根香吧&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"
-                        fozu = true
-                        console.info("[info]发射取消")
-                    }
+                        document.getElementById("fozudebtn").innerHTML ="&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;就再上十根香吧&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;";
+                        fozu = true;
+                        console.info("[info]发射取消");
+                    };
                 }else if(a == 114514){
-                    rickroll()
-                }
-            }
+                    rickroll();
+                };
+            };
             //======================================================================
+            //弹出一个播放rickroll的窗口哈哈哈
             function rickroll(){
-                //弹出一个播放rickroll的窗口哈哈哈
-                alert("RICKROLL!")
+                alert("RICKROLL!");
                 window.open(
                     "https://www.bilibili.com/video/BV1GJ411x7h7?t=5.2",
                     "你 被 骗 了",
                     "height=600,width=745,top=100,left=100,toolbar=no,menubar=no,scroolbars=no,resizable=no,location=no,status=no,depended=yes,z-look=yes"
-                )
-            }
+                );
+            };
         </script>
         <!-- 框架灵感来自
             “https://www.bilibili.com/video/BV1sG411x77z/?spm_id_from=333.337.search-card.all.click&vd_source=dc8bb826ff686b2200b9b618418072a3” 
@@ -1125,5 +1133,9 @@
                 <hr>
             </div>
         </div>
+        <script>
+            //一些只能在他加载完之后再运行的东西
+            
+        </script>
     </body>
 </html>
