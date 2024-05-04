@@ -2,12 +2,12 @@
 <html lang="zh">
     <head>
         <meta charset="utf-8">
-        <title>我第三个网站 - 5h9igzqanx</title>
+        <title id="main-title">我第三个网站 - 5h9igzqanx</title>
         <meta name="description" content="张没事做的网页在github托管的静态映像,而且是第三个(bushi)">
         <link rel="shortcut icon" href="https://5h9igzqanx.github.io/TRDWBST-media/picture/LOGO.jpg">
         <link rel="stylesheet" href="https://5h9igzqanx.github.io/fonts-wbst/font.css">
         <link rel="stylesheet" href="https://5h9igzqanx.github.io/TRDWBST/CSS/header/boss.css">
-        <style>
+        <style type="text/css">
             /* 比较多余的傻逼css——我不想看到加载css之前的html的土老帽样子,服了操 */
             *{
                 /*去掉外边距*/
@@ -86,6 +86,17 @@
             }
             .lside-content .dj:hover{
                 color:#75aac8;
+            }
+            /* 左栏头像样式 */
+            .lside-content img.avatar{
+                width: 30%;
+                display: block;
+                margin: 0px auto;
+                border-top-left-radius: 50%;
+                border-top-right-radius: 50%;
+                border-bottom-left-radius: 50%;
+                border-bottom-right-radius: 50%;
+                border: 4px solid #75aac8;
             }
             /* 左栏目录样式 */
             .lside-content .directory{
@@ -177,7 +188,9 @@
             }
             .slider .slider-wrapper,.slider-wrapper img{
                 width:100%;
-                border-radius:23px;
+                /* border-radius:23px; */
+                border-top-left-radius: 23px;
+                border-top-right-radius: 23px;
                 position:sticky;
                 z-index:2;
                 margin-bottom:-26px;
@@ -523,8 +536,7 @@
             <div class="lside">
                 <div class="lside-content" style="height:280px;">
                     <br>
-                    <img src="https://5h9igzqanx.github.io/TRDWBST-media/picture/LOGO.jpg" title="5h9igzqanx" alt="头像"
-                        style="width: 30%;display:block;margin: 0px auto;border-radius: 50%;border: 4px solid #75aac8;">
+                    <img src="https://5h9igzqanx.github.io/TRDWBST-media/picture/LOGO.jpg" title="5h9igzqanx" alt="头像" class="avatar">
                     <br>
                     <h3 style="text-align:center;font-family: 'ZX-C-汉仪文黑85W',simhei;">5h9igzqanx</h3>
                     <br>
@@ -593,7 +605,8 @@
                     <h2>📝About us</h2>
                     <center style="text-align: center;">
                         <br>
-                        <p style="font-family: 'ZX-C-汉仪文黑85W',仿宋;font-size: x-small;">暂无版权信息(不会弄)&ensp;-&emsp;<span onclick="yqlj(3)" class="dj">我为什么必须备案？</span></p>
+                        <p style="font-family: 'ZX-C-汉仪文黑85W',仿宋;font-size: x-small;">Copyrignt© 2024 - 2025 5h9igzqanx</p>
+                        <p style="font-family: 'ZX-C-汉仪文黑85W',仿宋;font-size: x-small;">All Rights Reserved</p>
                         <br>
                         <p style="font-family: 'ZX-C-汉仪文黑85W',仿宋;font-size: x-small;">5h9igzqanx&emsp;TRDWBST&emsp;托管平台:<span onclick="yqlj(1)" class="dj">GitHub</span></p>
                         <br>
@@ -606,8 +619,6 @@
                                 top.location.href = "https://www.github.com"//github官网
                             } else if (a == 2) {
                                 top.location.href = "https://im.qq.com/index"//qq官网
-                            } else if (a == 3) {
-                                top.location.href = "https://baijiahao.baidu.com/s?id=1726710343051334212"//百度专题
                             }
                         }
                     </script>
@@ -791,6 +802,7 @@
                     “https://www.bilibili.com”
                     -->
                     <div class="slider-wrapper">
+                        <p style="color:#a3c6da;user-select:text;">&emsp;Man!What can I say?Manba out!</p>
                         <img src="" alt="" id="NoticeImg">
                     </div>
                     <div class="slider-footer">
@@ -1041,25 +1053,26 @@
                         function SP5Btn(){
                             switch(SP5B){
                                 case 0:
-                                    alert("一个按钮，似乎没什么特别的…")
-                                    alert("它似乎有意识的活了起来，因为它说起了话")
-                                    alert("按钮:“前辈，请狠狠地惩罚我”")
-                                    alert("咝，怎么这么不对劲…你确定要按吗？")
+                                    alert("一个按钮,似乎没什么特别的…")
+                                    alert("它似乎有意识的活了起来,因为它说起了话")
+                                    alert("按钮:“■■，请狠狠地■■我”")
+                                    alert("咝,怎么这么不对劲…你确定要按吗?")
                                     SP5B = 1
                                     break
                                 case 1:
-                                    alert("你点了一下它，但它除了发出了一声娇喘没有一丝动静")
+                                    alert("你点了一下它，它发出了一声娇喘,掀开了它洁白的衣服和…裤袜(你可以清晰地看见它的…裤袜上面有…一根长条玻璃棒,上面嘛…咱也不敢问,咱也不方便说),然后朝你撅起了它…紧绷红润的呃…■■?")
                                     alert("按钮:“啊~❤哦啊~❤”")
-                                    alert("你要再点一下吗？")
+                                    alert("我只想让它自重(除非它是■■)")
+                                    alert("你要再点一下吗?")
                                     SP5B = 2
                                     console.log(SP5B)
                                     break
                                 case 2:
                                     alert("按钮:“啊嗷~❤啊哈啊~❤哈啊~”")
-                                    alert("按钮:“要~❤要变成~变成前~❤前辈的形~形状了~❤啊啊啊嗷~❤”")
+                                    alert("按钮:“要~❤要变成~变成■~❤■■的形~形状了~❤啊啊啊嗷~❤”")
                                     alert("它的脸上泛起红色，嘴里流出了涎水，身体微微发颤，说出的话含糊不清，但还能听懂…但是…")
                                     alert("咝…这话好不对劲…额…")
-                                    alert("喂喂，你只是点击了它两下…对…对吧")
+                                    alert("喂喂,你只是点击了它两下…对…对吧")
                                     SP5BtnEle.innerHTML = "一…❤一个按…❤按钮❤"
                                     //SP5BtnEle.classList.remove("Btn50")
                                     SP5BtnEle.classList.toggle("Btn52")
@@ -1067,7 +1080,7 @@
                                     break
                                 case 3:
                                     alert("按钮:“啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊”")
-                                    alert("它的下体红肿不堪，甚至还有白色的水渍…你不对劲！")
+                                    alert("它的下体红肿不堪,甚至还有白色的水渍…你不对劲!")
                                     alert("按钮:哼哼声")
                                     document.getElementById("fozubiaoqing").innerHTML = "                        (| 0_0 |)"
                                     //SP5BtnEle.classList.remove("Btn52")
@@ -1075,8 +1088,8 @@
                                     SP5B = 4
                                     break
                                 case 4:
-                                    alert("它竟然分娩了！你个出生连按钮都操！！！")
-                                    alert("怎么说呢？你牛逼！")
+                                    alert("它竟然分娩了!你个出生连按钮都操!!!")
+                                    alert("怎么说呢?你牛逼!")
                                     document.getElementById("fozubiaoqing").innerHTML = "                        (| -_- |)"
                                     SP5BtnEle.innerHTML = "那个按钮与你的子儿"
                                     SP5BtnEle.classList.remove("Btn53")
@@ -1106,5 +1119,23 @@
             //一些只能在他加载完之后再运行的东西
             
         </script>
+        <!-- <script>
+            mainTitle=document.getElementById("main-title")
+            function changeTitle(){
+                while(true){
+                    setTimeout(function(){
+                        mainTitle.innerHTML="我第三个网站 - 5h9igzqanx🌎"
+                    }, 1000);
+                    setTimeout(function(){
+                        mainTitle.innerHTML="我第三个网站 - 5h9igzqanx🌍"
+                    }, 1000);
+                    setTimeout(function(){
+                        mainTitle.innerHTML="我第三个网站 - 5h9igzqanx🌏"
+                    }, 1000);
+                }
+            }
+            let titleChanger = new Worker("https://5h9igzqanx.github.io/TRDWBST-PAGES/JS/main/titleChanger.js")
+            titleChanger.dispatchEvent
+        </script> -->
     </body>
 </html>
