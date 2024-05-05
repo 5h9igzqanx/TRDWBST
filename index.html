@@ -88,15 +88,20 @@
                 color:#75aac8;
             }
             /* 左栏头像样式 */
-            .lside-content img.avatar{
-                width: 30%;
+            .lside-content .avatar{
+                overflow: hidden;
+                width: 84.2px;
+                height: 84.2px;
                 display: block;
                 margin: 0px auto;
-                border-top-left-radius: 50%;
-                border-top-right-radius: 50%;
-                border-bottom-left-radius: 50%;
-                border-bottom-right-radius: 50%;
+                padding: 0px;
+            }
+            .lside-content .avatar img{
+                width: 90%;
+                height: auto;
                 border: 4px solid #75aac8;
+                border-radius: 50%;
+                object-fit: cover;
             }
             /* 左栏目录样式 */
             .lside-content .directory{
@@ -186,11 +191,20 @@
                 -moz-user-select:none;
                 user-select:none;
             }
-            .slider .slider-wrapper,.slider-wrapper img{
+            .slider .slider-wrapper{
                 width:100%;
-                /* border-radius:23px; */
-                border-top-left-radius: 23px;
-                border-top-right-radius: 23px;
+                border-radius:23px;
+                position:sticky;
+                overflow: hidden;
+                z-index:2;
+                margin-bottom:-26px;
+                -webkit-user-select:none;
+                -moz-user-select:none;
+                user-select:none;
+            }
+            .slider .slider-wrapper img{
+                width:100%;
+                border-radius:23px;
                 position:sticky;
                 z-index:2;
                 margin-bottom:-26px;
@@ -536,7 +550,9 @@
             <div class="lside">
                 <div class="lside-content" style="height:280px;">
                     <br>
-                    <img src="https://5h9igzqanx.github.io/TRDWBST-media/picture/LOGO.jpg" title="5h9igzqanx" alt="头像" class="avatar">
+                    <div class="avatar">
+                        <img src="https://5h9igzqanx.github.io/TRDWBST-media/picture/LOGO.jpg" title="5h9igzqanx" alt="头像" class="avatar">
+                    </div>
                     <br>
                     <h3 style="text-align:center;font-family: 'ZX-C-汉仪文黑85W',simhei;">5h9igzqanx</h3>
                     <br>
@@ -802,7 +818,6 @@
                     “https://www.bilibili.com”
                     -->
                     <div class="slider-wrapper">
-                        <p style="color:#a3c6da;user-select:text;">&emsp;Man!What can I say?Manba out!</p>
                         <img src="" alt="" id="NoticeImg">
                     </div>
                     <div class="slider-footer">
