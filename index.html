@@ -831,13 +831,13 @@
                     <script>
                         const sliderData = 
                         [
-                            {url:'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/1.gif',title:'&emsp;TRDWBST竣工！',href:'1'},
-                            {url:'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/2.gif',title:'&emsp;广告位招租',href:'2'},
-                            {url:'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/3.gif',title:'&emsp;广告位招租',href:'3'},
-                            {url:'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/4.gif',title:'&emsp;广告位招租',href:'4'},
-                            {url:'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/5.gif',title:'&emsp;广告位招租',href:'5'},
-                            {url:'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/6.gif',title:'&emsp;广告位招租',href:'6'},
-                            {url:'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/7.gif',title:'&emsp;广告位招租',href:'7'},
+                            {url:'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/1.gif',title:'TRDWBST竣工！',href:'1'},
+                            {url:'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/2.gif',title:'广告位招租',href:'2'},
+                            {url:'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/3.gif',title:'广告位招租',href:'3'},
+                            {url:'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/4.gif',title:'广告位招租',href:'4'},
+                            {url:'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/5.gif',title:'广告位招租',href:'5'},
+                            {url:'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/6.gif',title:'广告位招租',href:'6'},
+                            {url:'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/7.gif',title:'广告位招租',href:'7'},
                         ]//大公告栏数据,url为图片地址,title为标题,href为公告序号，详见第723行
                         let NoticeNumber = 0
                         let Nimg = document.querySelector('#NoticeImg')
@@ -851,7 +851,7 @@
                             console.info(Nlog)
                             Nimg.src = sliderData[NoticeNumber].url
                             Nimg.title = sliderData[NoticeNumber].title
-                            Ntitle.innerHTML = sliderData[NoticeNumber].title
+                            Ntitle.innerHTML = "&emsp;"+(sliderData[NoticeNumber].title)
                             let active = document.querySelector('.active')
                             active.classList.remove('active')
                             liList[NoticeNumber].classList.add('active')
