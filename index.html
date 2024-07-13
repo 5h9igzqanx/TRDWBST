@@ -44,12 +44,31 @@
             .page-back-to-top a button:hover{
                 background-color:rgba(87, 126, 148, 0.6);
             }
+            /* 背景图片 */
+            .page-background{
+                position: fixed;
+                z-index: -1;
+                bottom: 0px;
+                right: 0px;
+                width: 250px;
+                height: 500px;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                user-select: none;
+            }
+            .page-background>img{
+                width: 250px;
+                height: 500px;
+                opacity: 0.6;
+                filter: alpha(opacity=60);
+            }
             .all_content{
                 /* 大到能包全部内容(除nav之外)的盒子,为了适配各种宽度
                 尽管我已经设置了绝对定位,但我还是不敢删,怕崩了
                 屎山万岁! */
                 /* max-width:1920px; */
                 margin:0px auto;
+                z-index: 1;
             }
             /* 左栏及内容样式 */
             .lside{
@@ -279,7 +298,7 @@
             .slider .toggle button:hover{
                 background-color:#577e94;
             }
-            /* 关于GitHub的"广告" */
+            /* "广告" */
             #SP2 details{
                 -webkit-user-select:none;
                 -moz-user-select:none;
@@ -288,7 +307,7 @@
             #SP2 details summary{
                 cursor:pointer;
             }
-            /* 百度搜索框的副本 */
+            /* 百度搜索框的"副本" */
             #SP3 .baidussk{
                 background-color:white;
                 margin-left:10px;
@@ -371,26 +390,30 @@
                 border-radius:4px;
                 border:1px solid black;
             }
-            /* 媒体查询,宽度小于1300px时 */
+            /* 媒体查询,宽度小于1000px时 */
             @media screen and (max-width:1000px){
-                #SP1{
-                    width:96vw;
+                .page-background{
+                    display: none;
+                }
+                .lside{
+                    display: none;
                 }
                 #SP2{
                     overflow:hidden;
-                    width:96vw;
                 }
-                #SP3,.lside{
+                #SP3,#SP3+br,#SP3+br+hr{
                     display:none;
                 }
                 .content-body{
                     left:0px;
                     right:0px;
                     width:97.5vw;
+                    padding: 0px;
+                    margin: auto;
                 }
                 .slider{
                     width:95vw;
-                    margin-right:0px;
+                    margin: auto;
                 }
             }
         </style>
@@ -498,6 +521,9 @@
     </head>
     <body>
         <iframe src="https://5h9igzqanx.github.io/TRDWBST-pages/header/nav.htm" title="nav" width="100%" height="64px" frameborder="0" scrolling="no" style="position: fixed;z-index: 9999;"></iframe>
+        <div class="page-background">
+            <img src="https://5h9igzqanx.github.io/TRDWBST-media/picture/fun/pic-mascot/zhanWeiFu.png" alt="毁球,这回真没了">
+        </div>
         <div class="page-back-to-top">
             <a href="#top">
                 <button type="button" title="返回顶部">&lt;</button>
