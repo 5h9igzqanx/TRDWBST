@@ -94,7 +94,7 @@
             }
             .lside-content h2{
                 text-align:center;
-                font-family:'ZX-C-汉仪文黑85W',楷体;
+                font-family:'ZX-C-汉仪文黑85W','黑体';
             }
             .lside-content p{
                 font-family:微软雅黑;
@@ -447,7 +447,7 @@
                     alert("点击确认回到旧版");
                     top.location.href="https://5h9igzqanx.github.io/SCDWBST/";
                 }else if(a == 2){
-                    top.location.href="https://5h9igzqanx.github.io/TRDWBST-pages/pages/special/notice/";
+                    top.location.href="https://5h9igzqanx.github.io/TRDWBST-pages/pages/blog/notice/";
                 }else if(a == 3){
                     top.location.href="https://5h9igzqanx.github.io/TRDWBST-pages/pages/tool/0/feedback.htm";
                 }else if(a == 4){
@@ -522,7 +522,7 @@
     <body>
         <iframe src="https://5h9igzqanx.github.io/TRDWBST-pages/header/nav.htm" title="nav" width="100%" height="64px" frameborder="0" scrolling="no" style="position: fixed;z-index: 9999;"></iframe>
         <div class="page-background">
-            <img src="https://5h9igzqanx.github.io/TRDWBST-media/picture/fun/pic-mascot/zhanWeiFu.png" alt="毁球,这回真没了">
+            <img src="https://5h9igzqanx.github.io/TRDWBST-media/picture/fun/pic-mascot/zhanWeiFu.png" alt="这回真没了">
         </div>
         <div class="page-back-to-top">
             <a href="#top">
@@ -576,7 +576,24 @@
                 <br>
                 <div class="lside-content" style="height:250px;">
                     <nav>
-                        <h2>📑目录</h2>
+                        <h2>📑本站目录</h2>
+                        <br>
+                        <div class="directory">
+                            <p><a class="dj" href="#">&emsp;&ensp;主页</a></p>
+                            <p><a class="dj" href="#">&emsp;&ensp;仓库</a></p>
+                            <br>
+                            <p><a class="dj" href="https://5h9igzqanx.github.io/TRDWBST-pages-blog/">·&ensp;博客</a></p>
+                            <p><a class="dj" href="https://5h9igzqanx.github.io/TRDWBST-pages/pages/project/0/">·&ensp;项目</a></p>
+                            <p><a class="dj" href="https://5h9igzqanx.github.io/zwpgtools/">·&ensp;工具(在建)</a></p>
+                            <p><a style="cursor: no-drop;" href="#">·&ensp;资源(在建)</a></p>
+                            <p><a class="dj" href="https://5h9igzqanx.github.io/TRDWBST-pages/pages/fun/0/">·&ensp;玩</a></p>
+                        </div>
+                    </nav>
+                </div>
+                <br>
+                <div class="lside-content" style="height:250px;">
+                    <nav>
+                        <h2>📑本页目录</h2>
                         <br>
                         <div class="directory">
                             <p><a class="dj" href="#top">&emsp;&ensp;TOP</a></p>
@@ -592,7 +609,7 @@
                 </div>
                 <br>
                 <div class="lside-content" style="height:330px;">
-                    <h2 style="text-align:center;font-family: 'ZX-C-汉仪文黑85W';">📣公告</h2>
+                    <h2 style="text-align:center;font-family: 'ZX-C-汉仪文黑85W','黑体';">📣公告</h2>
                     <br>
                     <p>&emsp;&emsp;这里是我第三个网站，没错，我又开了一个。因为github不要钱hhhh，咱就相当于薅羊毛了</p>
                     <p>&emsp;&emsp;如果你看不惯，可以<a onclick="LsideCnt(1)" class="dj">回去旧的网站</a></p>
@@ -632,7 +649,7 @@
                 </div>
                 <br>
                 <div class="lside-content" style="height:240px;">
-                    <p style="text-align: center;font-size: large;font-family: 楷体;">现在是</p>
+                    <p style="text-align: center;font-size: large;font-family: 'ZX-C-汉仪文黑85W','黑体';">现在是</p>
                     <div style="font-size: xx-large;font-family: 'ZX-E-Minecraft';text-align: center;padding: 10px;cursor: help;"
                         id="lside-content-sj-time" onclick="LsideCnt(4)">11:45:14</div>
                     <div style="font-size: small;text-align: center;cursor: help;" id="lside-content-sj-date"
@@ -885,26 +902,26 @@
                         //鼠标点击
                         Nimg.addEventListener('click',function(){//图片的
                             var QAQ = NoticeNumber + 1
-                            Noticeqw(QWQ = QAQ)
+                            Noticeqw(numberOfIt = QAQ)
                         })
                         Ntitle.addEventListener('click',function(){//标题的，因为按钮遮住标题了点不到，css不行就只能js了
                             var QAQ = NoticeNumber + 1
-                            Noticeqw(QWQ = QAQ)
+                            Noticeqw(numberOfIt = QAQ)
                         })
                         function NoticeDianjijindutiaoqiehuan(a = 0){
                             //点击进度条切换
                             NoticeNumber = a
                             NoticeDianjiqiehuan()
                         }
-                        function Noticeqw(QWQ) {
+                        function Noticeqw(number) {
                             //大公告栏点击前往
-                            if (QWQ == 1){top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/special/notice/page/1.htm"
-                            }else if (QWQ == 2){top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/special/notice/page/2.htm"
-                            }else if (QWQ == 3){top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/special/notice/page/3.htm"
-                            }else if (QWQ == 4){top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/special/notice/page/4.htm"
-                            }else if (QWQ == 5){top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/special/notice/page/5.htm"
-                            }else if (QWQ == 6){top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/special/notice/page/6.htm"
-                            }else if (QWQ == 7){top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/special/notice/page/7.htm"}
+                            if (numberOfIt == 1){top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/blog/notice/page/1.htm"
+                            }else if (numberOfIt == 2){top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/blog/notice/page/2.htm"
+                            }else if (numberOfIt == 3){top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/blog/notice/page/3.htm"
+                            }else if (numberOfIt == 4){top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/blog/notice/page/4.htm"
+                            }else if (numberOfIt == 5){top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/blog/notice/page/5.htm"
+                            }else if (numberOfIt == 6){top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/blog/notice/page/6.htm"
+                            }else if (numberOfIt == 7){top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/blog/notice/page/7.htm"}
                         }
                         function NoticeCes() {
                             alert("暂无公告")
