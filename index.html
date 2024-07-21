@@ -848,13 +848,13 @@
                     <script>
                         const sliderData = 
                         [
-                            {url:'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/1.gif',title:'TRDWBST竣工！',href:'1'},
-                            {url:'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/2.gif',title:'广告位招租',href:'2'},
-                            {url:'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/3.gif',title:'广告位招租',href:'3'},
-                            {url:'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/4.gif',title:'广告位招租',href:'4'},
-                            {url:'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/5.gif',title:'广告位招租',href:'5'},
-                            {url:'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/6.gif',title:'广告位招租',href:'6'},
-                            {url:'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/7.gif',title:'广告位招租',href:'7'},
+                            {posterImgURL:'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/1.gif',pageURL:"https://5h9igzqanx.github.io/TRDWBST-pages-blog/post/2024050501/",title:'TRDWBST正式启用',href:'1'},
+                            {posterImgURL:'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/2.gif',pageURL:"https://5h9igzqanx.github.io/TRDWBST-pages-blog/post/2024071901/",title:'热烈庆祝TRDWBST Pages Blog建成',href:'2'},
+                            {posterImgURL:'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/3.gif',pageURL:"https://5h9igzqanx.github.io/TRDWBST-pages/pages/blog/notice/page/2.htm",title:'广告位招租',href:'3'},
+                            {posterImgURL:'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/4.gif',pageURL:"https://5h9igzqanx.github.io/TRDWBST-pages/pages/blog/notice/page/2.htm",title:'广告位招租',href:'4'},
+                            {posterImgURL:'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/5.gif',pageURL:"https://5h9igzqanx.github.io/TRDWBST-pages/pages/blog/notice/page/2.htm",title:'广告位招租',href:'5'},
+                            {posterImgURL:'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/6.gif',pageURL:"https://5h9igzqanx.github.io/TRDWBST-pages/pages/blog/notice/page/2.htm",title:'广告位招租',href:'6'},
+                            {posterImgURL:'https://5h9igzqanx.github.io/TRDWBST-media/picture/notice/cover/7.gif',pageURL:"https://5h9igzqanx.github.io/TRDWBST-pages/pages/blog/notice/page/2.htm",title:'广告位招租',href:'7'},
                         ]//大公告栏数据,url为图片地址,title为标题,href为公告序号，详见第723行
                         let NoticeNumber = 0
                         let Nimg = document.querySelector('#NoticeImg')
@@ -866,7 +866,7 @@
                             //点击(指按键)切换
                             var Nlog = "[info]公告切换为"+NoticeNumber
                             console.info(Nlog)
-                            Nimg.src = sliderData[NoticeNumber].url
+                            Nimg.src = sliderData[NoticeNumber].posterImgURL
                             Nimg.title = sliderData[NoticeNumber].title
                             Ntitle.innerHTML = "&emsp;"+(sliderData[NoticeNumber].title)
                             let active = document.querySelector('.active')
@@ -901,12 +901,10 @@
                         slider.addEventListener('mouseleave',function(){NoticeDingshiqiehuan()})
                         //鼠标点击
                         Nimg.addEventListener('click',function(){//图片的
-                            var QAQ = NoticeNumber + 1
-                            Noticeqw(numberOfIt = QAQ)
+                            Noticeqw(numberOfIt = NoticeNumber)
                         })
                         Ntitle.addEventListener('click',function(){//标题的，因为按钮遮住标题了点不到，css不行就只能js了
-                            var QAQ = NoticeNumber + 1
-                            Noticeqw(numberOfIt = QAQ)
+                            Noticeqw(numberOfIt = NoticeNumber)
                         })
                         function NoticeDianjijindutiaoqiehuan(a = 0){
                             //点击进度条切换
@@ -915,13 +913,14 @@
                         }
                         function Noticeqw(number) {
                             //大公告栏点击前往
-                            if (numberOfIt == 1){top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/blog/notice/page/1.htm"
-                            }else if (numberOfIt == 2){top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/blog/notice/page/2.htm"
-                            }else if (numberOfIt == 3){top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/blog/notice/page/3.htm"
-                            }else if (numberOfIt == 4){top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/blog/notice/page/4.htm"
-                            }else if (numberOfIt == 5){top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/blog/notice/page/5.htm"
-                            }else if (numberOfIt == 6){top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/blog/notice/page/6.htm"
-                            }else if (numberOfIt == 7){top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/blog/notice/page/7.htm"}
+                            // if (numberOfIt == 1){top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/blog/notice/page/1.htm"
+                            // }else if (numberOfIt == 2){top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/blog/notice/page/2.htm"
+                            // }else if (numberOfIt == 3){top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/blog/notice/page/3.htm"
+                            // }else if (numberOfIt == 4){top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/blog/notice/page/4.htm"
+                            // }else if (numberOfIt == 5){top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/blog/notice/page/5.htm"
+                            // }else if (numberOfIt == 6){top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/blog/notice/page/6.htm"
+                            // }else if (numberOfIt == 7){top.location.href = "https://5h9igzqanx.github.io/TRDWBST-pages/pages/blog/notice/page/7.htm"}
+                            top.location.href = sliderData[number].pageURL
                         }
                         function NoticeCes() {
                             alert("暂无公告")
