@@ -93,9 +93,9 @@
                 padding-bottom:4px;
                 overflow-y:auto;
             }
-            .lside-content h2{
+            .lside-content h2,.lside-content h3{
                 text-align:center;
-                font-family:'ZX-C-汉仪文黑85W','黑体';
+                font-family:'黑体';
             }
             .lside-content p{
                 font-family:微软雅黑;
@@ -131,7 +131,8 @@
             .lside-content .directory p a{
                 color:black;
                 text-decoration:none;
-                font-family:'ZX-C-汉仪文黑85W','黑体';
+                font-family:'黑体';
+                font-weight: bold;
             }
             /* flesh推荐 样式 */
             .lside-content .lside-content-ad{
@@ -188,7 +189,8 @@
                 background-color:#75aac8;
             }
             .content-body h2{
-                font-family:'ZX-C-汉仪文黑85W','黑体';
+                font-family:'黑体';
+                font-weight: bold;
             }
             a{
                 color:black;
@@ -248,7 +250,8 @@
                 z-index:7;
                 /* background:linear-gradient(to bottom,rgba(163,198,218,0),rgba(163,198,218,1)); */
                 color:black;
-                font-family:'ZX-C-汉仪文黑85W';
+                font-family:'黑体';
+                font-weight: bold;
                 font-size:x-large;
             }
             .slider .slider-footer #NoticeTitle:hover{
@@ -468,7 +471,7 @@
                 };
             };
             //======================================================================
-            function MainBody(a = 114514){
+            function MainBody(a=114514){
                 //正文里可以点的地方
                 //分支,我不想用switch
                 if(a == 1){
@@ -545,7 +548,7 @@
                         <img src="https://5h9igzqanx.github.io/TRDWBST-media/picture/LOGO/LOGO.gif" title="5h9igzqanx" alt="头像" class="avatar">
                     </div>
                     <br>
-                    <h3 style="text-align:center;font-family: 'ZX-C-汉仪文黑85W',simhei;">5h9igzqanx</h3>
+                    <h3>5h9igzqanx</h3>
                     <br>
                     <table style="font-family: 'ZX-E-Minecraft';margin: 0px auto;">
                         <thead>
@@ -613,7 +616,7 @@
                 </div>
                 <br>
                 <div class="lside-content" style="height:330px;">
-                    <h2 style="text-align:center;font-family: 'ZX-C-汉仪文黑85W','黑体';">📣公告</h2>
+                    <h2>📣公告</h2>
                     <br>
                     <p>&emsp;&emsp;这里是我第三个网站，没错，我又开了一个。因为github不要钱hhhh，咱就相当于薅羊毛了</p>
                     <p>&emsp;&emsp;如果你看不惯，可以<a onclick="LsideCnt(1)" class="dj">回去旧的网站</a></p>
@@ -627,17 +630,17 @@
                     </div>
                 </div>
                 <br>
-                <div class="lside-content" style="height:160px;">
+                <div class="lside-content" style="height:220px;">
                     <footer>
                         <h2>📝About us</h2>
                         <center style="text-align: center;">
                             <br>
-                            <p style="font-family: 'ZX-C-汉仪文黑85W',仿宋;font-size: x-small;">Copyrignt© 2024 - 2025 5h9igzqanx</p>
-                            <p style="font-family: 'ZX-C-汉仪文黑85W',仿宋;font-size: x-small;">All Rights Reserved</p>
+                            <p style="font-family: '仿宋';">Copyrignt© 2024 - 2025 5h9igzqanx</p>
+                            <p style="font-family: '仿宋';">All Rights Reserved</p>
                             <br>
-                            <p style="font-family: 'ZX-C-汉仪文黑85W',仿宋;font-size: x-small;">5h9igzqanx&emsp;TRDWBST&emsp;托管平台:<span onclick="yqlj(1)" class="dj">GitHub</span></p>
+                            <p style="font-family: '仿宋';">5h9igzqanx&emsp;TRDWBST&emsp;托管平台:<span onclick="yqlj(1)" class="dj">GitHub</span></p>
                             <br>
-                            <p style="font-family: 'ZX-C-汉仪文黑85W',仿宋;font-size: x-small;"><a class="dj" href="#top">联系方式见上</a></p>
+                            <p style="font-family: '仿宋';"><a class="dj" href="#top">联系方式见上</a></p>
                         </center>
                         <script>
                             function yqlj(a) {
@@ -653,19 +656,16 @@
                 </div>
                 <br>
                 <div class="lside-content" style="height:240px;">
-                    <p style="text-align: center;font-size: large;font-family: 'ZX-C-汉仪文黑85W','黑体';">现在是</p>
-                    <div style="font-size: xx-large;font-family: 'ZX-E-Minecraft';text-align: center;padding: 10px;cursor: help;"
-                        id="lside-content-sj-time" onclick="LsideCnt(4)">11:45:14</div>
-                    <div style="font-size: small;text-align: center;cursor: help;" id="lside-content-sj-date"
-                        onclick="LsideCnt(5)">----年--月--日&emsp;&emsp;星期九</div>
+                    <p style="text-align: center;font-size: large;font-family: '黑体';">现在是</p>
+                    <div style="font-size: xx-large;font-family: 'ZX-E-Minecraft';text-align: center;padding: 10px;cursor: help;" id="lside-content-sj-time" onclick="LsideCnt(4)">11:45:14</div>
+                    <div style="font-size: small;text-align: center;cursor: help;" id="lside-content-sj-date" onclick="LsideCnt(5)">----年--月--日&emsp;&emsp;星期九</div>
                     <!-- 代码来自
-                        “https://www.jb51.net/article/252112.htm”
-                        -->
-                        <br>
-                        <hr>
-                        <br>
-                    <p style="text-align: center;font-family: 楷体;">距离&ensp;<span id="lside-content-djs-title" onclick="LsideCnt(6)" style="color: yellow;cursor: help;font-family: 'ZX-C-汉仪文黑85W',楷体;"
-                            title="详情页面,点击前往">啥也不是の节</span>&ensp;还剩</p>
+                    “https://www.jb51.net/article/252112.htm”
+                    -->
+                    <br>
+                    <hr>
+                    <br>
+                    <p style="text-align: center;font-family: '宋体';">距离&ensp;<span id="lside-content-djs-title" onclick="LsideCnt(6)" style="color: yellow;cursor: help;font-family: '黑体';" title="详情页面,点击前往">啥也不是の节</span>&ensp;还剩</p>
                     <br>
                     <div style="text-align: center;font-size: x-large;cursor: not-allowed;" id="lside-content-djs">呃…嗯…吧嘶…</div>
                     <script>
@@ -692,7 +692,7 @@
                         setInterval(function () {
                             //左栏倒计时部分
                             var nowdate = new Date();//从1970年1月1日
-                            var enddate = (new Date('2024-7-1 23:59:59')).getTime();//从1970年1月1日到倒计时结束的毫秒数(人话:时间戳)(注意:这里的时间要比实际少一秒!)
+                            var enddate = (new Date('2024-8-31 23:59:59')).getTime();//从1970年1月1日到倒计时结束的毫秒数(人话:时间戳)(注意:这里的时间要比实际少一秒!)
                             var ms = enddate - nowdate;//剩余时间,但是毫秒
                             var seconds = ms / 1000;//剩余时间,但是秒
                             var points = seconds / 60;//剩余时间,但是分
@@ -700,11 +700,11 @@
                             var days = hours / 24;//天数
                             var tm = document.getElementById("lside-content-djs")//div标签的id
                             var tmtitle = document.getElementById("lside-content-djs-title")
-                            tmtitle.innerHTML = "暑假开始"
+                            tmtitle.innerHTML = "开学"
                             if (ms <= 0) {
-                                tm.innerHTML = `<span style='font-family:"ZX-C-汉仪文黑85W";'>时间到</span>`;//如果时间到就输出时间到
+                                tm.innerHTML=`<span style='font-family:"黑体";'>时间到</span>`;//如果时间到就输出时间到
                             } else {
-                                tm.innerHTML = `<span style="color:yellow;font-family: 'ZX-E-Minecraft';">` + Math.floor(days) + `</span><span style="font-family:'ZX-C-汉仪文黑85W';">天</span><span style="color:yellow;font-family: 'ZX-E-Minecraft';">` + Math.floor(hours % 24) + `</span><span style="font-family:'ZX-C-汉仪文黑85W';">时</span><span style="color:yellow;font-family: 'ZX-E-Minecraft';">` + Math.floor(points % 60) + `</span><span style="font-family:'ZX-C-汉仪文黑85W';">分</span><span style="color:red;font-family: 'ZX-E-Minecraft';">` + Math.floor(seconds % 60) + `</span><span style="font-family:'ZX-C-汉仪文黑85W';">秒</span>`;//求余输出剩余时间,Math.floor()为保留整数
+                                tm.innerHTML = `<span style="color:yellow;font-family: 'ZX-E-Minecraft';">` + Math.floor(days) + `</span><span style="font-family:'黑体';">天</span><span style="color:yellow;font-family: 'ZX-E-Minecraft';">` + Math.floor(hours % 24) + `</span><span style="font-family:'黑体';">时</span><span style="color:yellow;font-family: 'ZX-E-Minecraft';">` + Math.floor(points % 60) + `</span><span style="font-family:'黑体';">分</span><span style="color:red;font-family: 'ZX-E-Minecraft';">` + Math.floor(seconds % 60) + `</span><span style="font-family:'黑体';">秒</span>`;//求余输出剩余时间,Math.floor()为保留整数
                             };//时间到不输出负数
                         }, 50)
                     </script>
@@ -980,21 +980,21 @@
                         </div>
                         <br>
                         <script>
-                            var bdIpt = document.getElementById("bdIpt")
-                            let bdIptAn = document.querySelector("#bdIpt")
-                            let bdBtnAn = document.querySelector("#bdBtn")
+                            var bdIpt = document.getElementById("bdIpt");
+                            let bdIptAn = document.querySelector("#bdIpt");
+                            let bdBtnAn = document.querySelector("#bdBtn");
                             bdIptAn.addEventListener("keyup",function(event){
                                 if(event.keyCode === 13){
                                     bdSearch()
                                 }
-                            })
+                            });
                             bdBtnAn.addEventListener("click",function(){
                                 bdSearch()
-                            })
+                            });
                             function bdSearch(){
                                 var schurl = "https://www.baidu.com/s?wd="+bdIpt.value
                                 top.location.href = schurl
-                            }
+                            };
                         </script>
                     </div>
                 </section>
