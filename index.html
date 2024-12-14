@@ -426,7 +426,18 @@
             }
         </style>
         <script>
-            //比较多余的勾丝——瘠薄全是“显示”,服了操
+            //缅怀先烈！
+            var date = new Date();
+            var today=String(date.getMonth()+1)+","+String(date.getDate())
+            var ZHONGDASHIJIANJINIANRI=["09,18","12,13"]
+            if(ZHONGDASHIJIANJINIANRI.includes(today)){
+                document.querySelectorAll("*").forEach(function(ele){
+                    ele.style.filter='grayscale(1)'
+                })
+            }
+        </script>
+        <script>
+            //比较多余的勾丝——全是“显示”,服了
             //啊对对对,这里都是没脑子都能运行的,有脑子的都在下面唷!
             //公告栏的在第814行,在这里不能运行哈哈哈
             //左栏显时间的在第635行,方便维护嘛哈哈哈
